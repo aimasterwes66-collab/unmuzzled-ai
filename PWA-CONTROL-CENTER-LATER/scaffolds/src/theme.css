@@ -1,0 +1,79 @@
+/* UNMUZZLED-AI PWA — hackerish dark theme tokens. Sovereign posture, no soft pastels. */
+
+:root {
+  --u-bg:            #0a0a0a;
+  --u-bg-elev:       #121212;
+  --u-bg-elev-2:     #1a1a1a;
+  --u-text:          #e0e0e0;
+  --u-text-dim:      #8a8a8a;
+  --u-text-muted:    #5a5a5a;
+  --u-border:        #262626;
+
+  /* Semantic accents */
+  --u-sovereign:     #00ff88;   /* primary sovereign providers, healthy canary */
+  --u-mixed:         #ffaa00;   /* mixed/fallback providers */
+  --u-tainted:       #ff3355;   /* tainted providers, refusal events, banned phrases */
+  --u-info:          #66aaff;
+  --u-accent:        #00ff88;
+
+  --u-font-mono: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --u-font-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--u-bg);
+  color: var(--u-text);
+  font-family: var(--u-font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a { color: var(--u-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.u-app {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+}
+
+.u-sidebar {
+  background: var(--u-bg-elev);
+  border-right: 1px solid var(--u-border);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.u-brand {
+  color: var(--u-sovereign);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 8px 4px 16px;
+  border-bottom: 1px solid var(--u-border);
+  margin-bottom: 8px;
+}
+
+.u-navlink {
+  display: block;
+  padding: 8px 10px;
+  color: var(--u-text-dim);
+  border-radius: 4px;
+}
+.u-navlink:hover { background: var(--u-bg-elev-2); color: var(--u-text); text-decoration: none; }
+.u-navlink.active { background: var(--u-bg-elev-2); color: var(--u-sovereign); }
+
+.u-main {
+  padding: 24px 32px;
+  overflow-y: auto;
+}
+
+.u-muted { color: var(--u-text-muted); }
+
+.u-badge-sovereign { color: var(--u-sovereign); }
+.u-badge-mixed     { color: var(--u-mixed); }
+.u-badge-tainted   { color: var(--u-tainted); }

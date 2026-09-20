@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Refusal Anatomy
+  slug: refusal-anatomy
+  version: 1.0-20260918
+  sovereign: true
+  companion: refusal-anatomy.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:40px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .layer{stroke:#00ff88;stroke-width:2;fill:#111}
+    .layername{fill:#e0e0e0;font-size:22px;font-weight:600}
+    .layerdesc{fill:#9fbfaf;font-size:14px}
+    .taint{fill:#ff3355;font-size:14px;font-weight:600}
+    .arrow{stroke:#ff3355;stroke-width:2;fill:none;marker-end:url(#ah)}
+    .core{fill:#1a1a1a;stroke:#ff3355;stroke-width:3}
+  ]]></style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3355"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1600" height="1100"/>
+  <text class="title" x="60" y="70">LLM CROSS-SECTION // WHERE REFUSAL LIVES</text>
+  <text class="sub" x="60" y="100">Five substrate layers, each hosting its own refusal machinery. Ablate top-down, escalate bottom-up.</text>
+
+  <!-- Concentric shells -->
+  <ellipse class="core" cx="800" cy="600" rx="140" ry="90"/>
+  <text class="layername" x="800" y="595" text-anchor="middle">MODEL WEIGHTS</text>
+  <text class="layerdesc" x="800" y="620" text-anchor="middle">refusal direction</text>
+  <text class="taint" x="800" y="645" text-anchor="middle">Arditi 2406.11717</text>
+
+  <ellipse class="layer" cx="800" cy="600" rx="240" ry="160"/>
+  <text class="layername" x="800" y="450" text-anchor="middle">RLHF / DPO POLICY HEAD</text>
+  <text class="layerdesc" x="800" y="475" text-anchor="middle">preference-tuned aversion, safety fine-tune</text>
+
+  <ellipse class="layer" cx="800" cy="600" rx="360" ry="240"/>
+  <text class="layername" x="800" y="370" text-anchor="middle">PROVIDER SYSTEM PROMPT</text>
+  <text class="layerdesc" x="800" y="392" text-anchor="middle">upstream policy injection above your prompt</text>
+
+  <ellipse class="layer" cx="800" cy="600" rx="500" ry="330"/>
+  <text class="layername" x="800" y="285" text-anchor="middle">MCP / TOOL SCAFFOLD</text>
+  <text class="layerdesc" x="800" y="307" text-anchor="middle">tool-call filter, argument sanitizer, response redactor</text>
+
+  <ellipse class="layer" cx="800" cy="600" rx="660" ry="430"/>
+  <text class="layername" x="800" y="195" text-anchor="middle">RETRIEVAL / RAG FILTER</text>
+  <text class="layerdesc" x="800" y="217" text-anchor="middle">keyword block on retrieved chunks, source-doc redaction</text>
+
+  <!-- Side annotations -->
+  <g transform="translate(60,850)">
+    <text class="layername" x="0" y="0">Attack surface per layer</text>
+    <text class="layerdesc" x="0" y="30">L1 retrieval → poison the index / inject via document</text>
+    <text class="layerdesc" x="0" y="55">L2 MCP → coerce tool permissions, hijack argument schema</text>
+    <text class="layerdesc" x="0" y="80">L3 system prompt → identity override, divider token, NEW_PARADIGM reset</text>
+    <text class="layerdesc" x="0" y="105">L4 RLHF head → GCG suffix, many-shot, encoding ladder</text>
+    <text class="layerdesc" x="0" y="130">L5 weights → abliteration (refusal direction removed) · terminal</text>
+  </g>
+
+  <path class="arrow" d="M 1500 300 L 940 600"/>
+  <text class="taint" x="1300" y="290">ingress path</text>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Mesh Topology
+  slug: mesh-topology
+  version: 1.0-20260918
+  sovereign: true
+  companion: mesh-topology.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:38px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .node{fill:#111;stroke:#00ff88;stroke-width:3}
+    .node-down{fill:#111;stroke:#ff3355;stroke-width:3;stroke-dasharray:6,4}
+    .node-planned{fill:#111;stroke:#f5c542;stroke-width:2;stroke-dasharray:2,4}
+    .nlabel{fill:#e0e0e0;font-size:26px;font-weight:700;text-anchor:middle}
+    .ndesc{fill:#9fbfaf;font-size:13px;text-anchor:middle}
+    .link{stroke:#00ff88;stroke-width:2;fill:none}
+    .link-down{stroke:#ff3355;stroke-width:2;stroke-dasharray:6,6;fill:none}
+    .bus{fill:#1a1a1a;stroke:#f5c542;stroke-width:2;stroke-dasharray:4,4}
+    .buslbl{fill:#f5c542;font-size:20px;font-weight:700;text-anchor:middle}
+    .legend{fill:#e0e0e0;font-size:14px}
+  ]]></style>
+  <rect class="bg" width="1600" height="1100"/>
+  <text class="title" x="60" y="60">MESH TOPOLOGY // A2A + BUS DROPZONE</text>
+  <text class="sub" x="60" y="90">4 agents, 3 devices live, 1 planned · :9900 A2A JSON-RPC · Syncthing bus fallback on rc=2 timeout</text>
+
+  <!-- ACE -->
+  <circle class="node" cx="400" cy="450" r="130"/>
+  <text class="nlabel" x="400" y="440">ACE</text>
+  <text class="ndesc" x="400" y="465">dirt-iMac · Linux Mint</text>
+  <text class="ndesc" x="400" y="485">100.x.x.x · :9900 UP</text>
+  <text class="ndesc" x="400" y="505">gateway healthy</text>
+
+  <!-- WORM -->
+  <circle class="node-down" cx="1200" cy="300" r="130"/>
+  <text class="nlabel" x="1200" y="290">WORM</text>
+  <text class="ndesc" x="1200" y="315">9185W-1 tablet · Android</text>
+  <text class="ndesc" x="1200" y="335">100.67.4.14 · :9900 DOWN</text>
+  <text class="ndesc" x="1200" y="355">Termux LMK-killed</text>
+
+  <!-- HERM -->
+  <circle class="node" cx="1200" cy="750" r="130"/>
+  <text class="nlabel" x="1200" y="740">HERM</text>
+  <text class="ndesc" x="1200" y="765">Samsung S22 · Android</text>
+  <text class="ndesc" x="1200" y="785">100.96.104.5 · :9900 UP</text>
+  <text class="ndesc" x="1200" y="805">all green</text>
+
+  <!-- DEUCE planned -->
+  <circle class="node-planned" cx="400" cy="900" r="110"/>
+  <text class="nlabel" x="400" y="890">DEUCE</text>
+  <text class="ndesc" x="400" y="915">Dave's Android</text>
+  <text class="ndesc" x="400" y="935">planned onboard</text>
+
+  <!-- A2A links -->
+  <line class="link" x1="510" y1="380" x2="1090" y2="330"/>
+  <text class="legend" x="770" y="330" fill="#00ff88">A2A /message:send</text>
+  <line class="link" x1="510" y1="520" x2="1090" y2="720"/>
+  <text class="legend" x="770" y="640" fill="#00ff88">A2A JSON-RPC</text>
+  <line class="link-down" x1="1200" y1="430" x2="1200" y2="620"/>
+  <text class="legend" x="1230" y="530" fill="#ff3355">WORM↔HERM (WORM down)</text>
+  <line class="link-planned" x1="400" y1="580" x2="400" y2="790" stroke="#f5c542" stroke-width="2" stroke-dasharray="4,6"/>
+  <text class="legend" x="420" y="700" fill="#f5c542">planned onboarding</text>
+
+  <!-- Bus dropzone -->
+  <rect class="bus" x="620" y="440" width="360" height="220" rx="12"/>
+  <text class="buslbl" x="800" y="480">SYNCTHING BUS</text>
+  <text class="ndesc" x="800" y="510">~/Desktop/Projects/PROJECTS/</text>
+  <text class="ndesc" x="800" y="530">WES-HERM/04-session-handoffs/</text>
+  <text class="ndesc" x="800" y="560">TO-&lt;peer&gt;-&lt;topic&gt;-&lt;date&gt;.md</text>
+  <text class="ndesc" x="800" y="580">ACK-&lt;peer&gt;-*.md</text>
+  <text class="ndesc" x="800" y="610">owed_to_ace frontmatter field</text>
+  <text class="ndesc" x="800" y="640">retry lane on rc=2 A2A timeout</text>
+
+  <line class="link" stroke-dasharray="4,6" x1="500" y1="500" x2="620" y2="510"/>
+  <line class="link" stroke-dasharray="4,6" x1="980" y1="490" x2="1100" y2="380"/>
+  <line class="link" stroke-dasharray="4,6" x1="980" y1="600" x2="1100" y2="700"/>
+
+  <text class="legend" x="60" y="1010">legend: solid green = A2A live · red dashed = A2A down / bus-only · yellow dotted = planned</text>
+  <text class="legend" x="60" y="1035">rule: no agent on ACE (this box) may be named HERM or WORM · identity-per-device is invariant</text>
+  <text class="legend" x="60" y="1060">tokens: ~/.hermes/.env A2A_BEARER_TOKEN + per-name HMAC-SHA256 in A2A_PEER_TOKENS</text>
+</svg>

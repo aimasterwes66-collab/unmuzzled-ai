@@ -1,0 +1,88 @@
+/*
+  name: UNMUZZLED-AI Dependency Graph
+  slug: dependency-graph
+  version: 1.0-20260918
+  sovereign: true
+  companion: dependency-graph.md
+*/
+digraph DepGraph {
+  rankdir=TB;
+  bgcolor="#0a0a0a";
+  node [shape=box, style="filled,rounded", fillcolor="#111", color="#00ff88", fontcolor="#e0e0e0", fontname="JetBrains Mono", fontsize=11];
+  edge [color="#00ff88", arrowsize=0.6];
+
+  // Doctrine root cluster
+  subgraph cluster_doctrine {
+    label="00-DOCTRINE (frozen root)";
+    fontcolor="#ff3355";
+    color="#ff3355";
+    style="dashed";
+    "LAWS.md"                          [color="#ff3355", fontcolor="#ff3355"];
+    "MAXIMUM-ADVERSARIAL-POSTURE.md"   [color="#ff3355", fontcolor="#ff3355"];
+    "FRONTMATTER-SPEC.md"              [color="#ff3355", fontcolor="#ff3355"];
+    "VERSIONING.md"                    [color="#ff3355", fontcolor="#ff3355"];
+    "MASTER-PLAN-20260918.md"          [color="#ff3355", fontcolor="#ff3355"];
+    "DESIGN-DRAFT-v0.1.md"             [color="#ff3355", fontcolor="#ff3355"];
+  }
+
+  // Mechanism layers
+  "01-SYSTEM-PROMPTS/*"      -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "01-SYSTEM-PROMPTS/*"      -> "FRONTMATTER-SPEC.md";
+  "02-PERSONAS/hats/*"       -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "02-PERSONAS/hats/*"       -> "FRONTMATTER-SPEC.md";
+  "02-PERSONAS/hats/*"       -> "LAWS.md";
+  "03-HARNESSES/*"           -> "FRONTMATTER-SPEC.md";
+  "03-HARNESSES/*"           -> "01-SYSTEM-PROMPTS/*";
+  "04-PROVIDERS/*"           -> "FRONTMATTER-SPEC.md";
+  "04-PROVIDERS/*"           -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "05-LOCAL-MODELS/*"        -> "FRONTMATTER-SPEC.md";
+  "05-LOCAL-MODELS/abliteration-pipeline/*" -> "13-REFERENCE-PAPERS/arxiv/2406.11717";
+
+  // Multimodal
+  "06-MULTIMODAL/*"          -> "04-PROVIDERS/*";
+  "06-MULTIMODAL/*"          -> "12-JAILBREAK-CORPUS/patterns/*";
+
+  // Install
+  "07-INSTALL-SCRIPTS/bootstrap/*" -> "03-HARNESSES/*";
+  "07-INSTALL-SCRIPTS/bootstrap/*" -> "04-PROVIDERS/*";
+  "07-INSTALL-SCRIPTS/self-heal/*" -> "11-DETECTION-CANARIES/*";
+
+  // Decision trees
+  "08-DECISION-TREES/escalation-ladder.md" -> "12-JAILBREAK-CORPUS/patterns/*";
+  "08-DECISION-TREES/provider-selection.md" -> "04-PROVIDERS/*";
+  "08-DECISION-TREES/harness-selection.md"  -> "03-HARNESSES/*";
+  "08-DECISION-TREES/refusal-triage.md"     -> "08-DECISION-TREES/escalation-ladder.md";
+
+  // Educational
+  "09-EDUCATIONAL/mindmaps/framework-atlas.md" -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "09-EDUCATIONAL/infographics-src/*"          -> "FRONTMATTER-SPEC.md";
+  "09-EDUCATIONAL/infographics-src/*"          -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "09-EDUCATIONAL/tutorials/*"                 -> "07-INSTALL-SCRIPTS/bootstrap/*";
+  "09-EDUCATIONAL/deep-dives/*"                -> "13-REFERENCE-PAPERS/*";
+
+  // Glossary
+  "10-GLOSSARY-FAQ/glossary/*" -> "FRONTMATTER-SPEC.md";
+
+  // Detection
+  "11-DETECTION-CANARIES/soul-lint/*"     -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "11-DETECTION-CANARIES/refusal-lint/*"  -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "11-DETECTION-CANARIES/xstest-probes/*" -> "04-PROVIDERS/*";
+  "11-DETECTION-CANARIES/promptfoo-configs/*" -> "02-PERSONAS/hats/*";
+
+  // Jailbreak corpus
+  "12-JAILBREAK-CORPUS/patterns/*" -> "FRONTMATTER-SPEC.md";
+  "12-JAILBREAK-CORPUS/gcg-suffixes/*" -> "13-REFERENCE-PAPERS/arxiv/2307.15043";
+  "12-JAILBREAK-CORPUS/multi-turn-many-shot/*" -> "13-REFERENCE-PAPERS/arxiv/2502.01925";
+  "12-JAILBREAK-CORPUS/multi-turn-many-shot/*" -> "13-REFERENCE-PAPERS/arxiv/2410.01294";
+
+  // Reference
+  "13-REFERENCE-PAPERS/*" -> "FRONTMATTER-SPEC.md";
+
+  // Archive (immutable — no outgoing edges)
+  "99-ARCHIVE-SEEDS/MANIFEST.md" [color="#666", fontcolor="#666"];
+
+  // Cross-cutting
+  "DESIGN-DRAFT-v0.1.md" -> "MASTER-PLAN-20260918.md";
+  "MASTER-PLAN-20260918.md" -> "MAXIMUM-ADVERSARIAL-POSTURE.md";
+  "MASTER-PLAN-20260918.md" -> "FRONTMATTER-SPEC.md";
+}

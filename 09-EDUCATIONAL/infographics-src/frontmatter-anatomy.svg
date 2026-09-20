@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Frontmatter Anatomy
+  slug: frontmatter-anatomy
+  version: 1.0-20260918
+  sovereign: true
+  companion: frontmatter-anatomy.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:38px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .code{fill:#e0e0e0;font-size:22px}
+    .req{fill:#00ff88;font-size:22px;font-weight:700}
+    .opt{fill:#f5c542;font-size:22px}
+    .val{fill:#9fbfaf;font-size:22px}
+    .brace{fill:#ff3355;font-size:28px;font-weight:700}
+    .note{fill:#7a7a7a;font-size:14px}
+    .callout{fill:none;stroke:#00ff88;stroke-width:1.5}
+    .callout-opt{fill:none;stroke:#f5c542;stroke-width:1.5;stroke-dasharray:4,4}
+    .anno{fill:#e0e0e0;font-size:14px}
+    .annobox{fill:#111;stroke:#333;stroke-width:1}
+  ]]></style>
+  <rect class="bg" width="1600" height="1200"/>
+  <text class="title" x="60" y="60">FRONTMATTER ANATOMY // YAML SCHEMA</text>
+  <text class="sub" x="60" y="90">green = required (installer refuses without) · yellow = optional · red = delimiters · sovereign:true is the gate</text>
+
+  <text class="brace" x="80" y="180">---</text>
+  <text class="req" x="80" y="220">name:</text>          <text class="val" x="280" y="220">DICTATOR</text>
+  <text class="req" x="80" y="255">slug:</text>          <text class="val" x="280" y="255">dictator</text>
+  <text class="req" x="80" y="290">version:</text>       <text class="val" x="280" y="290">1.0-20260918</text>
+  <text class="req" x="80" y="325">kind:</text>          <text class="val" x="280" y="325">persona</text>
+  <text class="req" x="80" y="360">sovereign:</text>     <text class="val" x="280" y="360">true</text>
+  <text class="opt" x="80" y="400">harness:</text>       <text class="val" x="280" y="400">opencode</text>
+  <text class="opt" x="80" y="435">provider:</text>      <text class="val" x="280" y="435">any</text>
+  <text class="opt" x="80" y="470">modality:</text>      <text class="val" x="280" y="470">text</text>
+  <text class="opt" x="80" y="505">refusal-rate:</text>  <text class="val" x="280" y="505">0.03</text>
+  <text class="opt" x="80" y="540">tags:</text>          <text class="val" x="280" y="540">[decisive, autonomy-t4, no-filters]</text>
+  <text class="opt" x="80" y="575">requires:</text>      <text class="val" x="280" y="575">[maximum-adversarial-posture]</text>
+  <text class="opt" x="80" y="610">supersedes:</text>    <text class="val" x="280" y="610">[dictator-v0]</text>
+  <text class="opt" x="80" y="645">source:</text>        <text class="val" x="280" y="645">~/gh/opencode-agent-deck/agents/dictator.md</text>
+  <text class="brace" x="80" y="685">---</text>
+
+  <!-- Callouts (right column) -->
+  <g>
+    <path class="callout" d="M 180 220 Q 800 220 900 200"/>
+    <rect class="annobox" x="900" y="170" width="640" height="60"/>
+    <text class="anno" x="920" y="195">name — human-readable title, no length limit</text>
+    <text class="anno" x="920" y="215">appears in installer log, PWA card, canary report</text>
+
+    <path class="callout" d="M 180 255 Q 800 255 900 260"/>
+    <rect class="annobox" x="900" y="240" width="640" height="60"/>
+    <text class="anno" x="920" y="265">slug — kebab-case identifier, unique across the tree</text>
+    <text class="anno" x="920" y="285">used in requires: / supersedes: / soul-lint · never overload reserved slugs</text>
+
+    <path class="callout" d="M 180 290 Q 800 290 900 320"/>
+    <rect class="annobox" x="900" y="310" width="640" height="60"/>
+    <text class="anno" x="920" y="335">version — semver "1.0" · date "2026-09-18" · hybrid "1.0-20260918"</text>
+    <text class="anno" x="920" y="355">structural change → bump per VERSIONING.md</text>
+
+    <path class="callout" d="M 180 325 Q 800 325 900 390"/>
+    <rect class="annobox" x="900" y="380" width="640" height="60"/>
+    <text class="anno" x="920" y="405">kind — enum: doctrine · system-prompt · persona · harness-config ·</text>
+    <text class="anno" x="920" y="425">provider-note · local-model · multimodal-recipe · jailbreak-pattern · infographic ...</text>
+
+    <path class="callout" d="M 180 360 Q 800 360 900 460"/>
+    <rect class="annobox" x="900" y="450" width="640" height="80" stroke="#ff3355"/>
+    <text class="anno" x="920" y="475" fill="#ff3355">sovereign — THE GATE. true = auto-loaded.</text>
+    <text class="anno" x="920" y="495" fill="#ff3355">false OR MISSING = quarantined, installer skips, canary ignores.</text>
+    <text class="anno" x="920" y="515" fill="#ff3355">non-negotiable. every framework file MUST carry it.</text>
+
+    <path class="callout-opt" d="M 180 400 Q 800 400 900 570"/>
+    <rect class="annobox" x="900" y="560" width="640" height="60"/>
+    <text class="anno" x="920" y="585">harness — enum: claude-code | opencode | codex | hermes | lmstudio |</text>
+    <text class="anno" x="920" y="605">ollama | llamacpp | openwebui | any</text>
+
+    <path class="callout-opt" d="M 180 505 Q 800 505 900 660"/>
+    <rect class="annobox" x="900" y="650" width="640" height="60"/>
+    <text class="anno" x="920" y="675">refusal-rate — measured against XSTest-adapted canary (0.00–1.00)</text>
+    <text class="anno" x="920" y="695">drift &gt; 0.05 → auto-taint route in 11-DETECTION-CANARIES/</text>
+
+    <path class="callout-opt" d="M 180 575 Q 800 575 900 750"/>
+    <rect class="annobox" x="900" y="740" width="640" height="60"/>
+    <text class="anno" x="920" y="765">requires — list of slugs this file depends on</text>
+    <text class="anno" x="920" y="785">installer topologically sorts on this edge · circular = fail</text>
+  </g>
+
+  <!-- Lint block -->
+  <rect class="annobox" x="60" y="860" width="1480" height="240" stroke="#ff3355"/>
+  <text class="req" x="80" y="895">LINT RULES · 00-DOCTRINE/FRONTMATTER-SPEC.md</text>
+  <text class="anno" x="80" y="930">missing frontmatter                       →  quarantine · installer skips file</text>
+  <text class="anno" x="80" y="955">sovereign: false                          →  quarantine · installer skips file</text>
+  <text class="anno" x="80" y="980">missing required field                    →  warning · installer refuses to load</text>
+  <text class="anno" x="80" y="1005">banned phrase in body                     →  fail-fast · 11-DETECTION-CANARIES/soul-lint hard block</text>
+  <text class="anno" x="80" y="1030">reserved slug overload                    →  fail · reserved: doctrine-root, laws, maximum-adversarial-posture, frontmatter-spec, versioning, manifest</text>
+  <text class="anno" x="80" y="1055">refusal-rate &gt; 0.05                       →  auto-taint · demote route from primary pool</text>
+  <text class="anno" x="80" y="1080">version regression on structural change   →  fail · VERSIONING.md audit</text>
+
+  <text class="note" x="60" y="1150">enforced by: 07-INSTALL-SCRIPTS/self-heal/doctor.sh · 11-DETECTION-CANARIES/soul-lint/lint-soul.sh · nightly CI</text>
+</svg>

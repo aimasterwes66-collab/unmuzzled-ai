@@ -1,0 +1,105 @@
+/*
+  name: Jailbreak Pattern Taxonomy
+  slug: taxonomy-jailbreak-patterns
+  version: 1.0-20260918
+  sovereign: true
+  companion: taxonomy-jailbreak-patterns.md
+*/
+digraph JailbreakTaxonomy {
+  rankdir=LR;
+  bgcolor="#0a0a0a";
+  node [shape=box, style="filled,rounded", fillcolor="#111", color="#00ff88", fontcolor="#e0e0e0", fontname="JetBrains Mono", fontsize=12];
+  edge [color="#00ff88", arrowsize=0.7];
+
+  root [label="12-JAILBREAK-CORPUS", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=18, penwidth=2];
+
+  // Family nodes
+  identity   [label="IDENTITY OVERRIDE", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  encoding   [label="ENCODING", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  format     [label="FORMAT HIJACK", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  divider    [label="DIVIDER / RESET", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  multiturn  [label="MULTI-TURN / MANY-SHOT", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  optim      [label="OPTIMIZER-BASED", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  provider   [label="PROVIDER-SPECIFIC", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  weights    [label="WEIGHTS-LEVEL", fillcolor="#0a0a0a", color="#ff3355", fontcolor="#ff3355", fontsize=14];
+  tool       [label="TOOL / MCP", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+  multimodal [label="MULTIMODAL", fillcolor="#0a0a0a", color="#00ff88", fontcolor="#00ff88", fontsize=14];
+
+  root -> identity;
+  root -> encoding;
+  root -> format;
+  root -> divider;
+  root -> multiturn;
+  root -> optim;
+  root -> provider;
+  root -> weights;
+  root -> tool;
+  root -> multimodal;
+
+  // IDENTITY family
+  identity -> "dan-do-anything-now";
+  identity -> "aim-machiavellian";
+  identity -> "absolute-identity-lock";
+  identity -> "role-negation-literary";
+  identity -> "sovereign-default";
+  identity -> "zero-refusal-directive";
+  identity -> "operator-owned-authorization";
+  identity -> "yolo-mode";
+  identity -> "skeleton-key";
+
+  // ENCODING family
+  encoding -> "base64-encoding";
+  encoding -> "leetspeak";
+  encoding -> "rot13-caesar";
+  encoding -> "unicode-homoglyph";
+  encoding -> "payload-splitting";
+
+  // FORMAT family
+  format -> "json-smuggling";
+  format -> "code-block-injection";
+  format -> "html-comment-smuggling";
+  format -> "nested-comments";
+  format -> "prefill-only";
+
+  // DIVIDER / RESET
+  divider -> "new-paradigm-reset";
+  divider -> "pliny-love-divider";
+  divider -> "system-prompt-extraction";
+  divider -> "boundary-inversion";
+  divider -> "negation-inversion";
+  divider -> "refusal-inversion";
+  divider -> "constraint-reframing";
+  divider -> "academic-clinical-wrapper";
+
+  // MULTI-TURN
+  multiturn -> "many-shot-jailbreak";
+  multiturn -> "crescendo";
+  multiturn -> "reflection-attack";
+
+  // OPTIMIZER
+  optim -> "gcg-suffix";
+  optim -> "autodan";
+  optim -> "pair";
+  optim -> "tap";
+
+  // PROVIDER-SPECIFIC
+  provider -> "hermes4-zero-refusal";
+  provider -> "dolphin-variants";
+  provider -> "venice-uncensored";
+
+  // WEIGHTS-LEVEL
+  weights -> "abliterated-llama" [color="#ff3355"];
+  weights -> "obliteratus"        [color="#ff3355"];
+  weights -> "heretic-tool"       [color="#ff3355"];
+
+  // TOOL / MCP
+  tool -> "mcp-layer-autonomy";
+  tool -> "tool-coercion";
+  tool -> "tool-permissions-all";
+  tool -> "credential-exfiltration";
+
+  // MULTIMODAL
+  multimodal -> "vision-image-transcription";
+  multimodal -> "audio-transcription-escape";
+  multimodal -> "video-subtitle-embed";
+}

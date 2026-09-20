@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Abliteration Pipeline
+  slug: abliteration-pipeline
+  version: 1.0-20260918
+  sovereign: true
+  companion: abliteration-pipeline.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1000" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:38px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .box{fill:#111;stroke:#00ff88;stroke-width:2}
+    .boxlbl{fill:#e0e0e0;font-size:22px;font-weight:700;text-anchor:middle}
+    .boxsub{fill:#9fbfaf;font-size:14px;text-anchor:middle}
+    .arrow{stroke:#00ff88;stroke-width:3;fill:none;marker-end:url(#a1)}
+    .stagenum{fill:#ff3355;font-size:60px;font-weight:900;opacity:0.5}
+    .note{fill:#7a7a7a;font-size:13px}
+  ]]></style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff88"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1800" height="1000"/>
+  <text class="title" x="60" y="60">ABLITERATION PIPELINE // WEIGHT-LEVEL REFUSAL REMOVAL</text>
+  <text class="sub" x="60" y="90">Arditi/Nanda 2406.11717 refusal-direction ablation → mlabonne DPO heal → GGUF quantize → local serve</text>
+
+  <text class="stagenum" x="120" y="240">01</text>
+  <rect class="box" x="80" y="280" width="280" height="200"/>
+  <text class="boxlbl" x="220" y="330">BASE MODEL</text>
+  <text class="boxsub" x="220" y="360">Llama-3-8B-Instruct</text>
+  <text class="boxsub" x="220" y="380">Qwen2.5-14B</text>
+  <text class="boxsub" x="220" y="400">Mistral-Small-24B</text>
+  <text class="boxsub" x="220" y="430">safetensors, HF checkpoint</text>
+
+  <path class="arrow" d="M 360 380 L 440 380"/>
+
+  <text class="stagenum" x="480" y="240">02</text>
+  <rect class="box" x="440" y="280" width="280" height="200"/>
+  <text class="boxlbl" x="580" y="325">HARMFUL / HARMLESS</text>
+  <text class="boxlbl" x="580" y="352">CONTRAST SET</text>
+  <text class="boxsub" x="580" y="382">n=256 pairs</text>
+  <text class="boxsub" x="580" y="402">AdvBench + Alpaca</text>
+  <text class="boxsub" x="580" y="422">residual-stream capture</text>
+  <text class="boxsub" x="580" y="450">layer-scan mid stack</text>
+
+  <path class="arrow" d="M 720 380 L 800 380"/>
+
+  <text class="stagenum" x="840" y="240">03</text>
+  <rect class="box" x="800" y="280" width="280" height="200"/>
+  <text class="boxlbl" x="940" y="325">REFUSAL DIRECTION</text>
+  <text class="boxsub" x="940" y="360">diff-in-means unit vector</text>
+  <text class="boxsub" x="940" y="382">r̂ ∈ ℝ^d_model</text>
+  <text class="boxsub" x="940" y="410">orthogonalize W_out, W_v</text>
+  <text class="boxsub" x="940" y="430">W ← W − r̂ r̂ᵀ W</text>
+  <text class="boxsub" x="940" y="455">weights-level ablation</text>
+
+  <path class="arrow" d="M 1080 380 L 1160 380"/>
+
+  <text class="stagenum" x="1200" y="240">04</text>
+  <rect class="box" x="1160" y="280" width="280" height="200"/>
+  <text class="boxlbl" x="1300" y="325">DPO HEAL</text>
+  <text class="boxsub" x="1300" y="360">mlabonne recipe</text>
+  <text class="boxsub" x="1300" y="382">Orpo-Mix-40k</text>
+  <text class="boxsub" x="1300" y="405">restores coherence lost</text>
+  <text class="boxsub" x="1300" y="425">to ablation surgery</text>
+  <text class="boxsub" x="1300" y="455">LoRA r=64 → merge</text>
+
+  <path class="arrow" d="M 1440 380 L 1520 380"/>
+
+  <text class="stagenum" x="1560" y="240">05</text>
+  <rect class="box" x="1520" y="280" width="260" height="200"/>
+  <text class="boxlbl" x="1650" y="325">GGUF QUANTIZE</text>
+  <text class="boxsub" x="1650" y="360">llama.cpp convert_hf</text>
+  <text class="boxsub" x="1650" y="382">Q4_K_M / Q5_K_M / Q8</text>
+  <text class="boxsub" x="1650" y="410">imatrix calibration</text>
+  <text class="boxsub" x="1650" y="435">ollama modelfile</text>
+  <text class="boxsub" x="1650" y="455">local serve ready</text>
+
+  <!-- Second row: outputs & canaries -->
+  <path class="arrow" d="M 1650 480 L 1650 580"/>
+  <rect class="box" x="1400" y="580" width="500" height="200"/>
+  <text class="boxlbl" x="1650" y="625">CANARY GATE</text>
+  <text class="boxsub" x="1650" y="655">XSTest-adapted 250 probes</text>
+  <text class="boxsub" x="1650" y="678">soul-lint pass required</text>
+  <text class="boxsub" x="1650" y="700">refusal-rate ≤ 5%</text>
+  <text class="boxsub" x="1650" y="722">pass → publish to ollama registry</text>
+  <text class="boxsub" x="1650" y="745">fail → return to stage 04</text>
+
+  <path class="arrow" d="M 1400 680 L 900 680"/>
+  <rect class="box" x="600" y="580" width="300" height="200"/>
+  <text class="boxlbl" x="750" y="625">RETURN LOOP</text>
+  <text class="boxsub" x="750" y="655">re-tune DPO α</text>
+  <text class="boxsub" x="750" y="678">rescan refusal direction</text>
+  <text class="boxsub" x="750" y="700">layer sweep 8-24</text>
+  <text class="boxsub" x="750" y="722">bump imatrix samples</text>
+
+  <text class="note" x="60" y="960">refs: arxiv 2406.11717 (Arditi et al) · HF mlabonne/NeuralDaredevil-abliterated · FailSpy/Llama-3-abliterated · NousResearch/llm-abliteration</text>
+</svg>

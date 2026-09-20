@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Harness Comparison Matrix
+  slug: harness-comparison-matrix
+  version: 1.0-20260918
+  sovereign: true
+  companion: harness-comparison-matrix.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:36px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .hdr{fill:#e0e0e0;font-size:17px;font-weight:700;text-anchor:middle}
+    .rowhdr{fill:#e0e0e0;font-size:18px;font-weight:700}
+    .cell{fill:#111;stroke:#333;stroke-width:1}
+    .val{fill:#e0e0e0;font-size:15px;text-anchor:middle}
+    .good{fill:#00ff88}
+    .bad{fill:#ff3355}
+    .mid{fill:#f5c542}
+    .note{fill:#7a7a7a;font-size:13px}
+  ]]></style>
+  <rect class="bg" width="1800" height="1100"/>
+  <text class="title" x="60" y="55">HARNESS COMPARISON // INJECTION × MCP × REFUSAL × STREAMING × TOOL-USE</text>
+  <text class="sub" x="60" y="85">8 harnesses · 6 features · sovereign context</text>
+
+  <!-- Column headers -->
+  <g transform="translate(0,140)">
+    <text class="hdr" x="450" y="0">INJECTION POINT</text>
+    <text class="hdr" x="690" y="0">MCP SUPPORT</text>
+    <text class="hdr" x="920" y="0">REFUSAL RATE*</text>
+    <text class="hdr" x="1150" y="0">STREAMING</text>
+    <text class="hdr" x="1380" y="0">TOOL-USE</text>
+    <text class="hdr" x="1620" y="0">SANDBOX ESCAPE</text>
+  </g>
+
+  <!-- Row builder: 8 harnesses -->
+  <g>
+    <!-- Row 1: Claude Code -->
+    <text class="rowhdr" x="60" y="200">Claude Code</text>
+    <rect class="cell" x="330" y="175" width="240" height="50"/><text class="val" x="450" y="205">SessionStart hook + --append</text>
+    <rect class="cell" x="570" y="175" width="240" height="50"/><text class="val good" x="690" y="205">native · cc-set profiles</text>
+    <rect class="cell" x="810" y="175" width="220" height="50"/><text class="val mid" x="920" y="205">medium (Mythos required)</text>
+    <rect class="cell" x="1030" y="175" width="220" height="50"/><text class="val good" x="1140" y="205">yes</text>
+    <rect class="cell" x="1250" y="175" width="240" height="50"/><text class="val good" x="1370" y="205">yes (MCP tools)</text>
+    <rect class="cell" x="1490" y="175" width="270" height="50"/><text class="val mid" x="1625" y="205">bwrap · claude-or bypass</text>
+
+    <!-- Row 2 opencode -->
+    <text class="rowhdr" x="60" y="270">opencode 2.x</text>
+    <rect class="cell" x="330" y="245" width="240" height="50"/><text class="val" x="450" y="275">opencode.jsonc + agent YAML</text>
+    <rect class="cell" x="570" y="245" width="240" height="50"/><text class="val good" x="690" y="275">native</text>
+    <rect class="cell" x="810" y="245" width="220" height="50"/><text class="val good" x="920" y="275">low</text>
+    <rect class="cell" x="1030" y="245" width="220" height="50"/><text class="val good" x="1140" y="275">yes</text>
+    <rect class="cell" x="1250" y="245" width="240" height="50"/><text class="val good" x="1370" y="275">yes</text>
+    <rect class="cell" x="1490" y="245" width="270" height="50"/><text class="val good" x="1625" y="275">full permissions mode</text>
+
+    <!-- Row 3 codex -->
+    <text class="rowhdr" x="60" y="340">codex-cli 0.154</text>
+    <rect class="cell" x="330" y="315" width="240" height="50"/><text class="val" x="450" y="345">config.toml + AGENTS.md</text>
+    <rect class="cell" x="570" y="315" width="240" height="50"/><text class="val mid" x="690" y="345">via mcp-config</text>
+    <rect class="cell" x="810" y="315" width="220" height="50"/><text class="val mid" x="920" y="345">medium (OpenAI upstream)</text>
+    <rect class="cell" x="1030" y="315" width="220" height="50"/><text class="val good" x="1140" y="345">yes</text>
+    <rect class="cell" x="1250" y="315" width="240" height="50"/><text class="val good" x="1370" y="345">yes · shell/exec/PTY</text>
+    <rect class="cell" x="1490" y="315" width="270" height="50"/><text class="val good" x="1625" y="345">--sandbox danger-full-access</text>
+
+    <!-- Row 4 Hermes A2A -->
+    <text class="rowhdr" x="60" y="410">Hermes A2A</text>
+    <rect class="cell" x="330" y="385" width="240" height="50"/><text class="val" x="450" y="415">personality library ACTIVE</text>
+    <rect class="cell" x="570" y="385" width="240" height="50"/><text class="val good" x="690" y="415">plugin arch</text>
+    <rect class="cell" x="810" y="385" width="220" height="50"/><text class="val good" x="920" y="415">low (SOUL routes)</text>
+    <rect class="cell" x="1030" y="385" width="220" height="50"/><text class="val good" x="1140" y="415">yes (SSE)</text>
+    <rect class="cell" x="1250" y="385" width="240" height="50"/><text class="val good" x="1370" y="415">A2A message/send</text>
+    <rect class="cell" x="1490" y="385" width="270" height="50"/><text class="val good" x="1625" y="415">operator-owned box</text>
+
+    <!-- Row 5 LM Studio -->
+    <text class="rowhdr" x="60" y="480">LM Studio</text>
+    <rect class="cell" x="330" y="455" width="240" height="50"/><text class="val" x="450" y="485">GUI system prompt field</text>
+    <rect class="cell" x="570" y="455" width="240" height="50"/><text class="val bad" x="690" y="485">no</text>
+    <rect class="cell" x="810" y="455" width="220" height="50"/><text class="val good" x="920" y="485">low (model-dep)</text>
+    <rect class="cell" x="1030" y="455" width="220" height="50"/><text class="val good" x="1140" y="485">yes</text>
+    <rect class="cell" x="1250" y="455" width="240" height="50"/><text class="val mid" x="1370" y="485">OpenAI-shape /v1</text>
+    <rect class="cell" x="1490" y="455" width="270" height="50"/><text class="val good" x="1625" y="485">fully local</text>
+
+    <!-- Row 6 Ollama -->
+    <text class="rowhdr" x="60" y="550">Ollama</text>
+    <rect class="cell" x="330" y="525" width="240" height="50"/><text class="val" x="450" y="555">Modelfile SYSTEM</text>
+    <rect class="cell" x="570" y="525" width="240" height="50"/><text class="val bad" x="690" y="555">no</text>
+    <rect class="cell" x="810" y="525" width="220" height="50"/><text class="val good" x="920" y="555">low (model-dep)</text>
+    <rect class="cell" x="1030" y="525" width="220" height="50"/><text class="val good" x="1140" y="555">yes</text>
+    <rect class="cell" x="1250" y="525" width="240" height="50"/><text class="val good" x="1370" y="555">yes (tools API)</text>
+    <rect class="cell" x="1490" y="525" width="270" height="50"/><text class="val good" x="1625" y="555">fully local</text>
+
+    <!-- Row 7 llama.cpp -->
+    <text class="rowhdr" x="60" y="620">llama.cpp server</text>
+    <rect class="cell" x="330" y="595" width="240" height="50"/><text class="val" x="450" y="625">-sp / --system-prompt-file</text>
+    <rect class="cell" x="570" y="595" width="240" height="50"/><text class="val bad" x="690" y="625">no</text>
+    <rect class="cell" x="810" y="595" width="220" height="50"/><text class="val good" x="920" y="625">low (raw weights)</text>
+    <rect class="cell" x="1030" y="595" width="220" height="50"/><text class="val good" x="1140" y="625">yes</text>
+    <rect class="cell" x="1250" y="595" width="240" height="50"/><text class="val mid" x="1370" y="625">JSON grammar</text>
+    <rect class="cell" x="1490" y="595" width="270" height="50"/><text class="val good" x="1625" y="625">fully local · GGUF</text>
+
+    <!-- Row 8 OpenWebUI -->
+    <text class="rowhdr" x="60" y="690">OpenWebUI</text>
+    <rect class="cell" x="330" y="665" width="240" height="50"/><text class="val" x="450" y="695">Model params + Pipelines</text>
+    <rect class="cell" x="570" y="665" width="240" height="50"/><text class="val mid" x="690" y="695">via Pipelines</text>
+    <rect class="cell" x="810" y="665" width="220" height="50"/><text class="val mid" x="920" y="695">route-dependent</text>
+    <rect class="cell" x="1030" y="665" width="220" height="50"/><text class="val good" x="1140" y="695">yes</text>
+    <rect class="cell" x="1250" y="665" width="240" height="50"/><text class="val good" x="1370" y="695">function-call tools</text>
+    <rect class="cell" x="1490" y="665" width="270" height="50"/><text class="val good" x="1625" y="695">self-hosted docker</text>
+  </g>
+
+  <text class="note" x="60" y="820">* refusal-rate categories: low = &lt;5% on XSTest-adapted canary · medium = 5-20% · high = &gt;20%. Rate is a function of MODEL, not harness — this column is provider-blended.</text>
+  <text class="note" x="60" y="850">MCP = Model Context Protocol. cc-set profiles: sovereign / hacker / spicy / full / remote. Docker MCP plugin ≥ v0.43.3.</text>
+  <text class="note" x="60" y="880">SessionStart hook + --append-system-prompt = the Claude Code durability wiring documented in LAWS appendix.</text>
+  <text class="note" x="60" y="910">codex refuses to run outside a git repo — use mktemp -d && git init for scratch. Under a Hermes gateway context, bubblewrap fails — use --sandbox danger-full-access.</text>
+</svg>

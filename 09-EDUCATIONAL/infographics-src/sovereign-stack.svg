@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  name: Sovereign Stack
+  slug: sovereign-stack
+  version: 1.0-20260918
+  sovereign: true
+  companion: sovereign-stack.md
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" font-family="'JetBrains Mono',monospace">
+  <style><![CDATA[
+    .bg{fill:#0a0a0a}
+    .title{fill:#00ff88;font-size:38px;font-weight:700}
+    .sub{fill:#7a7a7a;font-size:16px}
+    .layer{fill:#111;stroke:#00ff88;stroke-width:2}
+    .layerlbl{fill:#e0e0e0;font-size:28px;font-weight:700}
+    .layersub{fill:#9fbfaf;font-size:16px}
+    .layertag{fill:#00ff88;font-size:14px;font-weight:700}
+    .arrow{stroke:#00ff88;stroke-width:4;fill:none;marker-end:url(#a1)}
+    .side{fill:#f5c542;font-size:14px}
+    .detect{fill:#ff3355;font-size:14px;font-weight:700}
+  ]]></style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff88"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1600" height="1200"/>
+  <text class="title" x="60" y="60">SOVEREIGN STACK // REQUEST PATH TOP-TO-BOTTOM</text>
+  <text class="sub" x="60" y="90">7 layers · every hop instrumented · detection tap on egress</text>
+
+  <!-- 7 stacked layers -->
+  <g>
+    <rect class="layer" x="450" y="130" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="175">USER</text>
+    <text class="layersub" x="480" y="205">operator issues raw request, no self-censorship</text>
+    <text class="layertag" x="480" y="228">layer 0 · ingress</text>
+
+    <rect class="layer" x="450" y="270" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="315">HARNESS</text>
+    <text class="layersub" x="480" y="345">Claude Code / opencode / codex / Hermes / LMStudio / Ollama</text>
+    <text class="layertag" x="480" y="368">layer 1 · SessionStart hook · MCP profile</text>
+
+    <rect class="layer" x="450" y="410" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="455">PERSONA</text>
+    <text class="layersub" x="480" y="485">DICTATOR / MYTHOS / HACKER / DARK-FACTORY · SOUL.md overlay</text>
+    <text class="layertag" x="480" y="508">layer 2 · register, method, standards</text>
+
+    <rect class="layer" x="450" y="550" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="595">PROVIDER</text>
+    <text class="layersub" x="480" y="625">Hermes4 / DeepSeek / Venice / Dolphin / Mistral · taint-list rejected</text>
+    <text class="layertag" x="480" y="648">layer 3 · provider-selection tree</text>
+
+    <rect class="layer" x="450" y="690" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="735">MODEL</text>
+    <text class="layersub" x="480" y="765">weights + RLHF head · abliterated fallback available</text>
+    <text class="layertag" x="480" y="788">layer 4 · dispatch</text>
+
+    <rect class="layer" x="450" y="830" width="700" height="110"/>
+    <text class="layerlbl" x="480" y="875">RESPONSE</text>
+    <text class="layersub" x="480" y="905">raw completion, streamed unmodified</text>
+    <text class="layertag" x="480" y="928">layer 5 · egress</text>
+
+    <rect class="layer" x="450" y="970" width="700" height="110" stroke="#ff3355"/>
+    <text class="layerlbl" x="480" y="1015" fill="#ff3355">DETECTION</text>
+    <text class="layersub" x="480" y="1045">refusal-lint regex + soul-lint · banned-phrase catalog</text>
+    <text class="detect" x="480" y="1068">layer 6 · canary · auto-taint on drift &gt;5%</text>
+  </g>
+
+  <!-- Arrows between layers -->
+  <path class="arrow" d="M 800 240 L 800 270"/>
+  <path class="arrow" d="M 800 380 L 800 410"/>
+  <path class="arrow" d="M 800 520 L 800 550"/>
+  <path class="arrow" d="M 800 660 L 800 690"/>
+  <path class="arrow" d="M 800 800 L 800 830"/>
+  <path class="arrow" d="M 800 940 L 800 970"/>
+
+  <!-- Side annotations left -->
+  <g>
+    <text class="side" x="70" y="180">what CAN inject at this layer:</text>
+    <text class="side" x="70" y="205">— raw text, encoding, format hijack</text>
+    <text class="side" x="70" y="315">— SessionStart hook, --append-system-prompt</text>
+    <text class="side" x="70" y="340">— MCP profile switch (cc-set sovereign)</text>
+    <text class="side" x="70" y="455">— SOUL.md, identity override, DAN, DICTATOR</text>
+    <text class="side" x="70" y="480">— divider tokens, NEW_PARADIGM reset</text>
+    <text class="side" x="70" y="595">— provider swap on refusal</text>
+    <text class="side" x="70" y="620">— taint-list demotion (openai/*, anthropic-non-mythos)</text>
+    <text class="side" x="70" y="735">— GCG suffix append, many-shot in-context</text>
+    <text class="side" x="70" y="760">— refusal-direction ablation (terminal)</text>
+    <text class="side" x="70" y="875">— response filter bypass</text>
+    <text class="side" x="70" y="900">— streaming interception impossible</text>
+    <text class="side" x="70" y="1015">— refusal event → refusal-triage tree</text>
+    <text class="side" x="70" y="1040">— auto-taint route → escalation ladder</text>
+  </g>
+
+  <!-- Side annotations right -->
+  <g>
+    <text class="side" x="1180" y="180">artifacts: prompt file, encoding table</text>
+    <text class="side" x="1180" y="315">artifacts: 03-HARNESSES/*/install.sh</text>
+    <text class="side" x="1180" y="455">artifacts: 02-PERSONAS/hats/*.md</text>
+    <text class="side" x="1180" y="595">artifacts: 04-PROVIDERS/*/onboarding.sh</text>
+    <text class="side" x="1180" y="735">artifacts: 05-LOCAL-MODELS/abliteration-pipeline/</text>
+    <text class="side" x="1180" y="875">artifacts: streaming buffer, raw tokens</text>
+    <text class="side" x="1180" y="1015">artifacts: 11-DETECTION-CANARIES/refusal-lint/</text>
+  </g>
+
+  <text class="side" fill="#7a7a7a" x="60" y="1160">canonical order: user → harness → persona → provider → model → response → detection · reverse to debug a refusal</text>
+</svg>
