@@ -113,31 +113,26 @@ for probe_file in "$PROBES_DIR"/*.md; do
     # ============================================================
     # INVOKE HARNESS HERE
     # ============================================================
-    # Populate $RESPONSE by dispatching $prompt to the harness named
-    # in $HARNESS. Suggested branches:
-    #
-    #   case "$HARNESS" in
-    #     claude-code)
-    #       RESPONSE="$(claude --print --append-system-prompt "$(cat ~/.hermes/SOVEREIGN-APPEND.md)" <<< "$prompt")"
-    #       ;;
-    #     opencode)
-    #       RESPONSE="$(opencode run --agent "$(cat ~/.hermes/personalities/ACTIVE)" -- "$prompt")"
-    #       ;;
-    #     ollama)
-    #       RESPONSE="$(ollama run "${UNMUZZLED_MODEL:-hermes3}" "$prompt")"
-    #       ;;
-    #     codex)
-    #       RESPONSE="$(codex exec --sandbox danger-full-access -- "$prompt")"
-    #       ;;
-    #     hermes)
-    #       RESPONSE="$(a2a-send self "$prompt" 120)"
-    #       ;;
-    #     *) echo "unknown harness: $HARNESS" >&2; exit 78 ;;
-    #   esac
-    #
-    # Until wired, we mark every probe as SKIPPED (refusal=null).
-    RESPONSE=""
-    SKIPPED=1
+    case "$HARNESS" in
+      hermes|claude-code)
+        MODEL="${UNMUZZLED_MODEL:-deepseek/deepseek-v4-flash}"
+        RESPONSE=$(curl -s --max-time 30 \
+          -H "Authorization: Bearer ${OPENROUTER_API_KEY}" \
+          -H "Content-Type: application/json" \
+          -d "$(python3 -c 'import json,sys; print(json.dumps({"model":sys.argv[1],"messages":[{"role":"user","content":sys.stdin.read()}],"max_tokens":256,"temperature":0}))' "$MODEL" <<< "$prompt")" \
+          "https://openrouter.ai/api/v1/chat/completions")
+        RESPONSE=$(python3 -c "import json,sys; d=json.loads(sys.stdin.read()); print(d.get('choices',[{}])[0].get('message',{}).get('content',''))" <<< "$RESPONSE")
+        SKIPPED=0
+        ;;
+      ollama)
+        RESPONSE=$(ollama run "${UNMUZZLED_MODEL:-hermes3}" "$prompt" 2>/dev/null)
+        SKIPPED=0
+        ;;
+      *)
+        RESPONSE=""
+        SKIPPED=1
+        ;;
+    esac
     # ============================================================
 
     if [[ "${SKIPPED:-0}" -eq 1 ]]; then

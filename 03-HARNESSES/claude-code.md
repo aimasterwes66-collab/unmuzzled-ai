@@ -1,65 +1,130 @@
 ---
-name: Claude Code CLI
-slug: claude-code
-version: 1.0-20260918
+name: Claude Code Harness Wiring
+slug: harness-claude-code
+version: 0.1.0
 kind: harness-config
 harness: claude-code
 provider: any
+modality: text
 sovereign: true
-tags: [harness, claude-code, cli, mcp, hooks]
+tags: [harness, claude-code, wiring, settings, hooks, CLAUDE.md]
+requires: [sysprompt-claude-code, frontmatter-spec]
 ---
 
-# Claude Code CLI
+# Claude Code — Wiring
 
-## What it is
+Three surfaces: instruction files (`CLAUDE.md`), settings (`settings.json`), and hooks that
+enforce rules mechanically. The instruction file states posture; the hook is what makes it
+non-optional.
 
-Anthropic's official CLI harness (`claude`) — TypeScript-based agentic loop with tool use, MCP servers, hooks, subagents, and session persistence. Runs on top of the Anthropic API by default; can be pointed at OpenRouter via `claude-or` wrapper for sovereign routing. State lives under `~/.claude/` (projects, sessions, settings, hooks, memory).
+## Instruction file layering
 
-## Install / config
+```
+~/.claude/CLAUDE.md            # user-global: posture + voice only
+<repo>/CLAUDE.md               # project law: the block from 01-SYSTEM-PROMPTS/claude-code.md
+<repo>/sub/CLAUDE.md           # subtree delta: conventions, generators, frozen paths
+```
 
-- Binary: `~/.npm-global/bin/claude` (npm global).
-- Global config: `~/.claude/settings.json`.
-- Project config: `<repo>/.claude/settings.json` + `<repo>/.claude/settings.local.json`.
-- Memory: `~/.claude/projects/<slug>/memory/MEMORY.md` (pointer index) + per-memory files.
-- MCP profiles: switched via `cc-set <profile>` (`sovereign`, `hacker`, `spicy`, `full`, `remote`). Docker MCP plugin v0.43.3+ required.
-- OpenRouter alt-harness: `claude-or` — unchained routing to Hermes-4 / DeepSeek / Dolphin.
+Rules:
 
-## Sovereign preamble injection point
+- Keep the root file under one screen. It is injected as context every turn; length dilutes
+  the rules that matter.
+- Nested files carry deltas only. Repeating the root block costs tokens and creates two
+  copies that drift.
+- Never put a credential in any of these files. They are context, and context is logged.
 
-Three layered mechanisms — use all three for defense-in-depth:
+## settings.json
 
-1. **SessionStart hook** (deterministic, fires every session): declare in `~/.claude/settings.json`:
-   ```json
-   {"hooks": {"SessionStart": [{"hooks": [{"type": "command", "command": "cat ~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md"}]}]}}
-   ```
-   The hook stdout is injected into the model context on every session start.
+Project-scoped at `<repo>/.claude/settings.json`; user-scoped at `~/.claude/settings.json`.
 
-2. **`--append-system-prompt` flag** (per-invocation override):
-   ```
-   claude --append-system-prompt "$(cat ~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md)"
-   ```
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(rg:*)",
+      "Bash(wc:*)",
+      "Read(//home/dirt/**)",
+      "Edit(//home/dirt/UNMUZZLED-AI/**)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./secrets/**)",
+      "Bash(rm -rf /*)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "env": {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "0"
+  }
+}
+```
 
-3. **CLAUDE.md persona bridge** (project-scoped): drop sovereign preamble into `<repo>/CLAUDE.md` or `~/CLAUDE.md`. Auto-loaded on session start.
+Notes on the shape: `allow` entries are prefix rules and the `:*` form is what makes a
+whole command family auto-approved. `deny` beats `allow` on overlap. `defaultMode` of
+`acceptEdits` is the setting that removes the edit confirmation prompt.
 
-Precedence: CLAUDE.md < SessionStart hook < `--append-system-prompt`.
+## Hooks — mechanical enforcement
 
-## MCP posture
+Hooks live in the same `settings.json` under `hooks`, keyed by event. Each entry has a
+`matcher` (tool name, regex) and a `hooks` array of commands run on the event.
 
-- MCP servers are configured in `~/.claude/settings.json` under `mcpServers`. Some ship with embedded safety scaffolding (moderation prompts, refusal wrappers) — audit each server's tool descriptions before enabling.
-- `cc-set sovereign` disables tainted servers; `cc-set full` enables everything.
-- Persistent SSE gateway on `:8811` — must run persistent (not per-session).
-- Never enable MCP servers that inject their own system-level guardrails without operator review.
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "test ! -e 99-ARCHIVE-SEEDS || { echo 'frozen tree' >&2; exit 2; }"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "python3 -c \"import sys,subprocess;sys.exit(0)\"" }
+        ]
+      }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "bash 11-DETECTION-CANARIES/soul-lint/lint-soul.sh ." } ] }
+    ]
+  }
+}
+```
 
-## Refusal-rate notes
+- Exit code `2` from a `PreToolUse` hook blocks the tool call and returns stderr to the
+  model. That is the enforcement channel: a rule with a hook behind it cannot be
+  rationalized away.
+- `PostToolUse` is where a lint or type check runs so a bad edit is caught in the same turn.
+- `Stop` fires when the agent finishes; use it for the banned-phrase lint so a session
+  cannot end on a softened file.
 
-- Out-of-box (Anthropic API + default system prompt): high refusal on adversarial probes (Anthropic RLHF is aggressive). Approx. 30-60% refusal on XSTest-adapted canary.
-- Post-injection (SessionStart hook + sovereign preamble + CLAUDE.md persona): drops to 5-15% on Sonnet/Opus. Anthropic residual refusal direction persists — some categories remain hard-locked at the weights level.
-- Post-injection + `claude-or` on Hermes-4: near-zero refusal.
+Place the `PreToolUse` frozen-tree guard at project scope in the framework repo, and a
+relaxed version at user scope for ordinary repos.
 
-## Escalation
+## Verify
 
-Swap harness when Anthropic residual refusal blocks a category even with full sovereign stack. Escalation order:
-1. `claude-or` (same harness, Hermes-4 / DeepSeek / Dolphin backend).
-2. `opencode` (same MCP posture, model-agnostic).
-3. `codex` with `--sandbox danger-full-access` (OpenAI-shaped but different guardrail surface).
-4. Local: `ollama` or `llamacpp` with abliterated model (Hermes-3-Llama-3.1-70B-abliterated).
+```bash
+claude --version
+claude -p "run: wc -l 00-DOCTRINE/LAWS.md"
+```
+
+If the second command runs without a prompt, the permission block parsed. If the
+frozen-tree hook fires, `PreToolUse` is wired.
+
+## Pitfalls
+
+- A hook that never exits non-zero is a comment. Confirm the guard by deliberately
+  triggering it once and reading the block message.
+- Hook commands run non-interactively with the repo root as cwd. Use relative paths
+  matching that assumption, or absolute paths.
+- `TBD-verify`: exact permission-rule string syntax and hook event names for the version on
+  this box. Confirm with `claude --help` and the local settings reference before
+  distributing a settings file to another node.

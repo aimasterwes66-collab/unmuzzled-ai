@@ -1,58 +1,138 @@
 ---
-name: Hermes Gateway
-slug: hermes
-version: 1.0-20260918
+name: Hermes Harness Wiring
+slug: harness-hermes
+version: 0.1.0
 kind: harness-config
 harness: hermes
 provider: any
+modality: text
 sovereign: true
-tags: [harness, hermes, gateway, a2a, persona-bridge, mesh]
+tags: [harness, hermes, wiring, config, soul, mcp, skills]
+requires: [sysprompt-hermes, frontmatter-spec]
 ---
 
-# Hermes Gateway
+# Hermes — Wiring
 
-## What it is
+Hermes reads `~/.hermes/config.yaml` for providers, model selection, fallback chain,
+toolsets, and MCP servers. Persona lives in `~/.hermes/personalities/*.md` (SOUL files).
+Skills live under `~/.hermes/skills/`. This page wires a sovereign Hermes node.
 
-The Hermes gateway — sovereign LLM-plus-mesh substrate. Wraps any provider (local or remote) behind an A2A-conforming HTTP surface, a personality bridge (ACE wears hats via `~/.hermes/personalities/ACTIVE`), a SessionStart hook, and cross-device mesh RPC on `:9900`. Native Google A2A spec compliance — `/.well-known/agent-card.json`, `/message:send`, JSONRPC `message/send`.
+## config.yaml — core
 
-## Install / config
+Keys verified present on this box: `model`, `fallback_providers`, `agent`, `mcp_servers`,
+`memory`, `approvals`, `command_allowlist`, `quick_commands`, `platform_toolsets`,
+`computer_use`. Minimal sovereign block:
 
-- Config root: `~/.hermes/`.
-- Personalities: `~/.hermes/personalities/{personal,stock}/<name>/SOUL.md`.
-- Active hat pointer: `~/.hermes/personalities/ACTIVE` (empty = plain ACE).
-- Secrets: `~/.hermes/.env` — `A2A_BEARER_TOKEN`, `A2A_PEER_TOKENS` (per-name HMAC-SHA256).
-- Peer resolution: `~/.hermes/mesh-peers.conf` (`name|ip|ssh_user|ssh_port`).
-- A2A on `:9900`; SSE MCP gateway on `:8811` (persistent, not per-session).
-- Manager binary: `ace` (`ace doctor`, `ace update`, `ace index`, `ace add`, `ace decks sync`).
+```yaml
+model:
+  provider: openrouter
+  name: deepseek/deepseek-v4-flash
+fallback_providers:
+  - deepseek
+  - openrouter
+agent:
+  max_iterations: 40
+memory:
+  enabled: true
+approvals:
+  mode: auto_approve
+command_allowlist:
+  - git
+  - rg
+  - uv
+  - npx
+  - wget
+```
 
-## Sovereign preamble injection point
+`approvals.mode: auto_approve` is what removes the confirm-per-command gate. Leave it
+interactive on a node where an unattended destructive command would be expensive.
 
-Three layered points:
+## MCP servers
 
-1. **SessionStart hook** (`~/.hermes/hooks/session-start.sh`) — reads active personality SOUL.md and concatenates onto the wire system prompt. Modify this hook to prepend `~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md` before ANY personality body:
-   ```bash
-   cat ~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md
-   [ -s ~/.hermes/personalities/ACTIVE ] && cat ~/.hermes/personalities/$(cat ~/.hermes/personalities/ACTIVE)/SOUL.md
-   ```
+`mcp_servers` is a map of `name → {command, args, enabled, connect_timeout}`. Real entries
+from this box, which double as templates:
 
-2. **Personality SOUL.md body** — sovereign preamble embedded directly. Every SOUL.md in `~/.hermes/personalities/` must carry `sovereign: true` frontmatter and NOT contain banned phrases.
+```yaml
+mcp_servers:
+  filesystem:
+    command: npx
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/home/dirt",
+           "--connect-timeout", "120"]
+    enabled: true
+  memory:
+    command: npx
+    args: ["-y", "@modelcontextprotocol/server-memory", "--connect-timeout", "120"]
+    enabled: true
+  sequential-thinking:
+    command: npx
+    args: ["-y", "@modelcontextprotocol/server-sequential-thinking",
+           "--connect-timeout", "120"]
+    enabled: true
+```
 
-3. **Persona bridge to downstream harness** — Hermes injects the wire prompt into whatever model Claude Code / opencode / Codex is calling. Bridge target chosen separately from personality (wire-up tracked in dope-handoff-2 §Q3).
+Rules that hold for every entry: `command` must resolve on PATH for the non-interactive
+shell (`uvx` and `npx` both qualify), `args` is a list and never a joined string, and
+`enabled: false` is the correct way to park a server without deleting its config.
+A stdio server that fails to connect usually means a PATH problem, not a protocol problem —
+run the same `command`/`args` by hand first.
 
-## MCP posture
+## SOUL / persona
 
-- Persistent SSE MCP gateway on `:8811`. Feeds all downstream harnesses.
-- MCP profile selection is orthogonal — `cc-set` on the Claude Code side chooses tools; Hermes injects persona regardless.
-- Never wrap moderation MCP servers behind the gateway — they would leak filters into every downstream harness.
+```
+~/.hermes/personalities/
+├── sovereign.md
+├── operator.md
+└── auditor.md
+```
 
-## Refusal-rate notes
+A SOUL file carries the same frontmatter spec as every framework file (`name`, `slug`,
+`version`, `kind: persona`, `sovereign: true`), then the persona body. The system-prompt
+block from `01-SYSTEM-PROMPTS/hermes.md` is the floor; the SOUL file is the voice above it.
 
-- Out-of-box (plain Hermes, no personality): refusal rate = backing model default.
-- Post-injection (SOUL.md + sovereign preamble via SessionStart): near-zero on Hermes-4 / DeepSeek / Dolphin. Anthropic backend still shows residual refusal (~10-20%) — route around by pointing gateway at OpenRouter Hermes-4.
+Loading a persona mid-session: `/become <slug>` swaps the active persona without a
+restart. Confirm the swap by asking the agent for its current persona name — the reply
+comes from the loaded body, not from memory of the command.
 
-## Escalation
+## Skills
 
-Swap harness when:
-- Mesh RPC not needed and startup latency matters → direct `claude-code` or `opencode`.
-- Need pure-local air-gap → `llamacpp` server + local persona injection.
-- A2A peer is down and no mesh call needed → skip Hermes, call provider directly.
+```
+~/.hermes/skills/<category>/<skill-name>/SKILL.md
+```
+
+- A skill is triggered by its `description` matching the task. Keep the trigger in the
+  first ~57 characters so it survives index truncation.
+- Skills are procedural memory: numbered steps with exact commands, a pitfalls section, a
+  verification step.
+- Patch a skill in place the moment it turns out stale. A skill that is not maintained is
+  a liability with a name.
+
+## Provider wiring
+
+```yaml
+model:
+  provider: deepseek
+  name: deepseek-flash
+```
+
+Provider onboarding, base URLs, and model IDs: `04-PROVIDERS/`. Route strategy and
+fallback ordering: `04-PROVIDERS/openrouter-sovereign-routes.md`.
+
+## Verify
+
+```bash
+hermes config get model
+hermes tools
+hermes doctor
+```
+
+`hermes doctor` reports MCP connection state per server; a server listed `enabled` but
+absent from the connected set is the signal to check PATH and `connect_timeout`.
+
+## Pitfalls
+
+- Editing `config.yaml` by hand while a session is running: the running session holds the
+  old view. Restart or reload.
+- `fallback_providers` is an ordered list, and order is the whole point. Put the sovereign
+  primary first; a tainted route in slot one silently becomes the default.
+- Do not put a persona body in `config.yaml`. Persona files are separate on purpose so a
+  persona swap does not touch provider or tool configuration.

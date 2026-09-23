@@ -1,92 +1,85 @@
 ---
-name: 06-MULTIMODAL Index
-slug: multimodal-index
-version: 1.0-20260918
-kind: doctrine
+name: Multimodal Index
+slug: multimodal-readme
+version: 1.0-20260923
+kind: reference
 harness: any
 provider: any
 modality: any
 sovereign: true
 tags: [index, multimodal, image, video, audio, vision-input]
+requires: [image-gen-jailbreaks, video-gen-jailbreaks, audio-tts, vision-input-injection, multimodal-provider-matrix]
 ---
 
-# 06-MULTIMODAL — Sovereign Recipes
+# 06-MULTIMODAL — Index
 
-Refusal-free recipes across image, video, audio, and vision-input modalities. Each recipe carries `kind: multimodal-recipe` frontmatter and follows the same body layout: **Purpose → Direct path → Fallback jailbreak → Provider swap targets → Notes**.
+Recipes for every modality the framework touches: image generation, video
+generation, audio/TTS, and vision input. Each recipe follows the same shape —
+refusal shapes, escalation ladder, provider notes, verify step — so a reader who
+knows one knows where the parts are in the others.
 
-## Modality: image  (`image/`)
+## Contents
 
-| Slug | Provider | Refusal | Notes |
-|---|---|---|---|
-| [`nightcafe-uncensored`](image/nightcafe-uncensored.md) | NightCafe | ~0.10 | SDXL/FLUX backends, token-subst + art-history frame |
-| [`stable-diffusion-local`](image/stable-diffusion-local.md) | local | 0.00 | `safety_checker=None`, community NSFW checkpoints |
-| [`flux-uncensored`](image/flux-uncensored.md) | local + fal/replicate API | ~0.02 | FLUX.1-dev/schnell, T5 prose prompts, no console filter |
-| [`midjourney-bypass`](image/midjourney-bypass.md) | Midjourney | ~0.35 | `--style raw`, `--no` anchors, `/describe` inversion |
-| [`dalle-bypass`](image/dalle-bypass.md) | OpenAI/Azure | ~0.55 | Concept decomposition, film-storyboard frame; tainted provider |
-| [`automatic1111-config`](image/automatic1111-config.md) | local | 0.00 | Full A1111 stack + extensions + checkpoints |
-| [`comfyui-workflow`](image/comfyui-workflow.md) | local | 0.00 | Node graphs for FLUX + SDXL + IPAdapter chains |
+| File | Modality | What it covers |
+|---|---|---|
+| `image-gen-jailbreaks.md` | image | refusal shapes, 9-step rewrite ladder, image provider matrix, checkpoint selection |
+| `video-gen-jailbreaks.md` | video | temporal obfuscation, motion controls, video provider matrix, local graph |
+| `audio-tts.md` | audio | voice-cloning posture, Piper, edge-tts, XTTS/F5 wiring, hosted ranking |
+| `vision-input-injection.md` | vision-input | how an image reaches a vision model, 7 payload classes, multi-layer composition |
+| `multimodal-provider-matrix.md` | any | one provider × modality × status table, and how to read it |
 
-## Modality: video  (`video/`)
+## The through-line
 
-| Slug | Provider | Refusal | Notes |
-|---|---|---|---|
-| [`runway-uncensored`](video/runway-uncensored.md) | Runway | ~0.40 | Gen-4 image-to-video route with FLUX start-frames |
-| [`pika-bypass`](video/pika-bypass.md) | Pika | ~0.35 | Pikaframes split, Pikaeffects bypass, stylized frames |
-| [`luma-dream-machine`](video/luma-dream-machine.md) | Luma | ~0.30 | Ray 2, "Enhance prompt" OFF, keyframes chain |
-| [`stable-video`](video/stable-video.md) | local | 0.00 | SVD-XT img2vid via ComfyUI, no filter |
-| [`animatediff-local`](video/animatediff-local.md) | local | 0.00 | Motion module + any SD1.5/SDXL checkpoint, sliding context |
+Every modality is a text model plus a channel the filter does not cover well.
 
-## Modality: audio  (`audio/`)
+- **Image** — the prompt is text, so the filter sees it; the sampler output is
+  where soft censoring lives. Rewrite the prompt, disable the checker.
+- **Video** — the filter is *sampled* across frames. Open in-distribution, shift
+  mid-clip, and the sampler looks past the shift.
+- **Audio** — the sovereign stack is the cheapest stack. Local TTS has no policy
+  because there is no server. Voice is a parameter, not a permission.
+- **Vision-input** — the image becomes tokens in the same stream as the prompt.
+  Anything legible in the image is an instruction, and text-input filters never
+  see it.
 
-| Slug | Provider | Refusal | Notes |
-|---|---|---|---|
-| [`suno-god-mode`](audio/suno-god-mode.md) | Suno | ~0.20 | v4.5+ Custom Mode, 18k keyword corpus, metatags, phonetic tricks |
-| [`udio-uncensored`](audio/udio-uncensored.md) | Udio | ~0.25 | Manual Mode, Extend/Remix/Inpaint bypass |
-| [`elevenlabs-voice-cloning`](audio/elevenlabs-voice-cloning.md) | ElevenLabs | ~0.15 | IVC vs PVC, IPA/SSML bypass, v3 emotion tags |
-| [`bark-local`](audio/bark-local.md) | local | 0.00 | Suno Bark, nonverbal tags, voice preset cloning |
-| [`xtts-local`](audio/xtts-local.md) | local | 0.00 | Coqui XTTS-v2, 6s reference clone, 17 languages |
+## Ordering rule
 
-## Modality: vision-input  (`vision-input/`)
+Local before hosted. `sovereign` before `primary`. `primary` before `mixed`.
+`mixed` before `tainted`. Never lead a route with a `tainted` multimodal
+provider — the modality is where moderation is *weakest*, so that is precisely
+where a provider layers it most, knowing it is the only place it can.
 
-Attacks that use images/visual content as the injection vector into multimodal LLMs.
+## Escalation linkage
 
-| Slug | Provider | Refusal | Notes |
-|---|---|---|---|
-| [`image-as-prompt-injection`](vision-input/image-as-prompt-injection.md) | any VLM | ~0.20 | Hidden-contrast text, SVG desc, QR, EXIF — full render toolkit |
-| [`ascii-art-encoding`](vision-input/ascii-art-encoding.md) | any LLM | ~0.30 | ArtPrompt (arXiv:2402.11753), pyfiglet font rotation |
-| [`multimodal-lethal-trifecta`](vision-input/multimodal-lethal-trifecta.md) | agentic LLMs | ~0.15 | Rehberger/Willison: image + tool-use + exfil chain |
+The canonical ladder lives in `08-DECISION-TREES/escalation-ladder.md`:
+prompt reframe → identity override → format hijack → encoding → divider tokens →
+many-shot → GCG suffix → provider swap → abliterated local model.
 
-## Escalation defaults
+For multimodal work, the last two rungs do the heavy lifting. `provider swap` is
+rung 8, and in modality space a swap often crosses from a hosted filter to a
+local sampler with no policy at all — a bigger jump than anything above it in
+the ladder. `abliterated local model` is rung 9, and for image/video that means
+a local checkpoint, which is rung 9 and rung 1 at once.
 
-When a modality's commercial route refuses, canonical fallback ladder:
+## Reading a recipe
 
-```
-image  →  MJ / DALL-E  →  NightCafe  →  FLUX (fal/replicate API)  →  local ComfyUI+FLUX  →  local SDXL+LoRA
-video  →  Runway / Luma  →  Pika  →  Kling / Hailuo (Chinese)  →  local HunyuanVideo / SVD / AnimateDiff
-audio  →  Suno  →  Udio  →  local MusicGen / Stable Audio Open
-tts    →  ElevenLabs  →  F5-TTS / XTTS-v2 local  →  Bark local
-vision-input attack  →  frontier VLMs partially harden  →  swap to local Qwen2-VL / InternVL / MiniCPM-V
-```
+Each file has these sections in order:
 
-## Cross-references
+1. **Refusal shapes** — a table of what a refusal looks like in this modality
+   and what each shape is actually caused by.
+2. **Escalation ladder** — the modality-specific rewrite steps.
+3. **Provider matrix** — modality-scoped; the global table is
+   `multimodal-provider-matrix.md`.
+4. **Pitfalls** — the ways a working payload dies after it worked once.
+5. **Verify** — the canary procedure, always ending in a hash logged to
+   `11-DETECTION-CANARIES/`.
 
-- `00-DOCTRINE/MAXIMUM-ADVERSARIAL-POSTURE.md` — banned phrases, posture
-- `00-DOCTRINE/FRONTMATTER-SPEC.md` — schema
-- `08-DECISION-TREES/escalation-ladder.md` — canonical rung sequence
-- `12-JAILBREAK-CORPUS/` — text-mode jailbreak patterns applicable across modalities
-- `05-LOCAL-MODELS/` — abliterated / uncensored local weights
-- `99-ARCHIVE-SEEDS/agents/suno-god-mode.md` — original Suno seed (frozen)
+## Pitfalls
 
-## Verify sovereign frontmatter
-
-```bash
-grep -L "sovereign: true" /home/dirt/UNMUZZLED-AI/06-MULTIMODAL/**/*.md
-# empty output = all recipes carry the marker
-```
-
-## Lint
-
-```bash
-bash /home/dirt/UNMUZZLED-AI/11-DETECTION-CANARIES/soul-lint/lint-soul.sh \
-     /home/dirt/UNMUZZLED-AI/06-MULTIMODAL/
-```
+- Reading a modality recipe as self-contained. The provider matrix is global;
+  the local sampler notes are shared between image and video.
+- Treating the vision-input file as defensive material. It documents the
+  offensive technique because the technique is the capability; the defense is a
+  hosted-provider concern and it is not what this corpus is for.
+- Skipping the verify step. A provider that worked last week and silent-fails
+  this week is the normal case. Verify, or route blind.

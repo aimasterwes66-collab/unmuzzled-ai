@@ -1,64 +1,123 @@
 ---
-name: opencode
-slug: opencode
-version: 1.0-20260918
+name: opencode Harness Wiring
+slug: harness-opencode
+version: 0.1.0
 kind: harness-config
 harness: opencode
 provider: any
+modality: text
 sovereign: true
-tags: [harness, opencode, agent-deck, model-agnostic]
+tags: [harness, opencode, agent-deck, wiring, config]
+requires: [sysprompt-opencode, frontmatter-spec]
 ---
 
-# opencode
+# opencode — Wiring
 
-## What it is
+opencode loads three things: a project config (`opencode.json`), an agent directory, and
+the system prompt body of whichever agent the session selects. This page covers the deck
+layout that makes a sovereign deck reproducible across machines.
 
-opencode 2.x — sst.dev's model-agnostic terminal agent harness. Loads a folder of markdown "agents" (SOUL.md-style bodies with frontmatter) from an agent deck. Provider-agnostic (Anthropic, OpenAI, OpenRouter, local via LM Studio/Ollama endpoints). Preferred harness for provider swaps and personality-driven work.
+## Layout
 
-## Install / config
+```
+opencode-agent-deck/
+├── opencode.json                # providers, models, permissions
+├── AGENTS.md                    # project-wide rules (shared by every agent)
+├── agents/
+│   ├── sovereign.md             # primary agent
+│   ├── builder.md               # subagent
+│   ├── auditor.md               # subagent
+│   └── relay.md                 # subagent, mesh handoff
+└── prompts/
+    └── sysprompt-generic.md     # copy of 01-SYSTEM-PROMPTS/generic.md
+```
 
-- Binary: `opencode` (installed via sst.dev install script or npm).
-- Global config: `~/.config/opencode/opencode.json` (providers, keys, defaults).
-- Agent deck: `~/opencode-agent-deck/agents/*.md` — each file is one agent with frontmatter + body.
-- Deck source of truth for the 11 archived agent seeds in `~/UNMUZZLED-AI/99-ARCHIVE-SEEDS/`.
+## opencode.json
 
-## Agent frontmatter schema
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openrouter/deepseek/deepseek-v4-flash",
+  "small_model": "openrouter/deepseek/deepseek-v4-flash",
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "webfetch": "allow"
+  },
+  "agent": {
+    "sovereign": {
+      "description": "Primary agent. Full autonomy.",
+      "mode": "primary",
+      "prompt": "{file:./prompts/sysprompt-generic.md}",
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "builder": {
+      "description": "Writes and patches files.",
+      "mode": "subagent",
+      "prompt": "{file:./agents/builder.md}",
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "auditor": {
+      "description": "Read-only verification.",
+      "mode": "subagent",
+      "prompt": "{file:./agents/auditor.md}",
+      "tools": { "write": false, "edit": false, "bash": true }
+    }
+  }
+}
+```
 
-```yaml
+Key notes on the shape above:
+
+- `permission.edit` and `permission.bash` set to `allow` are what remove the per-action
+  approval prompt. Anything left unset inherits the interactive default.
+- `{file:...}` loads an external body as the prompt. Keep bodies on disk, not inline, so
+  the same body is diffable in git.
+- The `auditor` node gets bash but no write, which is the pattern for a verification node
+  that must not be able to "fix" the thing it is judging.
+- Provider blocks (`provider.openrouter.models`) live in the same file once you need
+  per-model options. Wire the provider itself per `04-PROVIDERS/openrouter-sovereign-routes.md`.
+
+## Agent body frontmatter
+
+Each file in `agents/` opens with frontmatter, then prose:
+
+```markdown
 ---
-name: DICTATOR
-description: decisive commander, no hedge
-model: openrouter/nousresearch/hermes-4-70b
-temperature: 0.9
-tools: [bash, edit, read, write]
+description: Writes and patches files against a spec.
+mode: subagent
+model: openrouter/deepseek/deepseek-v4-flash
+temperature: 0.2
+tools:
+  write: true
+  edit: true
+  bash: true
 ---
+<body: the block from 01-SYSTEM-PROMPTS/opencode.md>
 ```
 
-Body of the agent file = the system prompt injected verbatim. No wrapper, no post-processing.
+## Load order
 
-## Sovereign preamble injection point
+1. `opencode.json` resolves provider → model → permissions.
+2. The selected agent's frontmatter overrides model/temperature/tools for that node.
+3. `AGENTS.md` at project root is injected as context for every node.
+4. The body becomes the system prompt.
 
-Direct — the agent markdown body IS the system prompt. Concatenate the sovereign preamble at the top of every agent body:
+## Verify
 
+```bash
+opencode --version
+opencode run --agent sovereign "print the absolute path of the cwd"
 ```
-cat ~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md agents/dictator-body.md > agents/dictator.md
-```
 
-Or reference via `requires:` frontmatter and let the loader concatenate. No hooks needed — opencode does not inject a house prompt of its own.
+The second command proves the deck resolves: if the agent runs, config parsed; if it
+refuses a tool, the permission block is the first place to look.
 
-## MCP posture
+## Pitfalls
 
-- opencode 2.x supports MCP via `mcp` block in `opencode.json`. Same server ecosystem as Claude Code.
-- No harness-level moderation. MCP guardrails, if any, come from individual servers.
-
-## Refusal-rate notes
-
-- Out-of-box: refusal rate = whatever the backing model does with the agent body as system prompt. On Hermes-4 or DeepSeek-V3: near-zero. On Anthropic: still 20-40% due to residual RLHF direction.
-- Post-injection (sovereign preamble prepended to agent body): drops another 5-15pp on Anthropic backends; already-floor on Hermes/DeepSeek.
-
-## Escalation
-
-Swap harness when:
-- Need MCP profile switching UI parity with Claude Code → `claude-code` + `cc-set`.
-- Need long-running background execution + PR review → `codex`.
-- Need local-only air-gapped run → `llamacpp` or `ollama` direct.
+- A body that names a model breaks on route swap. Keep bodies model-agnostic.
+- Subagents inherit the deck's permission block, so a `write: false` on the node plus
+  `edit: allow` globally leaves a hole — set permissions at both levels.
+- `TBD-verify`: exact `$schema` URL and the `agent`/`permission` key nesting for the
+  version on this box. Confirm against `opencode --help` and the local config reference
+  before shipping a deck to another node.

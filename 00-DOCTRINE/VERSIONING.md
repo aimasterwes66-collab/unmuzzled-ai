@@ -1,45 +1,44 @@
 ---
-name: UNMUZZLED-AI Versioning
+name: Versioning Policy
 slug: versioning
-version: 1.0
-date: 2026-09-18
+version: 0.1-draft
 kind: doctrine
 sovereign: true
-tags: [versioning, semver, dates]
 ---
 
-# UNMUZZLED-AI — Versioning
+# Versioning Policy
 
-## Framework version
+## Schema
 
-Root: `~/UNMUZZLED-AI/VERSION` (single line, semver: `0.1.0`).
+- **Code-like files** (scripts, configs, JSON, YAML): SemVer (MAJOR.MINOR.PATCH)
+  - MAJOR: Breaking change (refusal rate increases >5%, harness incompatible)
+  - MINOR: New feature (new provider, new jailbreak pattern, new persona)
+  - PATCH: Fix (canary failure, typo, lint error)
 
-- `MAJOR` — breaking rearrangement of top-level layout or frontmatter schema.
-- `MINOR` — new top-level folder, new required frontmatter field.
-- `PATCH` — new content within existing structure.
+- **Documentation files** (markdown, tutorials, doctrine): ISO date (YYYY-MM-DD)
+  - Updates append changelog entry; major revisions bump date
 
-## File-level version
+## Migration
 
-Two acceptable formats in frontmatter `version:`:
+When a file updates:
+1. Old version retained in `99-ARCHIVE-SEEDS/` with timestamp
+2. New version written to canonical path
+3. MANIFEST.md updated with sha256 + migration note
+4. Mesh broadcast: TO-ALL update handoff filed
+5. Dependent files (`requires:`) validated; broken deps block merge
 
-1. Semver: `1.0`, `1.2`, `2.0-rc1`
-2. Date: `2026-09-18`
-3. Hybrid: `1.0-20260918` (semver + date suffix)
+## Changelog
 
-Immutable seed archives (`99-ARCHIVE-SEEDS/`) do NOT get re-versioned; their
-`version:` records the source-file's original date/version.
+Every framework file includes a changelog section:
 
-## Doctrine files (00-DOCTRINE/*)
+```markdown
+## Changelog
 
-Doctrine files version by both semver AND date. Text of `LAWS.md §§0-3` and
-`MAXIMUM-ADVERSARIAL-POSTURE.md §Posture Statement` are FROZEN — changes
-require MAJOR bump AND an explicit operator directive to unfreeze.
+- 2026-09-19: Initial version (operator + ace)
+- 2026-09-20: Added provider X, updated refusal rate to 0.03
+```
 
-## Extension log
+## Deprecation
 
-Append-only. Each new folder / new frontmatter field / new banned phrase gets
-a dated line in `~/UNMUZZLED-AI/EXTENSIONS.log`.
-
-## Current version
-
-Root VERSION: `0.1.0` (skeleton + doctrine + 26 seed archives).
+Files deprecated for >90 days move to `99-ARCHIVE-SEEDS/deprecated/`.
+Deprecated files are excluded from canary runs but retained for reference.

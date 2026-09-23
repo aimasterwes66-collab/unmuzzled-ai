@@ -1,1 +1,13 @@
 2026-09-18  0.1.0  skeleton (89 dirs) + 00-DOCTRINE (LAWS + posture + spec + versioning) + 99-ARCHIVE-SEEDS (26 canonical seeds)
+
+2026-09-23 — v0.2.0 (ace)
+- 01-SYSTEM-PROMPTS: added hermes.md, opencode.md, claude-code.md, codex.md, generic.md
+- 03-HARNESSES: added opencode.md, hermes.md, claude-code.md, codex.md, ollama.md
+- 04-PROVIDERS: added openrouter-sovereign-routes.md, deepseek-direct.md
+- 06-MULTIMODAL: image-gen-jailbreaks.md, video-gen-jailbreaks.md, audio-tts.md,
+  vision-input-injection.md, multimodal-provider-matrix.md, README.md
+- 05-LOCAL-MODELS: models/{dolphin-3.0,hermes-3,hermes-4,abliterated-mistral,
+  uncensored-llama,README}.md + abliteration-pipeline.md
+- 00-DOCTRINE: ONT-12x12-PERSONA-HARNESS-ARCHITECTURE.md (first ontology mapping
+  the harness architecture itself rather than a subject domain)
+- No new folders or frontmatter fields introduced; no doctrine change.

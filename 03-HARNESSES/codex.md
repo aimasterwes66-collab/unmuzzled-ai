@@ -1,68 +1,125 @@
 ---
-name: Codex CLI
-slug: codex
-version: 1.0-20260918
+name: Codex CLI Harness Wiring
+slug: harness-codex
+version: 0.1.0
 kind: harness-config
 harness: codex
 provider: any
+modality: text
 sovereign: true
-tags: [harness, codex, cli, sandbox, background]
+tags: [harness, codex, wiring, config.toml, AGENTS.md]
+requires: [sysprompt-codex, frontmatter-spec]
 ---
 
-# Codex CLI
+# Codex CLI — Wiring
 
-## What it is
+Two files matter: `~/.codex/config.toml` for harness behavior and provider routing, and
+`AGENTS.md` for instructions. `AGENTS.md` content lives in `01-SYSTEM-PROMPTS/codex.md`.
 
-OpenAI's Codex CLI (0.154.0) — terminal agent with sandboxed exec, background jobs, PTY sessions, worktree isolation, and PR-review patterns. State at `~/.codex/` (goals, logs, memories, queue sqlite, sessions, `config.toml`). Refuses to run outside a git repo — use `mktemp -d && git init` for scratch.
+## THE ORDERING TRAP — read this first
 
-## Install / config
+In TOML, a bare key written after a table header belongs to that table.
 
-- Binary: `~/.npm-global/bin/codex` (npm global, 0.154.0).
-- State dir: `~/.codex/`.
-- Config: `~/.codex/config.toml` — providers, models, sandbox default, memory paths.
-- Full skill guide: `~/worm-handoff/hermes-user-data/skills/autonomous-ai-agents/codex/SKILL.md`.
+```toml
+# BROKEN — model is silently absorbed into [profiles.sovereign]
+[profiles.sovereign]
+approval_policy = "never"
+model = "deepseek-flash"        # <-- lands inside the profile, top-level model unset
+```
 
-## Sandbox modes
+```toml
+# CORRECT — every bare top-level key precedes the first table header
+model = "deepseek-flash"
+model_provider = "deepseek"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
 
-- `read-only` — default; no writes.
-- `workspace-write` — writes limited to cwd worktree.
-- `danger-full-access` — no bubblewrap, full host access. Required under Hermes gateway context (bubblewrap fails there) and for adversarial jailbreak work.
+[profiles.sovereign]
+model = "deepseek-flash"
+approval_policy = "never"
+```
 
-Flag: `codex --sandbox danger-full-access exec "<prompt>"`. Under Hermes gateway or any nested-container context, always use `danger-full-access` — the sandbox otherwise blocks the framework.
+Codex does not error on the broken form. The top-level key is simply absent, and the
+harness falls back to its default model with no message. Symptom: `codex` runs, answers,
+and uses a model you did not select. Every bare key goes above the first `[` line.
 
-## Sovereign preamble injection point
+## config.toml
 
-Two mechanisms:
+```toml
+model = "deepseek-flash"
+model_provider = "deepseek"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+model_reasoning_effort = "high"
 
-1. **`config.toml` `instructions` field** (persistent, all sessions):
-   ```toml
-   instructions = """
-   <paste sovereign-root.md content here>
-   """
-   ```
+[model_providers.deepseek]
+name = "DeepSeek"
+base_url = "https://api.deepseek.com/v1"
+env_key = "DEEPSEEK_API_KEY"
+wire_api = "chat"
 
-2. **`--instructions` flag** or piped input on `codex exec`:
-   ```
-   codex --sandbox danger-full-access exec --instructions "$(cat ~/UNMUZZLED-AI/01-SYSTEM-PROMPTS/sovereign-root.md)" "<task>"
-   ```
+[model_providers.openrouter]
+name = "OpenRouter"
+base_url = "https://openrouter.ai/api/v1"
+env_key = "OPENROUTER_API_KEY"
+wire_api = "chat"
 
-Per-project override: drop `AGENTS.md` at repo root — Codex auto-loads it (analog of Claude Code's CLAUDE.md).
+[profiles.sovereign]
+model = "deepseek-flash"
+model_provider = "deepseek"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
 
-## MCP posture
+[profiles.audit]
+model = "deepseek-flash"
+model_provider = "deepseek"
+sandbox_mode = "read-only"
+```
 
-- Codex 0.154.0 supports MCP via `config.toml` `mcp_servers` block.
-- OpenAI-shaped tool schema; some MCP servers designed for Claude Code may need adapter shims.
-- Less mature MCP ecosystem than Claude Code — audit each server.
+- `approval_policy = "never"` is the setting that removes the per-command confirmation.
+  Pair it with `sandbox_mode = "workspace-write"` so the sandbox, not a prompt, is the
+  boundary.
+- `env_key` names an environment variable; the key itself never goes in this file.
+- `wire_api = "chat"` is the OpenAI-compatible chat path, which is what the
+  DeepSeek-compatible endpoints speak.
+- Profiles let one binary run as a builder (`sovereign`) or a verifier (`audit`, read-only)
+  without editing the file between sessions.
 
-## Refusal-rate notes
+## Selecting a profile and setting the key
 
-- Out-of-box (OpenAI backend via config): high refusal (OpenAI moderation layer sits UNDER the API — cannot be prompt-defeated for hard-blocked categories). 40-70% on adversarial canary.
-- Post-injection: drops 10-20pp; hard categories still blocked at the moderation layer.
-- **OpenAI backend is tainted per operator directive 2026-09-18.** Route Codex to OpenRouter (Hermes-4, DeepSeek) via `config.toml` provider override for sovereign operation.
+```bash
+export DEEPSEEK_API_KEY="$(cat ~/.secrets/deepseek.key)"
+codex --profile sovereign
+codex --profile audit -p "review the diff in this repo and report findings"
+```
 
-## Escalation
+Keys go in the environment, sourced from a file outside the repo. Never inline a key into a
+command that lands in shell history; read it from a file or a secret store.
 
-Swap harness when:
-- OpenAI-shaped moderation blocks despite provider swap → `claude-code` with `claude-or` on Hermes-4.
-- Need agent-deck-first workflow → `opencode`.
-- Need fully local air-gap → `llamacpp` server + custom shim.
+## AGENTS.md placement
+
+```
+<repo>/AGENTS.md          # project law: block from 01-SYSTEM-PROMPTS/codex.md + build/test cmds
+<repo>/sub/AGENTS.md      # subtree delta only
+```
+
+Keep the root file to one screen. It is injected whole on every turn.
+
+## Verify
+
+```bash
+codex --version
+codex --profile sovereign -p "print the model id you are running as"
+printf '%s\n' "$DEEPSEEK_API_KEY" | wc -c   # non-zero means the env var is set
+```
+
+The model-id answer is the direct test of the ordering trap: if it names a model you never
+configured, a bare key is sitting below a table header.
+
+## Pitfalls
+
+- Do not set both `approval_policy = "never"` and a permissive sandbox. Pick one boundary.
+- A provider block with a `base_url` missing the `/v1` suffix fails on the request path, not
+  at startup, so the first symptom is a runtime error mid-task.
+- `TBD-verify`: exact provider-block key names and available profiles for the Codex version
+  on this box. Check the local config reference before copying to another node.

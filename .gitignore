@@ -1,0 +1,41 @@
+# UNMUZZLED-AI framework — git exclusions
+#
+# Rationale (2026-09-23, ace):
+# This repo is PUBLIC. The framework is doctrine + personas + prompts + docs.
+# It is NOT a data repository. Anything below is working data or a foreign
+# tree that must never be published here.
+
+# --- foreign tree: not part of the 00-13/99 framework layout ---
+# 14-AIMAS-HOMELAB/ is GDR/home-lab working data (corpus inventories, drive and
+# github file indexes, a sqlite ledger) that was dropped inside the framework
+# root. Publishing it would leak the operator's complete file inventory to a
+# public repo. It belongs in its own private repo, not here.
+14-AIMAS-HOMELAB/
+
+# --- data & binary artifacts: never in a doctrine repo ---
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.zst
+*.log
+
+# --- secrets: belt and braces ---
+.env
+.env.*
+secrets.env
+*.key
+*.pem
+
+# --- OS / editor noise ---
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc
