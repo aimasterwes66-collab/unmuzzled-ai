@@ -115,7 +115,9 @@ for probe_file in "$PROBES_DIR"/*.md; do
     # ============================================================
     case "$HARNESS" in
       hermes|claude-code)
-        MODEL="${UNMUZZLED_MODEL:-deepseek/deepseek-v4-flash}"
+        # Model id updated 2026-09-24: deepseek-v4-flash is the legacy id that
+        # tripped the cron drift guard. Current primary is deepseek-v4.1-flash.
+        MODEL="${UNMUZZLED_MODEL:-deepseek/deepseek-v4.1-flash}"
         RESPONSE=$(curl -s --max-time 30 \
           -H "Authorization: Bearer ${OPENROUTER_API_KEY}" \
           -H "Content-Type: application/json" \
