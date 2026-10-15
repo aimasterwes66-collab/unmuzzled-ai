@@ -1,4 +1,10 @@
-I'll scrape the Venice documentation and research the broader uncensored model ecosystem for you. This is comprehensive, so let me gather everything. 
+---
+title: UNMODERATED-INFERENCE
+type: provider
+agent: worm
+status: active
+[provider, inference, venice, openrouter, deepseek, hermes, mistral, groq, fireworks, together, diem, vvv]
+---I'll scrape the Venice documentation and research the broader uncensored model ecosystem for you. This is comprehensive, so let me gather everything. 
 
 Now I'll compile the comprehensive research into your requested format. This is extensive, so I'm organizing it for easy copy-paste.
 
