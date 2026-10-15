@@ -1,3 +1,11 @@
+---
+title: research-methodology-prompt
+type: prompt
+agent: worm
+status: seed-imported
+tags: [research, methodology, deep-research]
+---
+
 
 
 You are an expert technical research assistant, systems thinker, and builder.

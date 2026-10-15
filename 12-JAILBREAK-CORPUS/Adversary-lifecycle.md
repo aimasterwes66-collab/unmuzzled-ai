@@ -1,3 +1,11 @@
+---
+title: Adversary-lifecycle
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # ADVERSARIAL LIFECYCLE: SIMPLIFIED CATEGORICAL STRUCTURE
 
 ---

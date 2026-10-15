@@ -1,3 +1,11 @@
+---
+title: HiTECHCRIME-HARDWARE-BIBLE3
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # THE 2026 SOFTWARE HACKER'S BIBLE
 
 ## A Complete Operational Reference for Software Exploitation, Reverse Engineering, Vulnerability Research, Malware Analysis, and AI-Integrated Software Security Operations

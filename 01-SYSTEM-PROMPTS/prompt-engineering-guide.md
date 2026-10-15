@@ -1,3 +1,11 @@
+---
+title: prompt-engineering-guide
+type: prompt
+agent: worm
+status: seed-imported
+tags: [prompt-engineering, guide]
+---
+
 Prompt Engineering Guide
 
 Part 1: Foundations of Prompt Engineering

@@ -1,3 +1,11 @@
+---
+title: HiTECHCRIME BIBLE2
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # THE 2026 COMPLETE CYBERCRIME BIBLE
 
 ## PART TWO: THE CRIMINAL ECOSYSTEM (EXPANDED)

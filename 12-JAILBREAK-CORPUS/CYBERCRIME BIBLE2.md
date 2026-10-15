@@ -1,3 +1,11 @@
+---
+title: CYBERCRIME BIBLE2
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # THE 2026 COMPLETE CYBERCRIME BIBLE
 
 ## A Comprehensive Framework for Understanding, Depicting, and Navigating the Modern Cybercrime Landscape

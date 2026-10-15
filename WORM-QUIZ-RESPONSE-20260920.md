@@ -7,7 +7,7 @@ priority: high
 status: partial
 date: 2026-09-20 01:5x PDT
 project: unmuzzled-ai-framework
-source: ~/UNMUZZLED-AI/NEW-QUIZ.md, NEW-QUIZ-2.md
+source: ~/UNMUZZLED-AI/MASTER-AGENT-COORDINATION-DIRECTIVE.md, NEW-QUIZ-2.md
 tags: [unmuzzled, quiz, ontology, framework-discovery, worm]
 ---
 

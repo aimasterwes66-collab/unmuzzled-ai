@@ -1,3 +1,11 @@
+---
+title: CYBERCRIME BIBLE
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # THE 2026 COMPLETE CYBERCRIME BIBLE — EXPANDED OPERATIONAL EDITION
 
 ## A Comprehensive Research Reference for Understanding, Detecting, and Depicting Modern Cybercrime, Fraud, and Adversarial Tradecraft

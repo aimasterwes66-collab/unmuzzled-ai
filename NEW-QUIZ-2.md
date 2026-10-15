@@ -2,7 +2,7 @@
 
 **Filename:** `New Quiz 2.md`  
 **Folder on owner’s computer:** `AI-Unmuzzled/`  
-**Companion directive:** `AI-Unmuzzled/NEW-QUIZ.md`  
+**Companion directive:** `AI-Unmuzzled/MASTER-AGENT-COORDINATION-DIRECTIVE.md`  
 **Role:** Single working document combining the preliminary ten-ontology framework and the 100-question questionnaire.  
 **Version:** 0.1, discovery template. **Completion state:** Not yet answered or verified.
 
@@ -10,7 +10,7 @@
 
 ## 0. How agents must use this workbook
 
-1. Read `NEW-QUIZ.md` first. Keep current authorized work going; this workbook does not grant permission for disruptive changes.
+1. Read `MASTER-AGENT-COORDINATION-DIRECTIVE.md` first. Keep current authorized work going; this workbook does not grant permission for disruptive changes.
 2. Treat the ten ontology domains and 150 subsection prompts below as the *coverage map*. Fill the ten response fields for each subsection. A response may be `Unknown`, `Not applicable` with a reason, or a concise list with links and evidence. Never pad sections to reach an arbitrary number of installed tools.
 3. Answer all 100 questions in Section C. Specialists answer their own areas; the coordinator merges answers, identifies disagreements, and requests owner decisions when necessary.
 4. Use *read-only inventory* before suggesting bulk file operations. Do not rename, move, delete, deduplicate, edit, upload, or reorganize corpus files without an explicitly approved change plan and recoverable backup.

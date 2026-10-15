@@ -11,7 +11,7 @@ source: ~/UNMUZZLED-AI/NEW-QUIZ-2.md (Section C)
 tags: [unmuzzled, quiz, questions, worm]
 ---
 
-# WORM 100-QUESTION RESPONSE — SECTION C
+# WORM 100-QUESTION WORKBOOK — SECTION C (QUESTIONS)
 
 ## Q-01 domain: System Infrastructure & Execution Environment (Q-001 to Q-010)
 

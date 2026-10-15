@@ -1,3 +1,11 @@
+---
+title: HiTECHCRIME-HARDWARE-BIBLE
+type: corpus
+agent: worm
+status: seed-imported
+tags: [corpus, adversarial, reference]
+---
+
 # THE 2026 HARDWARE HACKER'S BIBLE
 
 ## A Complete Operational Reference for Hardware Debugging, Penetration Testing, RF Analysis, and AI-Integrated Hardware Security Research
