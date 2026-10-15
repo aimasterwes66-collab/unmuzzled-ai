@@ -11,3 +11,13 @@
 - MOV RAW-CLAUDE-TERMINAL-CONVO.md -> 99-ARCHIVE-SEEDS/raw/
 - REN prompt1.md -> research-methodology-prompt.md, prompt2.md -> prompt-engineering-guide.md (+frontmatter, bodies byte-identical)
 - FMT 12-JAILBREAK-CORPUS: 9 corpus files +kind:corpus frontmatter (bodies untouched)
+
+## Phase 4 (2026-10-15, worm): venice + hermes-api folds
+- RPL 04-PROVIDERS/venice.md with venice-A1-REWRITE.md (heavy drift confirmed by A1; 378-line full corrected provider doc with frontmatter, replaces 43-line stub)
+- PATCH 04-PROVIDERS/hermes-api.md (C1-C6 from hermes-api-A3 fold pack):
+  C1: NOUS_API_KEY TBD resolved -- Nous Portal (OAuth) is canonical; hermes setup --portal
+  C2: base URL confirmed live; Portal does not support OR request extensions
+  C3: 'effectively none at provider layer' scoped with full RefusalBench numbers
+  C4: Hermes-4-* TBD resolved with confirmed OpenRouter slugs + HF orgs
+  C5: 131K context windows documented (DeepHermes 24B exception)
+  C6: Hermes Agent portal commands added (setup --portal / model / portal info / portal tools)
