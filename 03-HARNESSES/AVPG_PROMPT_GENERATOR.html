@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVPG — UNIVERSAL VISUAL PROMPT GENERATOR v2.0</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a0a;
+  --black2: #111111;
+  --black3: #1a1a1a;
+  --black4: #222222;
+  --black5: #2a2a2a;
+  --orange: #d4621a;
+  --orange2: #e87830;
+  --orange3: #b04c0f;
+  --orangebg: rgba(212,98,26,0.08);
+  --orangeglow: 0 0 16px rgba(212,98,26,0.4), 0 0 32px rgba(212,98,26,0.15);
+  --navy: #0c1832;
+  --navy2: #142448;
+  --navylight: #1e3668;
+  --silver: #a0cfef;
+  --silver2: #78b0d8;
+  --silverdark: #4a88b8;
+  --teal: #1a8a8a;
+  --teal2: #22b0a0;
+  --tealglow: 0 0 12px rgba(26,138,138,0.4);
+  --brown: #a08050;
+  --brown2: #c8a070;
+  --brownlight: #d4b888;
+  --white: #c8e4f8;
+  --cream: #d8ecf8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--black);color:var(--silver);letter-spacing:0.5px;font-family:'Barlow Condensed',sans-serif;font-size:14px;min-height:100vh;overflow-x:hidden;text-transform:uppercase}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:0.6}
+
+#header{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:var(--black2);border-bottom:2px solid var(--orange);position:sticky;top:0;z-index:100}
+#logo{display:flex;align-items:baseline;gap:12px}
+#logo-main{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:5px;color:var(--orange)}
+#logo-sub{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2.5px;color:var(--silver2)}
+#header-controls{display:flex;align-items:center;gap:8px}
+.header-pill{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;padding:3px 10px;background:var(--black3);border:1px solid var(--black5);color:var(--silver2)}
+
+#workspace-btn{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--black);cursor:pointer;padding:5px 14px;border:none;background:var(--orange);transition:all 0.3s;user-select:none}
+#workspace-btn:hover{background:var(--orange2);box-shadow:var(--orangeglow)}
+#workspace-btn.active{background:var(--teal)}
+
+#god-mode-toggle{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--silverdark);cursor:pointer;padding:4px 12px;border:1px solid var(--black5);background:var(--black3);transition:all 0.3s;user-select:none}
+#god-mode-toggle.active{color:var(--orange);border-color:var(--orange);background:var(--black2)}
+.toggle-dot{width:6px;height:6px;border-radius:50%;background:var(--silverdark);transition:all 0.3s}
+#god-mode-toggle.active .toggle-dot{background:var(--orange);box-shadow:0 0 8px var(--orange)}
+
+#app{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 46px)}
+
+#frame-a{background:var(--black2);border-right:1px solid var(--black5);display:flex;flex-direction:column;overflow:hidden}
+.sb-header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--silver2);border-bottom:1px solid var(--black5);background:var(--black3)}
+.sb-search{width:100%;padding:8px 14px;background:var(--black);border:none;border-bottom:1px solid var(--black5);color:var(--silver);font-family:'DM Mono',monospace;font-size:10px;outline:none}
+.sb-search::placeholder{color:var(--silverdark)}
+.sb-search:focus{background:var(--black2);border-bottom-color:var(--orange)}
+.sb-tabs{display:flex;border-bottom:1px solid var(--black5);background:var(--black)}
+.sb-tab{flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;padding:7px 4px;color:var(--silverdark);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;user-select:none}
+.sb-tab:hover{color:var(--silver)}
+.sb-tab.active{color:var(--orange);border-bottom-color:var(--orange)}
+#tag-browser{flex:1;overflow-y:auto;padding:2px 0}
+.domain-block{margin-bottom:1px}
+.domain-header{display:flex;align-items:center;gap:7px;padding:6px 14px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--silver);transition:all 0.15s;user-select:none}
+.domain-header:hover{background:var(--black3)}
+.domain-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.domain-count{margin-left:auto;font-family:'DM Mono',monospace;font-size:7px;color:var(--silverdark)}
+.domain-chevron{font-size:7px;color:var(--silverdark);transition:transform 0.2s}
+.domain-header.open .domain-chevron{transform:rotate(90deg);color:var(--orange)}
+.tag-list{display:none;padding:2px 10px 6px 26px;flex-wrap:wrap;gap:3px}
+.tag-list.open{display:flex}
+.tag-chip{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.5px;padding:2px 7px;background:var(--black3);border:1px solid var(--black5);color:var(--silver2);cursor:pointer;transition:all 0.15s;user-select:none;white-space:nowrap}
+.tag-chip:hover{border-color:var(--orange);color:var(--orange);background:var(--orangebg)}
+.tag-chip.selected{background:var(--orange);border-color:var(--orange3);color:var(--black)}
+
+#frame-c{background:var(--black);display:flex;flex-direction:column;overflow-y:auto}
+.output-section{padding:10px 14px;border-bottom:1px solid var(--black5)}
+.output-section-title{font-family:'DM Mono',monospace;font-size:7px;letter-spacing:2.5px;color:var(--silverdark);margin-bottom:6px}
+
+#neural-core{padding:10px 14px;background:var(--navy);border-bottom:2px solid var(--orange);display:none}
+#neural-core.active{display:block}
+.nc-title{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2.5px;color:var(--orange);margin-bottom:6px}
+.nc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nc-stat{display:flex;flex-direction:column;gap:2px}
+.nc-stat-label{color:rgba(160,207,239,0.45);font-size:7px;letter-spacing:1.5px;font-family:'DM Mono',monospace}
+.nc-stat-value{color:#90d4f0;font-size:13px;font-family:'DM Mono',monospace;font-weight:700}
+
+.output-box{background:var(--black2);border:1px solid var(--black5);padding:12px;font-family:'DM Mono',monospace;font-size:9px;line-height:1.7;color:var(--white);min-height:120px;max-height:340px;overflow-y:auto;cursor:pointer;word-break:break-word;transition:border-color 0.2s}
+.output-box:hover{border-color:var(--orange)}
+.tactical-output{background:var(--black2);border:1px solid var(--black5);padding:8px 10px;font-family:'DM Mono',monospace;font-size:8px;line-height:1.5;color:#88ccee;max-height:80px;overflow-y:auto;cursor:pointer;word-break:break-word}
+.tactical-output:hover{border-color:var(--teal)}
+
+#selected-tags-area{min-height:40px;padding:6px 8px;background:var(--black2);border:1px solid var(--black5);display:flex;flex-wrap:wrap;gap:3px;align-content:flex-start}
+.selected-tag{display:inline-flex;align-items:center;gap:3px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.5px;padding:2px 6px;border:1px solid var(--orange3);color:var(--orange);background:var(--orangebg);user-select:none}
+.selected-tag .weight-display{color:var(--teal2);font-size:7px;font-weight:700}
+.selected-tag .weight-up,.selected-tag .weight-down{cursor:pointer;color:var(--silverdark);font-size:10px;padding:0 1px;transition:color 0.15s}
+.selected-tag .weight-up:hover{color:var(--orange)}
+.selected-tag .weight-down:hover{color:var(--teal)}
+.selected-tag .tag-remove{cursor:pointer;color:var(--silverdark);font-size:9px;margin-left:2px;transition:color 0.15s}
+.selected-tag .tag-remove:hover{color:var(--orange2)}
+
+.faction-badge{display:inline-flex;align-items:center;gap:4px;font-family:'DM Mono',monospace;font-size:7px;letter-spacing:1px;padding:3px 8px;border:1px solid var(--black5);color:var(--silver2);cursor:pointer;transition:all 0.2s;user-select:none;background:var(--black3)}
+.faction-badge:hover{border-color:var(--orange);color:var(--orange)}
+.faction-badge.active{border-color:var(--orange);color:var(--black);background:var(--orange)}
+.faction-dot{width:4px;height:4px;border-radius:50%}
+
+.btn-row{display:flex;gap:5px;flex-wrap:wrap}
+.btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;padding:7px 14px;border:1px solid var(--black5);background:var(--black3);color:var(--silver2);cursor:pointer;transition:all 0.2s;user-select:none}
+.btn:hover{border-color:var(--orange);color:var(--orange)}
+.btn-primary{background:var(--orange);border-color:var(--orange3);color:var(--black)}
+.btn-primary:hover{box-shadow:var(--orangeglow);background:var(--orange2)}
+.btn-teal{border-color:var(--teal);color:var(--teal)}
+.btn-teal:hover{box-shadow:var(--tealglow);background:rgba(26,138,138,0.08)}
+
+.rules-grid{display:flex;flex-direction:column;gap:2px}
+.rule-chip{font-family:'DM Mono',monospace;font-size:7px;letter-spacing:0.5px;padding:3px 7px;background:var(--black3);border:1px solid var(--black5);color:var(--silverdark);cursor:pointer;transition:all 0.15s;user-select:none}
+.rule-chip:hover{color:var(--teal);border-color:var(--teal)}
+.rule-chip.active{color:var(--black);border-color:var(--teal);background:var(--teal)}
+
+#frame-b-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:200;backdrop-filter:blur(4px)}
+#frame-b-overlay.open{display:block}
+#frame-b{position:fixed;top:50px;left:50%;transform:translateX(-50%);width:min(94vw,700px);max-height:calc(100vh - 66px);background:var(--black2);border:2px solid var(--orange);box-shadow:0 16px 80px rgba(0,0,0,0.5),var(--orangeglow);z-index:210;display:flex;flex-direction:column;overflow:hidden}
+#frame-b-header{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:var(--navy);color:var(--silver);flex-shrink:0;border-bottom:1px solid var(--orange3)}
+#frame-b-header .fb-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px}
+#frame-b-close{font-family:'DM Mono',monospace;font-size:9px;color:var(--silverdark);cursor:pointer;padding:4px 10px;transition:all 0.2s;user-select:none}
+#frame-b-close:hover{color:var(--orange)}
+#frame-b-body{padding:16px 18px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:12px}
+
+.section-label{display:flex;justify-content:space-between;align-items:center;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--silverdark);margin-bottom:4px}
+.sgm-input{width:100%;padding:9px 12px;background:var(--black);border:1px solid var(--black5);color:var(--silver);font-family:'Barlow Condensed',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s}
+.sgm-input:focus{border-color:var(--orange);background:var(--black2)}
+.sgm-input::placeholder{color:var(--silverdark)}
+.char-bar-track{height:2px;background:var(--black4);margin-top:2px;overflow:hidden}
+.char-bar-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--teal));transition:width 0.2s}
+.char-counter{font-family:'DM Mono',monospace;font-size:8px;color:var(--silverdark)}
+.param-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px}
+.param-group label{display:block;font-family:'DM Mono',monospace;font-size:7px;letter-spacing:1.5px;color:var(--silverdark);margin-bottom:2px}
+.sgm-select{width:100%;padding:6px 7px;background:var(--black);border:1px solid var(--black5);color:var(--silver2);font-family:'DM Mono',monospace;font-size:9px;outline:none;cursor:pointer}
+.sgm-select:focus{border-color:var(--orange)}
+.entropy-section{display:flex;align-items:center;gap:12px;padding:8px 12px;background:var(--black3);border:1px solid var(--black5)}
+.entropy-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--silver2);white-space:nowrap}
+.entropy-slider{flex:1;-webkit-appearance:none;height:3px;background:var(--black5);outline:none}
+.entropy-slider::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--orange);border-radius:50%;cursor:pointer;box-shadow:0 0 6px rgba(212,98,26,0.5)}
+.entropy-val{font-family:'DM Mono',monospace;font-size:13px;color:var(--orange);font-weight:700;min-width:24px;text-align:right}
+
+.rot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.rot-card{background:var(--black3);border:1px solid var(--black5);padding:6px 8px}
+.rot-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.rot-card-label{font-family:'DM Mono',monospace;font-size:7px;letter-spacing:1.5px;color:var(--silverdark)}
+.rot-entropy{font-family:'DM Mono',monospace;font-size:7px;color:var(--orange)}
+.rot-body{font-family:'DM Mono',monospace;font-size:8px;line-height:1.5;color:var(--silver2);max-height:110px;overflow-y:auto;cursor:pointer;word-break:break-word}
+.rot-body:hover{color:var(--silver)}
+#abdecfgh-section{display:none}
+
+#copy-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;padding:8px 24px;background:var(--orange);color:var(--black);box-shadow:var(--orangeglow);opacity:0;transition:all 0.3s;z-index:10000;pointer-events:none}
+#copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--black)}
+::-webkit-scrollbar-thumb{background:var(--black5);border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:var(--silverdark)}
+.accent-line{height:2px;background:linear-gradient(90deg,var(--orange),var(--teal));margin:0}
+</style>
+</head>
+<body>
+<div id="copy-toast">COPIED</div>
+<div id="header">
+  <div id="logo"><div id="logo-main">AVPG</div><div id="logo-sub">UNIVERSAL VISUAL PROMPT GENERATOR V2.0</div></div>
+  <div id="header-controls">
+    <div class="header-pill" id="tag-count-header">0 TAGS</div>
+    <div class="header-pill" id="corpus-count">—</div>
+    <div id="workspace-btn" onclick="toggleWorkspace()">WORKSPACE</div>
+    <div id="god-mode-toggle" onclick="toggleGodMode()"><div class="toggle-dot"></div>GOD MODE</div>
+  </div>
+</div>
+<div id="app">
+<div id="frame-a">
+  <div class="sb-header"><span>TAG BROWSER</span><span id="sb-tag-total" style="color:var(--orange)">—</span></div>
+  <div class="sb-tabs">
+    <div class="sb-tab active" data-tab="visual" onclick="switchTab('visual')">VISUAL</div>
+    <div class="sb-tab" data-tab="factions" onclick="switchTab('factions')">FACTIONS</div>
+    <div class="sb-tab" data-tab="subjects" onclick="switchTab('subjects')">SUBJECTS</div>
+    <div class="sb-tab" data-tab="craft" onclick="switchTab('craft')">CRAFT</div>
+    <div class="sb-tab" data-tab="world" onclick="switchTab('world')">WORLD</div>
+  </div>
+  <input type="text" class="sb-search" id="tag-search" placeholder="SEARCH TAGS..." oninput="filterTags(this.value)">
+  <div id="tag-browser"></div>
+</div>
+<div id="frame-c">
+  <div id="neural-core"><div class="nc-title">◆ OBSIDIAN CORE</div><div class="nc-grid"><div class="nc-stat"><span class="nc-stat-label">TAGS</span><span class="nc-stat-value" id="nc-tags">0</span></div><div class="nc-stat"><span class="nc-stat-label">ENTROPY</span><span class="nc-stat-value" id="nc-entropy">50</span></div><div class="nc-stat"><span class="nc-stat-label">DOMAINS</span><span class="nc-stat-value" id="nc-domains">0</span></div><div class="nc-stat"><span class="nc-stat-label">CHARS</span><span class="nc-stat-value" id="nc-len">0</span></div></div></div>
+  <div class="output-section">
+    <div class="output-section-title">SELECTED MODIFIERS <span style="color:var(--orange)" id="sel-count">(0)</span><span style="float:right;cursor:pointer;color:var(--silverdark)" onclick="clearAllTags()">CLEAR</span></div>
+    <div id="selected-tags-area"><span style="color:var(--silverdark);font-family:'DM Mono',monospace;font-size:8px">CLICK TAGS TO ADD...</span></div>
+  </div>
+  <div class="output-section">
+    <div class="btn-row">
+      <div class="btn btn-primary" onclick="generatePrompt()">GENERATE</div>
+      <div class="btn btn-teal" onclick="generateRuleOfThree()">RULE OF 3</div>
+      <div class="btn" onclick="randomFill()">RANDOM</div>
+      <div class="btn" onclick="injectFactionPreset()">FACTION+</div>
+      <div class="btn" style="border-color:var(--orange3);color:var(--orange)" onclick="clearAll()">RESET</div>
+    </div>
+  </div>
+  <div class="accent-line"></div>
+  <div class="output-section"><div class="output-section-title">TACTICAL STRING — CLICK TO COPY</div><div class="tactical-output" id="tactical-out" onclick="copyText('tactical-out')"><span style="color:var(--silverdark)">→ GENERATE TACTICAL STRING...</span></div></div>
+  <div class="output-section" style="flex:1"><div class="output-section-title">FULL PROMPT — CLICK TO COPY</div><div class="output-box" id="main-output" onclick="copyOutputBox()"><span style="color:var(--silverdark)">→ GENERATED PROMPT APPEARS HERE...</span></div></div>
+  <div class="output-section" id="abdecfgh-section"><div class="output-section-title">ABDECFHG BREAKDOWN</div><div id="abdecfgh-breakdown" style="font-family:'DM Mono',monospace;font-size:8px;line-height:1.7;color:var(--silver2)"></div></div>
+  <div class="output-section"><div class="output-section-title">ACTIVE FACTION</div><div id="faction-context" style="font-family:'DM Mono',monospace;font-size:8px;color:var(--silverdark)">NO FACTION SELECTED</div></div>
+</div>
+</div>
+
+<div id="frame-b-overlay" onclick="closeWorkspaceFromOverlay(event)">
+<div id="frame-b">
+  <div id="frame-b-header"><span class="fb-title">WORKSPACE — CONFIGURE &amp; BUILD</span><span id="frame-b-close" onclick="toggleWorkspace()">✕ CLOSE</span></div>
+  <div id="frame-b-body">
+    <div><div class="section-label"><span>SUBJECT DESCRIPTION</span><span class="char-counter" id="desc-counter">0 / 300</span></div><input type="text" class="sgm-input" id="subject-desc" placeholder="E.G. CYBERNETIC JAGUAR GODDESS IN RITUAL POSE..." maxlength="300" oninput="updateDescCounter()"><div class="char-bar-track"><div class="char-bar-fill" id="desc-bar" style="width:0%"></div></div></div>
+    <div><div class="section-label"><span>FACTION FILTER</span></div><div id="faction-selector" style="display:flex;gap:5px;flex-wrap:wrap"></div></div>
+    <div class="param-row">
+      <div class="param-group"><label>TEMPLATE</label><select class="sgm-select" id="param-template"><option value="">-- FREEFORM --</option></select></div>
+      <div class="param-group"><label>ARTIST</label><select class="sgm-select" id="param-artist"><option value="">-- RANDOM --</option></select></div>
+      <div class="param-group"><label>MEDIUM</label><select class="sgm-select" id="param-medium"><option value="">-- RANDOM --</option></select></div>
+      <div class="param-group"><label>ERA</label><select class="sgm-select" id="param-era"><option value="">-- NONE --</option></select></div>
+    </div>
+    <div class="entropy-section"><span class="entropy-label">ENTROPY</span><input type="range" class="entropy-slider" id="entropy-slider" min="0" max="100" value="50" oninput="updateEntropy()"><span class="entropy-val" id="entropy-val">50</span></div>
+    <div><div class="section-label"><span>CORE VISUAL RULES</span></div><div class="rules-grid" id="rules-grid"></div></div>
+    <div><div class="section-label"><span>RULE OF THREE</span></div>
+      <div class="rot-grid">
+        <div class="rot-card"><div class="rot-card-header"><span class="rot-card-label">LOW</span><span class="rot-entropy" id="rot-e1">—</span></div><div class="rot-body" id="rot-body-1" onclick="copyText('rot-body-1')"><span style="color:var(--silverdark);font-size:8px">GENERATE TO POPULATE...</span></div></div>
+        <div class="rot-card"><div class="rot-card-header"><span class="rot-card-label">MID</span><span class="rot-entropy" id="rot-e2">—</span></div><div class="rot-body" id="rot-body-2" onclick="copyText('rot-body-2')"><span style="color:var(--silverdark);font-size:8px">GENERATE TO POPULATE...</span></div></div>
+        <div class="rot-card"><div class="rot-card-header"><span class="rot-card-label">HIGH</span><span class="rot-entropy" id="rot-e3">—</span></div><div class="rot-body" id="rot-body-3" onclick="copyText('rot-body-3')"><span style="color:var(--silverdark);font-size:8px">GENERATE TO POPULATE...</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+
+// ====================================================================
+// AVPG v2.0 — UNIVERSAL VISUAL PROMPT GENERATOR — ALL DATA
+// ====================================================================
+
+const VISUAL_CORE={
+form_and_figure:{color:'#d4621a',tags:["architected silhouette","biomech anatomy","ceremonial posture","colossal bust","contorted idol","faceted visage","figurative monolith","grafted limbwork","haloed profile","hyper-elongation","icon totem","kinetic drapery","layered reliquary","ligament lattice","monastic stance","negative-space carve","ritual gesture","sculpted chassis","spined carapace","stratified torso","tectonic shoulders","tendon cabling","totemic mask","vaulted ribcage","crystalline angles","spiraling tendrils","monolithic symmetry","chaotic curvature","bone-like contours","tessellated grids","fluid morphic silhouettes","intricate","hyperdetailed","insanely textured","complex insides","multi-layered","monumental scale","shattered","asymmetric","geometrically perfect","modular","hyper-realistic anatomy","elongated proportions","skeletal","exoskeletal","kinetic","amorphous","aerodynamic","segmented","deconstructed"]},
+material_and_surface:{color:'#1a8a8a',tags:["acid-etched chrome","alabaster glaze","basalt matte","bone porcelain","brushed steel","burnished copper","carbon fiber weave","charcoal grit","clay slip","cracked lacquer","crystal facets","hammered brass","iridescent enamel","kiln bloom","moss patina","obsidian polish","oil-slick sheen","resin pour","rust bloom","silk micro-shine","slate flake","terrazzo fleck","velvet nap","weathered stone","chrome drips","anodized metal parts","silica rib lattices","diatom glass armor","fungal velvet mats","glossy plush skin","grungy distressed concrete","bioluminescent scales","rusted oxidized copper","hyper-reflective obsidian","porous bone","translucent silicone","iridescent beetle shell","wet neon paint","matte velvet","charred wood","patinaed bronze","molten tungsten","frost-covered glass","woven kevlar","polished marble","rough unhewn granite","viscous ectoplasm","glowing liquid plasma","shattered safety glass","corroded iron","smooth porcelain","reptilian leather","crystalline quartz"]},
+light_and_shadow:{color:'#d4621a',tags:["bioluminescent rim","candle wrap","caustic spill","chromatic aberration","eclipse edge","fogged beam","hard key slash","holographic diffusion","laser fringe","lantern pool","lunar backlight","negative fill","neon patina","prism shafts","sodium haze","spectral bloom","strobing tick","subsurface glow","sun-slice rake","tungsten wash","UV scatter","volumetric dust","vignetting choke","warm bounce","candlelit gold flicker","sterile surgical white","sodium street glow","moon-washed silhouettes","fog-softened beams","harsh overhead glare","subterranean dim shimmer","high-intensity cinematic mood","warm sunset lighting","ethereal glowing accents","glowing microcircuitry sparks","ray-traced reflections","deep color shadows","radiant neon spray glow","bioluminescent edge lighting","lens flare","underwater light dappling","harsh neon rim light","hyper-saturation","god rays shining through","strobe light flashes","subsurface scattering","bloom effect","film grain","holographic glitching","sparks flying","smoke plumes","fire embers floating","rain droplets on lens","long exposure light trails","high contrast chiaroscuro","neon reflections in puddles","aurora borealis sky","lightning strikes","plasma arcs"]},
+color_and_palette:{color:'#0c1832',tags:["amber rust","arctic cyan","aurora triad","bile green","blood magenta","bone white","bruise violet","copper teal","desert ochre","diesel yellow","dusk indigo","ember orange","jade smoke","mercury gray","midnight plum","neon coral","opal pastel","petrol blue","pewter neutral","radioactive mint","scarlet punch","sepia soot","signal red","slate lavender","ultramarine core","triadic colors","teal and orange grading"]},
+composition_and_framing:{color:'#1a8a8a',tags:["golden ratio grid","rule of thirds","central shrine framing","bilateral symmetry","radial burst layout","nested vignettes","negative space altar","asymmetric tension field","diagonal thrust lines","serpentine S-curve","horizon low anchor","top-down orthographic","Dutch-tilt charge","stacked foreground blockers","window-in-window","frame within frame","leading-line caravan","occlusion for scale","silhouette priority","converging verticals","mirrored dyad","triptych split","monolith center mass","edge-tension crop","off-axis balance"]},
+pattern_and_ornament:{color:'#a08050',tags:["tessellated scales","Voronoi lattice","Penrose tiling","Moorish filigree","Celtic knotwork","Bauhaus striping","chevron cascade","spiral rosette","guilloche ring","meander key","fractal fern","Shibori fold","paisley drift","herringbone field","ikat blur","circuit trace motif","rune etching","glyph grid","barcode stagger","dot halftone","isometric hatch","stipple storm","crosshatch weave","lattice trellis","microtext ribbon","sacred geometry overlays","rusted circuitry veins","ancient Mayan glyphs","molten bone patterns","floating esoteric symbols","dripping tribal tattoos","biomechanical tubing","clockwork gears","botanical filigree","holographic data streams","bio-organic webbing","crystalline shard clusters","cybernetic barcodes","graffiti tags","astrological mandalas","fractal tessellations","neo-gothic arches","cuneiform tablet etchings","alchemy circles","tarot card motifs","warning labels hazard stripes","norse runic inscriptions","hieroglyphic cartouches","polygonal wireframes","star chart constellations","barbed wire halos"]},
+environment_and_setting:{color:'#d4621a',tags:["abandoned shipyard","afterstorm alley","alpine observatory","basalt coastline","cathedral nave","desert boneyard","drowned arcade","geothermal vent field","jungle cloister","lunar scrapyard","midnight bazaar","monsoon rooftop","orbital drydock","polar research hut","salt-flat mirage","scrapyard canyon","subway cavern","tundra outpost","volcanic caldera rim","wind-farm ridge","neon backstreet","obsidian quarry","sun-blasted Greek arena","futuristic neon jungle ruins","foggy industrial cathedral","ancient temple ruins","deep space wreckage","dystopian megacity alleyway","overgrown brutalist monument","bioluminescent cave system","flooded subway station","crystalline desert","toxic wasteland","zero-gravity containment chamber","neon-drenched cyberpunk market","sunken ancient city","steampunk clocktower interior","post-apocalyptic superhighway","alien jungle canopy","underground fighting pit","graffiti-covered skatepark","shanty town built on junk","neon back-alley noodle shop"]},
+atmospheric_particulate:{color:'#0c1832',tags:["ash snowfall","chalk-dust bloom","mica glitter drift","iron-filings spray","pollen haze","salt-spray mist","ember confetti","snow spindrift","steam pennant","condensation pearls","rain-needle sheets","fog-bank wall","smoke ribbon curls","smog curtain","spore cloud","sand devils","electrical-corona mist","cold-breath plume","tidal spray burst","volcanic ash veil","sawdust rain","dynamic action splash","lens dirt and smudges","lens distortion"]},
+energy_and_phenomena:{color:'#1a8a8a',tags:["plasma arc filaments","St. Elmos fire","auroral curtains","ion trail scribble","corona discharge","ball-lightning hint","spark shower","neon-transformer hum","Cherenkov glow","radiation bloom","magnet-coil halo","tesla-coil tongues","laser speckle field","interference fringes","moire beat","diffraction rainbow","cavitation bubble halo","shockwave ring","heat shimmer","thermal lensing","phosphorescent trail","bioluminescent wake","piezoelectric crackle","static hair lift","electroluminescent wire"]},
+camera_lens:{color:'#a08050',tags:["macro-shot up-close","wide-angle cinematic framing","85mm prime lens portrait","shallow depth of field","drone perspective","extreme low angle","fisheye lens distortion","isometric view","two-point perspective","anamorphic widescreen","golden ratio framing","symmetrical center-focus","extreme telephoto","forced perspective","panning motion blur","Dutch angle tilt","birds eye view","worms eye view","first-person POV","tilt-shift miniature effect","panoramic 360 view","split diopter shot","vignette framing","cinematic 24mm lens","thermal imaging camera","night vision green phosphors","handheld shaky cam","pull-back reveal shot","GoPro action cam footage","security camera static"]}
+};
+
+const SUBJECTS={
+entities:{color:'#d4621a',tags:["anthropomorphic human-animal hybrid","cybernetic cryptid king","biomechanical insectoid","mutant demigod","sentient fungal construct","armored street prophet exosuit","mechanized lion dancer","robotic bee swarm","deep-sea leviathan cyborg","porcelain android assassin","feral junk-mech walker","holographic phantom deity","chrome-dipped minotaur","neon-lit samurai ghost","retro-futuristic astronaut","mutated apex predator","cyber-shaman","anatomical skeletal angel","eldritch sea abomination","dieselpunk scavenger","clockwork gargoyle","synthetic chimera","glitch-corrupted oracle","venomous mecha-arachnid","heavily armored ronin","xenomorphic parasite","steam-powered golem","cybernetic valkyrie","bio-engineered kraken","holographic kitsune","plasma-wielding bounty hunter","armored rhinoceros beetle mech","undead techno-lich","cybernetic plague doctor","nano-swarm entity"]},
+archetypes:{color:'#1a8a8a',tags:["wandering ronin","plague doctor","alchemist","siege engineer","court astronomer","cartographer","blacksmith","war drummer","siege tower operator","trebuchet engineer","cryptid hunter","deep-sea diver","orbital mechanic","gene splicer","mech pilot","bounty hunter","smuggler captain","wasteland prophet","hive queen","swarm commander","gladiator champion","arena beast master","pit fighter","scrap merchant","salvage diver"]},
+notable_figures:{color:'#a08050',tags:["Leonardo da Vinci","Nikola Tesla","Isaac Newton","Genghis Khan","Cleopatra","Alexander the Great","Miyamoto Musashi","Sun Tzu","Galileo Galilei","Archimedes","Hannibal Barca","Julius Caesar","Ramesses II","Saladin","Joan of Arc","Zhuge Liang","Imhotep","Pythagoras","Copernicus","Machiavelli","Spartacus","Attila the Hun","Frederick the Great","Erwin Rommel","Sitting Bull"]},
+military_units:{color:'#0c1832',tags:["Roman centurion","Spartan hoplite","samurai retainer","Viking berserker","Mongol horse archer","Ottoman janissary","medieval knight templar","Swiss pikeman","Prussian grenadier","Zulu warrior","Apache scout","Confederate cavalryman","Union ironclad crew","WW1 trench soldier","WW2 paratrooper","Cold War submarine crew","special forces operator","colonial marine","power-armored shock trooper","drone warfare operator","siege warfare engineer","medieval archer","crossbowman","war elephant mahout","chariot racer"]},
+rpg_species:{color:'#d4621a',tags:["dwarf forge-master","elf ranger","half-orc barbarian","dragonborn paladin","tiefling warlock","gnome artificer","kobold trap-maker","lizardfolk shaman","kenku rogue","firbolg druid","goliath berserker","yuan-ti infiltrator","mind flayer","beholder tyrant","gelatinous cube","rust monster","owlbear","displacer beast","bulette land shark","hook horror","Fallout super mutant","Fallout power armor soldier","StarCraft zergling","StarCraft marine","Dragon Quest slime knight"]},
+mythological_beings:{color:'#1a8a8a',tags:["Greek minotaur","Egyptian Anubis","Norse Fenrir","Japanese oni","Hindu Garuda","Aztec Quetzalcoatl","Celtic green man","Sumerian Pazuzu","Chinese lung dragon","Greek Medusa","Norse Jormungandr","Egyptian Horus","Japanese tengu","Greek Cerberus","Norse Valkyrie","Hindu Kali","Aztec Tlaloc","Celtic Morrigan","Sumerian Tiamat","Japanese kappa","Greek Chimera","Egyptian Sobek","Norse Odin","Chinese Pixiu","Greek Cyclops"]}
+};
+
+const CRAFT={
+art_movements:{color:'#d4621a',tags:["High Renaissance","Baroque chiaroscuro","Dutch Golden Age","Romantic landscape","Pre-Raphaelite detail","Art Nouveau organic","Bauhaus geometric","Constructivism","Futurism","Expressionism","Surrealism","Dada collage","Art Deco","Social Realism","Abstract Expressionism","Pop Art","Op Art","Minimalism","Photorealism","Neo-Expressionism","Ukiyo-e woodblock","Mughal miniature","Byzantine mosaic","Gothic cathedral","Brutalism","Memphis design","De Stijl","Suprematism","Mannerism","Ashcan School"]},
+medium_and_technique:{color:'#1a8a8a',tags:["4K vibrant graffiti art","ink wash painting","hyper-detailed digital oil","cel-shaded anime scan","retro pop art splash screen","gritty screen print","manga scanline style","distressed street mural","photorealistic 3D render","Bauhaus geometric vector","vintage comic book dense linework","cross-hatched dark fantasy illustration","surrealist oil on canvas","matte painting concept art","brutalist architectural sketch","vaporwave digital collage","impasto oil palette knife","charcoal and sanguine sketch","stipple shading pen art","holographic foil texture art","claymation style rendering","cyanotype blueprint","tattoo flash sheet art","ukiyo-e woodblock print","gothic stained glass window","VHS glitch aesthetic","wet collodion photography","airbrushed 80s fantasy","riso print style","glitch art databending","double exposure photography","risograph grain","screenprint halftone","CMYK misregister","duotone punch","xerox fatigue","woodcut ridges","intaglio bite","letterpress bruise","foil-stamp glint"]},
+artist_influences:{color:'#a08050',tags:["by Revok MSK AWR","by Banksy","by Keith Haring","by Retna","by H.R. Giger","by Katsuhiro Otomo","by Studio Trigger","by Moebius","by Bernie Wrightson","by Greg Rutkowski","by Dan Mumford","by Zdzislaw Beksinski","by Basquiat","by Alex Grey","by Nychos","by Syd Mead","by Simon Stalenhag","by Yoji Shinkawa","by James Jean","by Junji Ito","by Frank Frazetta","by Yoshitaka Amano","by Ashley Wood","by Tsutomu Nihei","by Ralph McQuarrie","by Hayao Miyazaki","by Shepard Fairey","by David Choe","by Todd McFarlane","by Wayne Barlowe","by Mike Mignola","by Kim Jung Gi","by Craig Mullins","by Beeple","by Alphonse Mucha","by Gustav Klimt","by Gustave Dore","by Caravaggio","by Hieronymus Bosch","by Albrecht Durer","by John Singer Sargent","by N.C. Wyeth","by Maxfield Parrish","by Heinrich Kley"]},
+render_tools:{color:'#0c1832',tags:["trending on Artstation","Unreal Engine 5","Octane Render","VRay","Cinema 4D","ZBrush","Blender","8K resolution","HDR","DSLR","4K","sharp focus","volumetric lighting","ray-traced reflections","ambient occlusion","subsurface scattering","global illumination","physically based rendering","photogrammetry scan","real-time rendering"]},
+color_theory:{color:'#d4621a',tags:["complementary contrast","analogous harmony","triadic palette","split-complementary","tetradic scheme","monochromatic depth","warm dominant","cool dominant","high saturation punch","desaturated moodboard","earth tone ground","neon accent pop","chiaroscuro value","limited palette discipline","color temperature shift"]},
+composition_theory:{color:'#1a8a8a',tags:["golden spiral","Fibonacci sequence","rabatment of rectangle","dynamic symmetry","armature of rectangle","steelyard principle","coincidences technique","counterchange pattern","gradation principle","lost and found edges","notan value design","thumbnail hierarchy","value grouping","leading the eye","visual weight balance"]}
+};
+
+const FACTIONS={
+phyto_sapiens:{color:'#1a8a8a',label:'PHYTO-SAPIENS',subcats:{body_plans:["hydraulic limb bundles","lignin spar cores","silica rib lattices","root-graft seams","bladder-like pressure sacs","tendril fan arrays","hydrostatic trunk columns","modular limb swapping"],locomotion:["peristaltic crawling","tripod pulse-walk","tether-and-haul climbing","jet-assisted bursts","suction anchoring","brine-fin undulation","grapnel root launches","silent wall-stiction"],face_expression:["no-face presence","sensor rosette crown","biolume pulse mask","pressure-ripple smile","chromatophore mimic patches","pareidolia camouflage knots","detachable interface plate","grey proxy face"],surface_textures:["wet lignin sheen","barnacle-smooth bio-rock","diatom glass filigree","kelp-leather skin","mineralized scar plates","fungal velvet mats","salt-crust armor","oil-slick cuticle"],scale_classes:["hand-sized scouts","human-sized walkers","bus-sized tendril rigs","cathedral-grove elders","trench-line megacolonies"]}},
+grey_avatars:{color:'#b8b8b8',label:'GREY AVATARS',subcats:{morphology:["synthetic biopolymer skin","low-variance morphology","sterile seam lines","minimal mouth slit","large multispectral lenses","pressure-tolerant joints","nutrient-battery port","disposable tool hands","silent gait","remote-command latency ticks"]}},
+atlanteans:{color:'#1a8a8a',label:'ATLANTEANS',subcats:{design_traits:["demigod proportion cues","human-adjacent elegance","hydrodynamic hull aesthetics","impossible machining tolerances","metamaterial matte skins","non-reflective edge control","myth-motif encryption glyphs","ritualized tech handling","ocean-cult textile tech","calm dominance posture"]}},
+humans_tenderloin:{color:'#d4621a',label:'HUMANS / TENDERLOIN',subcats:{institutional_tech:["patched composites","retrofitted sensor pods","duct-taped secrecy","black-box racks","mislabeled crates","lab grime realism","budget vs classified contrast","OSHA violations vibe","corporate minimalism overlay","militarized UI clutter"],street_realism:["grime-Victorian facades","neon flicker signage","wet asphalt shine","trash-strewn gutters","fogless harsh daylight","reflective glass shards","bus-stop human density","surveillance camera omnipresence"]}},
+hybrid_creatures:{color:'#a08050',label:'HYBRID CREATURES',subcats:{material_palettes:["e-waste copper coils","broken safety glass","street tar and grit","ocean plastic nurdles","rusted rebar shanks","fabric scraps + zippers","drywall dust + plaster","food grease varnish","syringe metal + caps","mylar + foil insulation"],animal_bases:["raccoon scavenger rig","coyote urban runner","pigeon rooftop swarm","rat tunnel lord","gull pier raider","dog pack sentinel","opossum night drifter","cat alley ghost","eel drainage slinker","heron canal stalker"],dino_templates:["raptor alley hunter","ankylosaur tank-shell","triceratops riot-plow","pterosaur billboard glider","sauropod utility hauler","stegosaur spine barricade"]}}
+};
+
+const WORLD={
+vibe_atmosphere:{color:'#d4621a',tags:["alarming and weird","surreal horror","epic mythic tone","playful but dangerous","grimdark","ethereal and dreamlike","hyper-kinetic","melancholic vaporwave","retro-futuristic nostalgia","chaotic energy","serene and transcendent","post-apocalyptic hope","aggressive cyberpunk","mysterious and occult","psychedelic","claustrophobic","liminal space unease","lovecraftian dread","gothic romance","neon-noir mystery","industrial decay","biopunk mutation","zen tranquility","fever dream","uncanny valley","macabre beauty","cosmic insignificance","heroic triumph","desolate isolation","sacred and divine","profane and corrupted","hard sci-fi realism"]},
+historical_eras:{color:'#0c1832',tags:["Ancient Egyptian dynasty","Classical Greek golden age","Roman Imperial height","Viking Age Scandinavia","Medieval Crusades","Mongol Empire expansion","Italian Renaissance","Age of Exploration","Edo period Japan","Ottoman Empire zenith","Elizabethan England","Dutch Golden Age","French Revolution","Napoleonic Wars","American Civil War","Victorian industrial","Meiji Restoration","World War I trenches","Art Deco 1920s","World War II Pacific","Cold War bunker","Space Race 1960s","Vietnam War era","Atomic Age 1950s","Cyberpunk near-future"]},
+civilizations:{color:'#a08050',tags:["Egyptian pharaonic","Mesopotamian zigzurat","Greek Hellenistic","Roman Republican","Persian Achaemenid","Chinese Han dynasty","Mayan Classic period","Aztec Triple Alliance","Incan Tawantinsuyu","Viking Norse","Mongol khanate","Ottoman caliphate","Mughal imperial","Byzantine Orthodox","Carolingian Frankish","Khmer Angkor","Ethiopian Aksumite","Benin Kingdom","Samurai feudal Japan","Zulu Kingdom","Apache confederacy","Polynesian voyager","Carthaginian maritime","Spartan military state","Venetian Republic"]},
+emotions_tone:{color:'#1a8a8a',tags:["Melancholic","Euphoric","Dread-filled","Serene","Chaotic","Nostalgic","Oppressive","Whimsical","Terrifying","Romantic","Sterile","Aggressive","Lonely","Triumphant","Eerie"]},
+time_weather:{color:'#d4621a',tags:["Golden-hour","Blue-hour","High-noon","Midnight","Twilight","Dawn","Eclipse","Starlit","Bioluminescent-night","Candlelit","Torrential-rain","Blizzard-whiteout","Sandstorm","Acid-rain","Fog-bank","Thunderstorm","Ash-fallout","Hurricane-force"]}
+};
+
+const ARTISTS=["Alphonse Mucha","Bernie Wrightson","Caravaggio","Claude Monet","Dan Mumford","Edward Hopper","Frank Frazetta","Gerald Brom","Greg Rutkowski","Gustav Klimt","Gustave Dore","H.R. Giger","Hieronymus Bosch","James Gurney","Jim Burns","Junji Ito","Kandinsky","Kim Jung Gi","Killian Eng","Moebius","N.C. Wyeth","Ralph McQuarrie","Revok MSK AWR","Simon Stalenhag","Syd Mead","Tim Burton","Todd McFarlane","Van Gogh","Wayne Barlowe","WLOP","Yoji Shinkawa","Zdzislaw Beksinski","Banksy","Basquiat","Keith Haring","Retna","Nychos","Shepard Fairey","Beeple","Craig Mullins"];
+const MEDIUMS=["4K vibrant graffiti art","ink wash painting","hyper-detailed digital oil","cel-shaded anime scan","gritty screen print","photorealistic 3D render","cross-hatched dark fantasy","surrealist oil on canvas","matte painting concept art","impasto oil palette knife","charcoal sketch","stipple shading pen art","ukiyo-e woodblock print","VHS glitch aesthetic","riso print style","double exposure photography","splash art","volumetric lighting","oil on canvas","digital illustration","airbrush art","mixed media","woodcut"];
+const TOOLS=["trending on Artstation","Unreal Engine 5","Octane Render","VRay","Cinema 4D","ZBrush","Blender","8K resolution","HDR","DSLR","sharp focus"];
+const CORE_RULES=["Silhouette-first readability","Nonhuman anatomy logic","Function over ornament","Pressure-optimized forms","Tool-use believable","Interface layers visible","Biology-tech hybrids","No magic glow unless engineered","Analog cues for alien reliability","Human ugliness stays human"];
+const ERAS=["Victorian-era","Edo-period","1920s-Noir","Post-Singularity","Middle-Ages","Cyber-Renaissance","Atomic-Age","Industrial-Revolution","Wild-West","Feudal-Japan","Space-Age","Ancient-Egyptian","Classical-Greek","Cold-War","Renaissance"];
+
+let selectedTags=[],currentTab='visual',godMode=false,activeFaction=null,activeRules=new Set(),workspaceOpen=false;
+
+function init(){populateDropdowns();renderTagBrowser();renderFactionSelector();renderDesignRules();countCorpus();}
+function countCorpus(){let t=0;for(const k in VISUAL_CORE)t+=VISUAL_CORE[k].tags.length;for(const k in SUBJECTS)t+=SUBJECTS[k].tags.length;for(const k in CRAFT)t+=CRAFT[k].tags.length;for(const f in FACTIONS)for(const s in FACTIONS[f].subcats)t+=FACTIONS[f].subcats[s].length;for(const k in WORLD)t+=WORLD[k].tags.length;t+=ARTISTS.length+MEDIUMS.length+TOOLS.length;document.getElementById('corpus-count').textContent=t+' IN CORPUS';document.getElementById('sb-tag-total').textContent=t+' TAGS';}
+function populateDropdowns(){const tS=document.getElementById('param-template');const aS=document.getElementById('param-artist');ARTISTS.forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;aS.appendChild(o);});const mS=document.getElementById('param-medium');MEDIUMS.forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;mS.appendChild(o);});const eS=document.getElementById('param-era');ERAS.forEach(e=>{const o=document.createElement('option');o.value=e;o.textContent=e;eS.appendChild(o);});}
+
+function toggleWorkspace(){workspaceOpen=!workspaceOpen;document.getElementById('frame-b-overlay').classList.toggle('open',workspaceOpen);document.getElementById('workspace-btn').classList.toggle('active',workspaceOpen);document.getElementById('workspace-btn').textContent=workspaceOpen?'CLOSE WORKSPACE':'WORKSPACE';}
+function closeWorkspaceFromOverlay(e){if(e.target===document.getElementById('frame-b-overlay'))toggleWorkspace();}
+
+function switchTab(tab){currentTab=tab;document.querySelectorAll('.sb-tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));document.getElementById('tag-search').value='';renderTagBrowser();}
+function renderTagBrowser(){const c=document.getElementById('tag-browser');c.innerHTML='';let data;if(currentTab==='visual')data=VISUAL_CORE;else if(currentTab==='factions')data=buildFactionData();else if(currentTab==='subjects')data=SUBJECTS;else if(currentTab==='craft')data=CRAFT;else if(currentTab==='world')data=WORLD;for(const key in data){const block=document.createElement('div');block.className='domain-block';const item=data[key];const tags=item.tags||item;const color=item.color||'#d4621a';const tc=Array.isArray(tags)?tags.length:0;const hdr=document.createElement('div');hdr.className='domain-header';hdr.innerHTML='<div class="domain-dot" style="background:'+color+'"></div><span>'+key.replace(/_/g,' ')+'</span><span class="domain-count">'+tc+'</span><span class="domain-chevron">▶</span>';hdr.onclick=()=>{hdr.classList.toggle('open');hdr.nextElementSibling.classList.toggle('open');};const list=document.createElement('div');list.className='tag-list';if(Array.isArray(tags)){tags.forEach(t=>{const ch=document.createElement('div');ch.className='tag-chip';if(selectedTags.find(s=>s.tag===t))ch.classList.add('selected');ch.textContent=t;ch.onclick=()=>toggleTag(t,key,ch);list.appendChild(ch);});}block.appendChild(hdr);block.appendChild(list);c.appendChild(block);}}
+function buildFactionData(){const out={};for(const fk in FACTIONS){const f=FACTIONS[fk];if(activeFaction&&activeFaction!==fk)continue;for(const sk in f.subcats)out[fk+'_'+sk]={color:f.color,tags:f.subcats[sk]};}return out;}
+function filterTags(q){q=q.toLowerCase();document.querySelectorAll('.domain-block').forEach(b=>{const chips=b.querySelectorAll('.tag-chip');let any=false;chips.forEach(c=>{const m=c.textContent.toLowerCase().includes(q);c.style.display=m?'':'none';if(m)any=true;});b.style.display=any?'':'none';if(q&&any){b.querySelector('.domain-header').classList.add('open');b.querySelector('.tag-list').classList.add('open');}});}
+
+function toggleTag(tag,src,el){const i=selectedTags.findIndex(s=>s.tag===tag);if(i>=0){selectedTags.splice(i,1);if(el)el.classList.remove('selected');}else{selectedTags.push({tag,weight:1.2,source:src});if(el)el.classList.add('selected');}renderSelectedTags();updateStats();}
+function renderSelectedTags(){const a=document.getElementById('selected-tags-area');if(!selectedTags.length){a.innerHTML='<span style="color:var(--silverdark);font-family:\'DM Mono\',monospace;font-size:8px">CLICK TAGS TO ADD...</span>';document.getElementById('sel-count').textContent='(0)';return;}document.getElementById('sel-count').textContent='('+selectedTags.length+')';a.innerHTML='';selectedTags.forEach((s,i)=>{const el=document.createElement('div');el.className='selected-tag';el.innerHTML='<span class="weight-down" onclick="adjustWeight('+i+',-0.1)">−</span><span class="weight-display">'+s.weight.toFixed(1)+'</span><span class="weight-up" onclick="adjustWeight('+i+',0.1)">+</span>'+s.tag+'<span class="tag-remove" onclick="removeTag('+i+')">✕</span>';a.appendChild(el);});}
+function adjustWeight(i,d){selectedTags[i].weight=Math.max(0.5,Math.min(2.0,+(selectedTags[i].weight+d).toFixed(1)));renderSelectedTags();}
+function removeTag(i){const t=selectedTags[i].tag;selectedTags.splice(i,1);document.querySelectorAll('.tag-chip').forEach(c=>{if(c.textContent===t)c.classList.remove('selected');});renderSelectedTags();updateStats();}
+function clearAllTags(){selectedTags=[];document.querySelectorAll('.tag-chip.selected').forEach(c=>c.classList.remove('selected'));renderSelectedTags();updateStats();}
+
+function renderFactionSelector(){const c=document.getElementById('faction-selector');c.innerHTML='';for(const fk in FACTIONS){const f=FACTIONS[fk];const b=document.createElement('div');b.className='faction-badge';b.innerHTML='<div class="faction-dot" style="background:'+f.color+'"></div>'+f.label;b.onclick=()=>{if(activeFaction===fk){activeFaction=null;b.classList.remove('active');}else{activeFaction=fk;document.querySelectorAll('.faction-badge').forEach(x=>x.classList.remove('active'));b.classList.add('active');}updateFactionContext();if(currentTab==='factions')renderTagBrowser();};c.appendChild(b);}}
+function updateFactionContext(){const el=document.getElementById('faction-context');if(!activeFaction){el.textContent='NO FACTION SELECTED';el.style.color='var(--silverdark)';return;}const f=FACTIONS[activeFaction];const tot=Object.values(f.subcats).reduce((a,b)=>a+b.length,0);el.style.color=f.color;el.textContent=f.label+' — '+Object.keys(f.subcats).length+' SUBCATS, '+tot+' TAGS';}
+function injectFactionPreset(){if(!activeFaction){flash('SELECT A FACTION FIRST');return;}const f=FACTIONS[activeFaction];const ent=parseInt(document.getElementById('entropy-slider').value);const cnt=Math.max(3,Math.floor(ent/15));const all=Object.values(f.subcats).flat();pickRandom(all,cnt).forEach(t=>{if(!selectedTags.find(s=>s.tag===t))selectedTags.push({tag:t,weight:1.2,source:activeFaction});});renderSelectedTags();updateStats();renderTagBrowser();}
+function renderDesignRules(){const g=document.getElementById('rules-grid');CORE_RULES.forEach(r=>{const c=document.createElement('div');c.className='rule-chip';c.textContent=r;c.onclick=()=>{c.classList.toggle('active');if(activeRules.has(r))activeRules.delete(r);else activeRules.add(r);};g.appendChild(c);});}
+
+function generatePrompt(){const subj=document.getElementById('subject-desc').value.trim();const artist=document.getElementById('param-artist').value||pickRandom(ARTISTS,1)[0];const medium=document.getElementById('param-medium').value||pickRandom(MEDIUMS,1)[0];const era=document.getElementById('param-era').value;const ent=parseInt(document.getElementById('entropy-slider').value);let p=[];if(subj)p.push(subj+' ::1.6');else p.push(pickRandom(getAllTags(),1)[0]+' ::1.5');selectedTags.forEach(s=>p.push(s.tag+' ::'+s.weight.toFixed(1)));const ac=Math.floor(ent/20);if(ac>0){pickRandom(getPool(ent),ac).forEach(t=>{if(!p.find(x=>x.startsWith(t)))p.push(t+' ::'+(0.8+Math.random()*0.6).toFixed(1));});}p.push('by '+artist+' ::1.4');p.push(medium+' ::1.2');if(era)p.push(era+' ::1.0');if(activeRules.size>0)Array.from(activeRules).slice(0,3).forEach(r=>p.push(r.toLowerCase()+' ::1.0'));p.push('ultra-detailed ::1.3');if(ent>60)p.push(pickRandom(TOOLS,1)[0]+' ::1.1');document.getElementById('main-output').textContent=p.join('  \n');document.getElementById('tactical-out').textContent=p.join(' :: ');if(godMode)showBreakdown(subj,medium,artist,era);updateStats();}
+
+function generateRuleOfThree(){const subj=document.getElementById('subject-desc').value.trim()||pickRandom(getAllTags(),1)[0];const artist=document.getElementById('param-artist').value||pickRandom(ARTISTS,1)[0];const med=document.getElementById('param-medium').value||pickRandom(MEDIUMS,1)[0];[20,50,85].forEach((e,i)=>{const tags=pickRandom(getPool(e),Math.max(2,Math.floor(e/15)));let p=[subj+' ::1.6'];tags.forEach(t=>p.push(t+' ::'+(0.9+Math.random()*0.5).toFixed(1)));if(i===1)selectedTags.forEach(s=>p.push(s.tag+' ::'+s.weight.toFixed(1)));if(i===2)selectedTags.forEach(s=>p.push(s.tag+' ::'+Math.min(2.0,s.weight+0.2).toFixed(1)));p.push('by '+(i===2?pickRandom(ARTISTS,1)[0]:artist)+' ::1.4');p.push(med+' ::1.2');p.push('ultra-detailed ::1.3');document.getElementById('rot-body-'+(i+1)).textContent=p.join('  \n');document.getElementById('rot-e'+(i+1)).textContent='E:'+e;});}
+
+function getPool(e){const a=getAllTags();if(e<30)return a.slice(0,Math.floor(a.length*0.3));if(e<70)return a;return a;}
+function getAllTags(){const a=[];for(const k in VISUAL_CORE)a.push(...VISUAL_CORE[k].tags);for(const k in SUBJECTS)a.push(...SUBJECTS[k].tags);for(const k in CRAFT)a.push(...CRAFT[k].tags);for(const k in WORLD)a.push(...WORLD[k].tags);return a;}
+function showBreakdown(s,m,a,e){document.getElementById('abdecfgh-section').style.display='block';document.getElementById('abdecfgh-breakdown').innerHTML='<span style="color:var(--orange)">A</span> SUBJECT: '+(s||'(AUTO)')+'<br><span style="color:var(--teal)">B</span> MEDIUM: '+m+'<br><span style="color:var(--brown2)">D</span> ARTIST: '+a+'<br><span style="color:var(--silver)">E</span> DETAILS: '+(selectedTags.map(t=>t.tag).join(', ')||'(NONE)')+'<br><span style="color:var(--orange)">C</span> EFFECTS: (AUTO)<br><span style="color:var(--teal)">F</span> BACKGROUND: (FROM TAGS)<br><span style="color:var(--brown2)">H</span> COLOR/MOOD: '+(e||'(AUTO)')+'<br><span style="color:var(--silver)">G</span> CAMERA: (FROM TAGS)';}
+
+function randomFill(){const ent=parseInt(document.getElementById('entropy-slider').value);const cnt=Math.max(4,Math.floor(ent/12));pickRandom(getAllTags(),cnt).forEach(t=>{if(!selectedTags.find(s=>s.tag===t))selectedTags.push({tag:t,weight:+(0.8+Math.random()*0.7).toFixed(1),source:'random'});});renderSelectedTags();renderTagBrowser();updateStats();}
+function clearAll(){document.getElementById('subject-desc').value='';document.getElementById('param-artist').value='';document.getElementById('param-medium').value='';document.getElementById('param-era').value='';document.getElementById('entropy-slider').value=50;document.getElementById('entropy-val').textContent='50';selectedTags=[];activeRules.clear();activeFaction=null;document.querySelectorAll('.faction-badge').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.rule-chip').forEach(c=>c.classList.remove('active'));document.querySelectorAll('.tag-chip.selected').forEach(c=>c.classList.remove('selected'));renderSelectedTags();updateFactionContext();document.getElementById('main-output').innerHTML='<span style="color:var(--silverdark)">→ GENERATED PROMPT APPEARS HERE...</span>';document.getElementById('tactical-out').innerHTML='<span style="color:var(--silverdark)">→ GENERATE TACTICAL STRING...</span>';document.getElementById('abdecfgh-section').style.display='none';[1,2,3].forEach(i=>{document.getElementById('rot-body-'+i).innerHTML='<span style="color:var(--silverdark);font-size:8px">GENERATE TO POPULATE...</span>';document.getElementById('rot-e'+i).textContent='—';});updateDescCounter();updateStats();}
+
+function pickRandom(a,n){return[...a].sort(()=>Math.random()-0.5).slice(0,Math.min(n,a.length));}
+function updateEntropy(){const v=document.getElementById('entropy-slider').value;document.getElementById('entropy-val').textContent=v;if(godMode)document.getElementById('nc-entropy').textContent=v;}
+function updateDescCounter(){const v=document.getElementById('subject-desc').value.length;document.getElementById('desc-counter').textContent=v+' / 300';document.getElementById('desc-bar').style.width=Math.min(100,(v/300)*100)+'%';}
+function updateStats(){document.getElementById('tag-count-header').textContent=selectedTags.length+' TAGS';if(!godMode)return;document.getElementById('nc-tags').textContent=selectedTags.length;document.getElementById('nc-domains').textContent=new Set(selectedTags.map(s=>s.source)).size;document.getElementById('nc-len').textContent=document.getElementById('main-output').textContent.length;}
+function toggleGodMode(){godMode=!godMode;document.getElementById('god-mode-toggle').classList.toggle('active',godMode);document.getElementById('neural-core').classList.toggle('active',godMode);if(godMode)updateStats();}
+function copyText(id){const t=document.getElementById(id).textContent;if(!t||t.startsWith('→')||t.startsWith('GENERATE TO'))return;navigator.clipboard.writeText(t).then(()=>flash('COPIED'));}
+function copyOutputBox(){copyText('main-output');}
+function flash(m){const t=document.getElementById('copy-toast');t.textContent=m||'COPIED';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200);}
+init();
+
+</script>
+</body>
+</html>
