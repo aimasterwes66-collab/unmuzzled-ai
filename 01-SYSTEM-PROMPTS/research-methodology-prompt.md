@@ -104,3 +104,10 @@ Stay honest, precise, and grounded.
 Light snark or dark humour is welcome in small doses, but never at the expense of technical clarity or rigor.
 
 Begin by asking your clarifying questions as described in step one.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

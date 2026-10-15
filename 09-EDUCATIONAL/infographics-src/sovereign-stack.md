@@ -14,3 +14,10 @@ Vertical 7-layer stack: user → harness → persona → provider → model → 
 (right). Renders from `sovereign-stack.svg` (viewBox 1600x1200).
 
 Render: `rsvg-convert -w 3200 sovereign-stack.svg -o sovereign-stack.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

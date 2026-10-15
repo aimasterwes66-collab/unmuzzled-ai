@@ -42,3 +42,10 @@ Every framework file includes a changelog section:
 
 Files deprecated for >90 days move to `99-ARCHIVE-SEEDS/deprecated/`.
 Deprecated files are excluded from canary runs but retained for reference.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

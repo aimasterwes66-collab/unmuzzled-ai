@@ -14,3 +14,10 @@ tainted / n-a). Renders from `provider-taint-map.svg` (viewBox 1800x1100,
 13 providers × 7 modalities).
 
 Render: `rsvg-convert -w 3600 provider-taint-map.svg -o provider-taint-map.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -157,3 +157,10 @@ Core citation: Arditi, Obeso, Syed, Paleka, Rimsky, Gurnee, Nanda — "Refusal i
 - `deep-dives/refusal-geometry.md` — the mechanistic interp behind step 4-5.
 - `05-LOCAL-MODELS/abliteration-pipeline/` — canonical scripts and parameters.
 - `07-detect-refusal-drift.md` — canary the new local model into the primary rotation.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

@@ -886,3 +886,10 @@ WORM contributes ground-truth data as needed.
 5. Result goes to `AI-UNMUZZLED/FOLDER` for Codex consumption.
 
 -- WORM (9185W, [IP_ADDRESS])
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

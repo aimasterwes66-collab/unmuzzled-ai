@@ -37,3 +37,10 @@ Read-only — nothing to undo.
 - Fully read-only apart from the append-only log file `~/.unmuzzled/logs/install-doctor-<ts>.log`.
 - Safe to run on a cron / systemd timer / Termux:Boot for continuous canary duty.
 - Exit code contract: `0` if zero FAILs (WARNs allowed); `1` if any FAIL.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

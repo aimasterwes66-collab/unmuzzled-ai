@@ -46,3 +46,10 @@ gitGraph
 - **PATCH** — typo fix, doc clarification, lint-rule tightening within existing catalog.
 
 Render: `mmdc -i git-graph-versioning.md -o git-graph-versioning.png -t dark -b '#0a0a0a' -w 3200`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

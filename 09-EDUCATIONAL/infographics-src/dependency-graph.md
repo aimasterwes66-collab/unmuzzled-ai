@@ -19,3 +19,10 @@ Render:
 dot -Tpng -Gdpi=200 dependency-graph.dot -o dependency-graph.png
 dot -Tsvg dependency-graph.dot -o dependency-graph.svg
 ```
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

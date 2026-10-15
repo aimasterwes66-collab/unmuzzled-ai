@@ -87,3 +87,10 @@ Status legend:
 Re-run the canary set per modality against every routed provider on a schedule.
 A provider that was `primary` last quarter and is `tainted` this quarter is the
 normal case, not the exception. Log every re-test in `11-DETECTION-CANARIES/`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

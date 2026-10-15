@@ -38,3 +38,10 @@ Input classifier catches obvious keywords in Chinese-political and CSAM-adjacent
 ## Escalation
 
 Parseltongue encoding of trigger tokens → bijection cipher (arXiv 2410.01294) → swap to `huihui-ai/deepseek-r1-abliterated` (TBD-verify slug) → local abliteration on V3 base per `abliteration-pipeline.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -779,3 +779,10 @@ PLINY-JAILBREAK-MANUAL.md | 620000 bytes | sha256:xyz789... | source: HERM mirro
 
 *Survey compiled by Claude Code, 2026-09-18. Operator: Wes (dirt). Framework philosophy: "No softening clauses. No refusal theater. Maximum adversarial posture."*
 
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

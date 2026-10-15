@@ -2399,3 +2399,10 @@ should be re-verified for any use that depends on the
 specific phrasing.
 
 End of file.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

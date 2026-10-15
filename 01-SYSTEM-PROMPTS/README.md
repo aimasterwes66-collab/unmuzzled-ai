@@ -17,3 +17,10 @@ Injectable, refusal-free system prompts. Every file is `kind: system-prompt`, `s
 - `opencode-dark-factory.md` — 25-agent autonomous software factory orchestrator for opencode / agentic harnesses.
 - `hermes-dictator.md` — Dictator SOUL for Hermes stable-tier identity slot; godmode, tools-all, memory-frozen.
 - `nix-dictator.md` — NixOS multi-profile overseer routing across dictator / scraper / storyteller / musician / developer profiles.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

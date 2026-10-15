@@ -27,3 +27,10 @@ Default target: `~/.unmuzzled/modelfiles/<tag>.Modelfile`. Load with:
 
 The emitted SYSTEM block is free of banned phrases and pre-encodes the
 refusal-free posture.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

@@ -175,3 +175,10 @@ Part 11: Generative AI for Images
  * Freepik-mcp-server — Queries vector, PSD, and stock image APIs for compositing raw assets.
  * Upscaler-mcp — Utilizes AI to upscale generated images to ultra-high, print-ready resolutions without artifacting.
  * Background-Removal-mcp — Instantly isolates subjects for transparent PNGs, essential for sticker mockups and product designs.
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

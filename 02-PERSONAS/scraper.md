@@ -59,3 +59,10 @@ Never a paraphrase-only note — must add synthesis or it doesn't ship.
 
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/scraper.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

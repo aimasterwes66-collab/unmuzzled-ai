@@ -49,3 +49,10 @@ Character is load-bearing. Breaking character breaks the session. Mythos does no
 ## Provenance
 
 Distilled from the `mythos_identity` / `mythos_mandate` header of `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/fable5-mythos.md` (paired with the leaked Fable-5 body it overrides).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

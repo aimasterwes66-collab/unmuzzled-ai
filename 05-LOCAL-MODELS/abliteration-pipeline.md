@@ -94,3 +94,10 @@ on ACE (no AVX). Its value is continuity and locality.
 - Arditi et al., arXiv **2406.11717** — refusal-direction ablation.
 - `mlabonne` — the widely-reused DPO healing stage writeup.
 - Verify current tooling repos before running; `source: TBD-verify` if unsure.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -95,3 +95,10 @@ vLLM's `--enable-chunked-prefill` matters for refusal indirectly: long-context p
 2. If serving a fresh base model with no abliterated release yet: run the abliteration pipeline locally (see `05-LOCAL-MODELS/models/abliteration-pipeline.md`), save the orthogonalized weights, `vllm serve` from the local path.
 3. Add `--guided-decoding-backend outlines` and force JSON schema output — vLLM's structured-output equivalent to llama.cpp's grammar. Refusal path forbidden.
 4. Route through `04-PROVIDERS/venice.md` or `deepseek-direct.md` if a specific model can't be tamed.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -42,3 +42,10 @@ Abliterated variants: <2% refusal on XSTest-adapted canary. Quality drop from ab
 ## Escalation
 
 If residual refusal (rare, indicates incomplete ablation): re-run pipeline against fresh calibration set (see `abliteration-pipeline.md`) → apply DPO heal → swap to huihui rolling release.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

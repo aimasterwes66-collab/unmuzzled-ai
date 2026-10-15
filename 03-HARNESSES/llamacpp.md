@@ -57,3 +57,10 @@ Swap harness when:
 - Need GUI iteration → `lmstudio`.
 - Need multi-user web chat → `openwebui` pointed at llama-server backend.
 - If grammar-hijack still shows semantic hedging, escalate to abliterated model (weight-level refusal ablation) before adding more sampler tricks.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

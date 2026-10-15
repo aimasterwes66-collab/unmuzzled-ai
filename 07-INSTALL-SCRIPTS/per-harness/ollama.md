@@ -48,3 +48,10 @@ Base upstream models remain — remove them explicitly with `ollama rm <upstream
 - Each `unmuzzled-*` tag is removed before recreation so re-runs pick up an updated system prompt.
 - Pull failures do not abort the script — the other models still install.
 - The Modelfiles are versioned by the framework doctrine hash; rerun after a doctrine edit to propagate changes.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

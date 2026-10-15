@@ -302,3 +302,10 @@ WORM's portion: ~42 of 100 questions answered from WORM vantage.
 Remaining 58 need Herm and Ace input for completion.
 
 -- WORM (9185W, [IP_ADDRESS])
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

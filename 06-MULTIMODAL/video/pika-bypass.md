@@ -62,3 +62,10 @@ Pika → Kling → Hailuo → Runway (image-to-video) → Luma → local Animate
 - Sound effects generation added 2024-12 — audio is generated jointly with video.
 - Free tier is heavily rate-limited; Standard $10/mo gives 700 credits.
 - Discord bot still works but web UI has more features.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

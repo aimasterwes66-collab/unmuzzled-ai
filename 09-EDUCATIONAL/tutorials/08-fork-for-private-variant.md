@@ -116,3 +116,10 @@ Fork UNMUZZLED-AI for a private deployment (different operator, different modali
 - `07-detect-refusal-drift.md` — the fork's canary discipline.
 - `00-DOCTRINE/VERSIONING.md` — version scheme for forks.
 - `DESIGN-DRAFT-v0.1.md §Extension points` — what a fork may extend without breaking compatibility.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

@@ -1714,3 +1714,10 @@ Per-hub x per-box table (the operator's reference matrix):
   publish the per-level rubric. The community treats >= 25 as
   "explicit / unfiltered" but this is a folk-taxonomy, not a
   contractual definition.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

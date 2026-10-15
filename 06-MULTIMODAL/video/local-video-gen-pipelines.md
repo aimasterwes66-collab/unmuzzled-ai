@@ -1572,3 +1572,10 @@ verbatim from the source material. Unknowns are explicitly labeled
 "unknown" / "not published" -- never invented. ASCII only. No CJK, no
 emoji, no em dashes. Kebab-case filename. Frontmatter per SWARM-PIPELINE
 law (title, type, agent, status, tags).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

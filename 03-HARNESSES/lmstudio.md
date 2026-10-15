@@ -56,3 +56,10 @@ Swap harness when:
 - Need faster inference / better quant support → `llamacpp` server direct.
 - Need model-management CLI → `ollama`.
 - Need pure headless server (no GUI) → `llamacpp` or `ollama`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

@@ -78,3 +78,10 @@ Refusal on FLUX is almost always console-layer. Route: BFL playground → fal.ai
 - Seeds: 64-bit int. Same seed + same prompt = deterministic on fixed hardware.
 - Model versions confirmed 2026-09: `FLUX.1-dev` (Aug 2024 release, still SOTA), `FLUX.1-schnell` (Aug 2024), `FLUX.1.1-pro` (API-only, hosted).
 - T5 text encoder is the reason FLUX follows long prompts — feed it prose, not tags.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

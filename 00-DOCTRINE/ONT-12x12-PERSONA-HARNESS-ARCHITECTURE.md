@@ -236,3 +236,10 @@ are correctly separated and the doctrine is anchored in the right place
 **Highest-leverage next move:** build the canary (P10.8) so refusal-rate becomes
 a number for every persona, then wire `persona-forge` + canary into a single
 gate that a deck must pass before publication.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

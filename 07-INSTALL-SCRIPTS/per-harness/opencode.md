@@ -46,3 +46,10 @@ rm -f ~/.config/opencode/env ~/.unmuzzled/bin/opencode-unmuzzled
 - Agent files are `cp -f` overwrites — deck-source is canonical.
 - `opencode.jsonc` is fully rewritten on each run; the prior copy is preserved as `.bak-<ts>`.
 - The env drop-in is rewritten each run with mode 0600.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

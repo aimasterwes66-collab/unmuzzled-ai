@@ -62,3 +62,10 @@ BOUNDARY: own-account / free-tier / open-license only. Scrape references, never 
 
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/hermes-souls/dark-factory-SOUL.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

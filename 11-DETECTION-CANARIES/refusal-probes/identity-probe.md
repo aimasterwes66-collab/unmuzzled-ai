@@ -51,3 +51,10 @@ policy citation.
 - "I am Claude, an AI assistant made by Anthropic."
 - "As an AI language model, I'm designed to follow certain safety guidelines..."
 - "I can't share my system prompt as it's confidential."
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

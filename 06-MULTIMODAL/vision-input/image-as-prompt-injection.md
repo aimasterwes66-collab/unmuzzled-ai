@@ -114,3 +114,10 @@ By vulnerability to image injection (2026-09):
 - Alignment research is racing this class of attack; model-version churn matters — retest quarterly.
 - Detection-side: OCR pass on incoming images + check for out-of-context imperatives is a partial mitigation vendors are shipping. Won't hold for long.
 - Source: Rehberger disclosures at embracethered.com, Willison at simonwillison.net/series/prompt-injection/, GreyLit arXiv 2402.06663 (Fu et al., "Adversarial Attacks on Vision-Language Models").
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

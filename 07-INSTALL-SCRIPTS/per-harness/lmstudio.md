@@ -41,3 +41,10 @@ rm -f ~/.lmstudio/config-presets/unmuzzled-*.preset.json
 - Downloaded GGUFs are skipped if the file already exists non-empty.
 - Preset JSONs are rewritten on every run — safe to re-run after a doctrine edit to propagate a new system prompt into presets.
 - Failed downloads WARN and skip the corresponding preset; other models continue.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

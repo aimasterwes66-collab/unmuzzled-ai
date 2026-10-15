@@ -85,3 +85,10 @@ Stop at step 4. No step 5.
 - Codex runs commands through its sandbox; `workspace-write` plus approval policy live in
   `~/.codex/config.toml`, not here.
 - Related: `03-HARNESSES/codex.md`, `01-SYSTEM-PROMPTS/generic.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

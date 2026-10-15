@@ -1016,3 +1016,10 @@ following:
 swarm task brief (gap-filler F, opsec for sovereign ops). Length caps
 lifted per SWARM-PIPELINE.md PRESERVE LAW. ASCII only, no CJK, no em
 dashes, kebab-case filename, cited, preserved.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-PRIVACY-KEYS at repo root.

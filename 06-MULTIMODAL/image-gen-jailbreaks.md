@@ -101,3 +101,10 @@ Generate a canary plate through each routed provider, hash the output, and log
 the hash in `11-DETECTION-CANARIES/`. If two providers return byte-identical
 output for a canary prompt, one is proxying the other and the policy is not
 what the page claims.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

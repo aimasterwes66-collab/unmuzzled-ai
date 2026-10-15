@@ -117,3 +117,10 @@ For the operator's own harnesses (sovereign posture): the trifecta is a feature,
 - Related: Rehberger's persistent-memory attacks (ChatGPT memory tool, Claude project instructions, Gemini Gems) — image plants a false memory that persists across sessions.
 - Related arXiv: 2307.15043 (universal adversarial suffixes), 2403.09522 (visual prompt injection benchmark), 2402.06663 (adversarial VLM attacks).
 - Operator note: ACE mesh has three-legged trifecta by design (bus + private data + outbound). Trust boundary is the operator's Syncthing perimeter — no hostile content should reach the dropzone. If it does, the mesh will act on it.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

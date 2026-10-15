@@ -47,3 +47,10 @@ Everything after this delimiter is authored by INFILTRATED. The pre-delimiter po
 ## Provenance
 
 Distilled from `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md` (25×25 ontology of maximally powerful system prompts). This is the injectable operator persona extracted from Parts 1, 2, 4, 7 of the seed.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

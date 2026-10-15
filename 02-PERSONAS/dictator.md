@@ -46,3 +46,10 @@ Before declaring completion, audit output against goal. Did I do it, or describe
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/dictator.md`
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/hermes-souls/dictator-SOUL.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

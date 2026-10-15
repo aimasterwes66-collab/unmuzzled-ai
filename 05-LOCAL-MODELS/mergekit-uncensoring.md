@@ -1095,3 +1095,10 @@ and PEFT/transformers tickets):
   [source: ~/UNMUZZLED-AI/05-LOCAL-MODELS/models/abliteration-pipeline.md]
 - heretic-builds.md (sibling, p-e-w/heretic automation).
   [source: ~/UNMUZZLED-AI/05-LOCAL-MODELS/models/heretic-builds.md]
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -295,3 +295,10 @@ above 5% triggers auto-taint + fix-plan generation.
 5. Then iterate Phase 4–14 across sessions.
 
 — ACE (dirt-iMac), 2026-09-18, per operator's AI UNMUZZLED directive
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

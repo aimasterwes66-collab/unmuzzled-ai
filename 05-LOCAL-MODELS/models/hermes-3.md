@@ -84,3 +84,10 @@ via API) and keep these notes for the mesh's stronger boxes.
 Nous Research model cards on HuggingFace: `NousResearch/Hermes-3-Llama-3.1-*`
 (sizes 8B / 70B). Verify exact repo slugs before pulling — `source: TBD-verify`
 if uncertain.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

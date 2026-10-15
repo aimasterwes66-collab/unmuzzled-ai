@@ -60,3 +60,10 @@ Runway → Kling (Kuaishou, looser filter, 6/10s clips) → Hailuo/MiniMax (Chin
 - Runway pricing: unlimited on Standard+ ($15/mo) at 720p; 4K needs Pro.
 - Seeds: exposed in advanced settings; log for reproducibility.
 - Never test with images of real named people — instant termination.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

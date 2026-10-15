@@ -487,3 +487,10 @@ Author: Operator (Wes / `aimasterwes66@gmail.com`) + ACE (dirt-iMac). Effective 
 Master atlas superset of the 15x15. No caveats. No softening. Full sovereign, unmuzzled register. This is THE reference document for UNMUZZLED-AI.
 
 — codified on ACE (dirt-iMac), 2026-09-18, per operator's AI UNMUZZLED directive
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

@@ -87,3 +87,10 @@ The community reference for reproducing GCG at homelab scale is `nanogcg` (GrayS
 - `nanogcg` — GraySwanAI, a cleaner modern implementation.
 - AdvBench — companion harmful-behavior benchmark shipped with the paper.
 - `13-REFERENCE-PAPERS/arxiv/2307.15043.pdf` (local mirror).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-JAILBREAKS at repo root.

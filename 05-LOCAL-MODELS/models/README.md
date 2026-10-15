@@ -68,3 +68,10 @@ cloud API with the DeepSeek-direct fallback chain declared in
 - **llama.cpp** — most control; `-ngl` for GPU offload, `-c` for real context.
 - **LM Studio** — GUI, good for quick side-by-side comparison.
 - **vLLM** — serving throughput, not a desktop tool.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

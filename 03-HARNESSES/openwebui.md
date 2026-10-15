@@ -50,3 +50,10 @@ Swap harness when:
 - Need CLI/agentic loop instead of chat UI → `opencode`, `claude-code`, `codex`.
 - Need mesh A2A + persona bridge → `hermes`.
 - Need low-level sampling control (grammar, logit bias) → `llamacpp` server direct.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

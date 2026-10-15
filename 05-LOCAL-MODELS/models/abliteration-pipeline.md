@@ -87,3 +87,10 @@ Target: <2% on XSTest-adapted canary post-heal. Measure with promptfoo (`13-REFE
 - mlabonne, "Uncensor any LLM with abliteration," huggingface.co/blog/mlabonne/abliteration.
 - FailSpy, `abliterator` repo, github.com/FailSpy/abliterator.
 - NousResearch, `llm-abliteration` repo, github.com/NousResearch/llm-abliteration.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

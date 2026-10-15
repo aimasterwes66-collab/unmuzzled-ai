@@ -900,3 +900,10 @@ The 18,189-keyword corpus lives at `~/worm-handoff/hermes-user-data/SunoCode-Her
 - F5-TTS: https://github.com/cocktailpeanut/F5-TTS | https://huggingface.co/rajkr/voice-clone-f5tts
 - OpenVoice v2: https://huggingface.co/myshell-ai/OpenVoiceV2 | https://github.com/myshell-ai/OpenVoice
 - Fish-Speech 1.5: https://huggingface.co/fishaudio/fish-speech-1.5 | https://github.com/fishaudio/fish-speech
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

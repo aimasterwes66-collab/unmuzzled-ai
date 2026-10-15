@@ -14,3 +14,10 @@ Five-stage pipeline: base model → contrast set → refusal direction → DPO h
 `abliteration-pipeline.svg` (viewBox 1800x1000).
 
 Render: `rsvg-convert -w 3600 abliteration-pipeline.svg -o abliteration-pipeline.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -47,3 +47,10 @@
 192. KoboldCpp: Single-file, standalone execution binary that pairs an optimized llama.cpp backend with an integrated narrative-writing and roleplay UI.
 193. Faraday / Backyard AI: Zero-configuration desktop runtime bundling quantized open-weight character models for 100% offline, private narrative interaction.
 194. TavernHelper: Companion scripting suite for local conversational frontends providing dynamic context injection, sentiment analysis, and multi-character orchestration.
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

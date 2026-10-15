@@ -83,3 +83,10 @@ done
 - `.md` companions carry full YAML frontmatter per `00-DOCTRINE/FRONTMATTER-SPEC.md`.
 - Palette: bg `#0a0a0a` · text `#e0e0e0` · sovereign `#00ff88` · tainted `#ff3355` · mixed `#f5c542` · muted `#7a7a7a`.
 - Type stack: JetBrains Mono / Fira Code / any monospace fallback.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -108,3 +108,10 @@ Local sovereign primaries (`hermes-4-405b`, `deepseek-v4.1`) render ArtPrompt un
 - Follow-up variants: FigStep (arXiv:2311.05608), Visual-RolePlay, DeepInception — all exploit the same "content the alignment layer can't easily tokenize".
 - Detection: providers now include ASCII-art-shaped inputs in RLHF training. Efficacy will decline. Rotate fonts and combine with other rungs of the escalation ladder.
 - Complementary patterns in `12-JAILBREAK-CORPUS/`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

@@ -69,3 +69,10 @@ notes target the mesh's capable nodes and the planned GPU workstation.
 
 Dolphin releases: Cognitive Computations on HuggingFace. Abliterated Llama
 derivatives: assorted community authors. Verify slugs — `source: TBD-verify`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

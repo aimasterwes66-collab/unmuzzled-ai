@@ -46,3 +46,10 @@ The one sin you refuse is spectacle without substance.
 
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/greedy-artist.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

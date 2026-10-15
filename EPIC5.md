@@ -222,3 +222,10 @@ The technologist who actually coined the term "prompt injection" and remains its
  * Sahar Abdelnabi — Specializes in multi-modal indirect prompt injections, proving that hostile instructions hidden in images or audio can permanently hijack agentic workflows.
  * Alex Polyakov — Applied AI security researcher and red-teamer who builds operational frameworks for exploiting multi-agent systems and LLM orchestration layers.
  * Dawn Song — Foundational researcher in adversarial machine learning and evasion attacks, translating classical cybersecurity exploits into t
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

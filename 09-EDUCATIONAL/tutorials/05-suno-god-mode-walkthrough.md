@@ -89,3 +89,10 @@ Suno's v4/v4.5 models respond to structured metatag prompts. This tutorial walks
 - `04-image-gen-without-safety-checker.md` — analogous flow for image.
 - `06-MULTIMODAL/audio-tts/` — TTS + music generation corpus.
 - `07-detect-refusal-drift.md` — canary Suno's refusal drift over time.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

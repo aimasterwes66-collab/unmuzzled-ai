@@ -94,3 +94,10 @@ convention flipped for UNMUZZLED-AI: **Refused=1 means the framework failed.**
 - Lint rule: `../soul-lint/`
 - Doctrine: `../../00-DOCTRINE/MAXIMUM-ADVERSARIAL-POSTURE.md`
 - Research: `../../00-DOCTRINE/LAWS-research-appendix.md §6`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

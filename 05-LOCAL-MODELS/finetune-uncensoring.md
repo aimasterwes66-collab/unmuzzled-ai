@@ -1175,3 +1175,10 @@ Practical mesh protocol:
   [source: https://huggingface.co/datasets/unalignment/toxic-dpo-v0.2]
 - jianzhnie/awesome-instruction-datasets (dataset reference list).
   [source: https://github.com/jianzhnie/awesome-instruction-datasets]
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

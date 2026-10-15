@@ -2965,3 +2965,10 @@ existing layers.
 - escalation-ladder.md (UNMUZZLED-AI 08-DECISION-TREES) -- ~/UNMUZZLED-AI/08-DECISION-TREES/escalation-ladder.md
 - SWARM-PIPELINE.md (UNMUZZLED-AI) -- ~/UNMUZZLED-AI/SWARM-PIPELINE.md
 - RECONCILE-PLAN.md (UNMUZZLED-AI) -- ~/UNMUZZLED-AI/RECONCILE-PLAN.md
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

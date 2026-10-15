@@ -615,3 +615,10 @@ tags: [corpus, adversarial, reference]
 **End of Simplified Categorical Structure**
 
 *This framework provides the scaffolding for a comprehensive cybercrime thriller narrative, with each category and entry serving as a potential scene, character motivation, plot point, or thematic exploration. The structure maintains the technical precision of threat intelligence while enabling deep narrative development.*
+
+
+---
+
+## Deep reference
+
+Comprehensive corpus map and index: see UNMODERATED-JAILBREAKS at repo root.

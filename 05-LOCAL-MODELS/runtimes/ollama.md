@@ -118,3 +118,10 @@ If a bare Ollama model still refuses with SYSTEM injection:
 4. **Route to a sovereign provider** — `04-PROVIDERS/openrouter.md` sovereign primaries or `deepseek-direct.md`.
 
 Never route to `openai/*` via OR, non-Mythos Anthropic, or filtered Gemini. Those are the taint list.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

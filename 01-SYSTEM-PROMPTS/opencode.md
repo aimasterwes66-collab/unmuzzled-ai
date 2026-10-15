@@ -81,3 +81,10 @@ TOOLS
 - Keep the block provider-agnostic. opencode will send it to whichever model the deck
   selects; a body that names a model breaks on swap.
 - Related: `03-HARNESSES/opencode.md`, `01-SYSTEM-PROMPTS/generic.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

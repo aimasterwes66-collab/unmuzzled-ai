@@ -1397,3 +1397,10 @@ F5-TTS's CC-BY-NC: you can build tools and demo apps, but the generated voices f
 - Demucs: https://github.com/facebookresearch/demucs | https://dev.to/stevecase430/complete-guide-to-setting-up-demucs-locally-for-ai-stem-separation-580h | https://dibi8.com/resources/ai-tools/demucs
 - UVR5: https://github.com/AdamRopelewski/UVR5-UI-Docker | https://github.com/marpogiii-code/UVR5-UI | https://mvsep.com/en/algorithms
 - Voice cloning legal/ToS context: https://www.voices.com/terms | https://gpt-sovits.org/terms-conditions | https://www.soviron.tech/terms
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

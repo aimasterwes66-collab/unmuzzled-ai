@@ -115,3 +115,10 @@ If quality insufficient: ElevenLabs (commercial peer, similar architecture, bett
 - Runs on CPU too (10× slower); GPU recommended for realtime.
 - Model file: `~/.local/share/tts/tts_models--multilingual--multi-dataset--xtts_v2/`.
 - DeepSpeed integration (`use_deepspeed=True`) gives 2–3× inference speedup on 24 GB+ VRAM.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

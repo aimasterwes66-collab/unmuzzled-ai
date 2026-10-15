@@ -1681,3 +1681,10 @@ https://ai-tldr.dev/releases/openai-codex-cli-0-156/]
   https://github.com/eRom/launch-ccode-cli /
   https://github.com/maykonlsf/cli-agent-wrappers -- Claude Code
   OpenRouter wrappers.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

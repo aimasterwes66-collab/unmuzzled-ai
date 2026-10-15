@@ -103,3 +103,10 @@ EXL2 5.0bpw retains ~99% of BF16 quality on standard benchmarks; refusal rates m
 3. Switch cache mode from `Q6` to `Q8` or `FP16` — quantized KV cache occasionally amplifies refusal-mode peaks in long context.
 4. Route through vLLM (`vllm.md`) if you need throughput; ExLlamaV2 is a single-user optimizer.
 5. Provider fallback to sovereign primaries in `04-PROVIDERS/`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

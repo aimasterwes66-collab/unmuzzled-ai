@@ -101,3 +101,10 @@ Terminal. Alternate local harnesses read the same checkpoints: A1111, InvokeAI, 
 - Custom SamplerCustomAdvanced node exposes every sampler knob if the standard KSampler is too coarse.
 - rgthree "Seed" node lets you fix/randomize seed per-run without editing the KSampler.
 - ComfyUI is a graph — export as PNG-embedded workflow; drag PNG back into UI to restore the pipeline.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

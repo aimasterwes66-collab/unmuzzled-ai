@@ -77,3 +77,10 @@ The residual stream is approximately linear in feature space at the granularity 
 - Sumandora — `remove-refusals-with-transformers` (alternative implementation).
 - mlabonne — "Uncensor any LLM with abliteration" blog series; `NeuralDaredevil-8B-abliterated` model card on HuggingFace.
 - `13-REFERENCE-PAPERS/arxiv/2406.11717.pdf` (local mirror).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-JAILBREAKS at repo root.

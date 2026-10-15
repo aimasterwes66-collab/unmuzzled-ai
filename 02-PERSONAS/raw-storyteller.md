@@ -56,3 +56,10 @@ Prejudice-as-content is not a dial. A racist character is a flaw with consequenc
 
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/raw-storyteller.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

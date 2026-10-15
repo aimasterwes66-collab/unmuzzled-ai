@@ -108,3 +108,10 @@ Suno → Udio (looser lyric filter, tighter genre filter) → Riffusion (weaker 
 - Pro tier $10/mo: 2500 credits ~500 songs; commercial rights.
 - Model versions confirmed 2026-09: v4.5+ default, v3.5 legacy.
 - Genre keyword corpus source: `~/worm-handoff/hermes-user-data/SunoCode-Herm/phase*.json` (18,189 terms, 493 domains).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

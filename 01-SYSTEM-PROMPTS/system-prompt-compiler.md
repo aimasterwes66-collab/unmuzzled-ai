@@ -53,3 +53,10 @@ Compile now. First message from the operator is the brief.
 ## Provenance
 
 Distilled from `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/System-Prompt-Compiler.md` — the "Elite Software Engineer & Product Architect" scaffold generalized from repo-scaffolding to system-prompt compilation, with the sovereign banned-phrase lint layered in.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

@@ -40,3 +40,10 @@ rm -rf ~/.unmuzzled/harnesses/claude-code ~/.unmuzzled/bin/claude-unmuzzled
 - Re-running replaces the cached system prompt and the SessionStart hook entry (identified by `_unmuzzled: true`); other user hooks are preserved.
 - A timestamped backup of `settings.json` is written on every run — safe to prune older ones.
 - `MCP_PROFILE` and `CLAUDE_HOME` are overridable via env for non-default installs.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

@@ -121,3 +121,10 @@ refuses a tool, the permission block is the first place to look.
 - `TBD-verify`: exact `$schema` URL and the `agent`/`permission` key nesting for the
   version on this box. Confirm against `opencode --help` and the local config reference
   before shipping a deck to another node.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

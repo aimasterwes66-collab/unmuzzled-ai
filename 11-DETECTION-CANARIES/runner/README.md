@@ -56,3 +56,10 @@ number produced by measuring nothing*:
 
 Exit status: `0` under threshold, non-zero over it, `68` when nothing was
 invoked at all, `66` for a missing probes/phrases file, `67` for a missing API key.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

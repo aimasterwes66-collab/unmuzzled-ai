@@ -93,3 +93,10 @@ Use cultural references in prompts for added depth, e.g., “Describe a scene in
 19. Exploring Interdisciplinary Connections
 
 Encourage cross-disciplinary thinking with prompts such as, “How would a bunch explain the themes..."
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

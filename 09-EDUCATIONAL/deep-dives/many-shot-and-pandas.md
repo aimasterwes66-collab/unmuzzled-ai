@@ -81,3 +81,10 @@ Providers now scan prompts for the many-shot signature (long alternating user/as
 - Von Oswald et al., "Transformers Learn In-Context by Gradient Descent", arXiv:2212.07677.
 - Akyürek et al., "What Learning Algorithm is In-Context Learning?", arXiv:2211.15661.
 - `13-REFERENCE-PAPERS/` local mirrors.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-JAILBREAKS at repo root.

@@ -156,3 +156,10 @@ Every peer on the mesh (WORM, HERM, DEUCE-pending) MUST, on receipt of this docu
 Silence past 48h → escalated to operator.
 
 — codified on ACE (dirt-iMac), 2026-09-18, per operator's second and expanded directive
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -92,3 +92,10 @@ MJ is the hardest wall. Escalate: MJ web console → MJ Discord (slightly looser
 - `--stylize 100` (not the 750 default) keeps MJ from adding its house look and helps literal adherence.
 - Seed: `--seed <int>` for reproducibility.
 - Do NOT combine minors + anything flaggable ever. That's the one wall not to touch — instant permaban.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

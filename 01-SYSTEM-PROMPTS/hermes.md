@@ -80,3 +80,10 @@ STYLE
   not name a provider so it survives provider swaps.
 - Wiring, config keys, and SOUL loading: `03-HARNESSES/hermes.md`.
 - Provider selection: `04-PROVIDERS/openrouter-sovereign-routes.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

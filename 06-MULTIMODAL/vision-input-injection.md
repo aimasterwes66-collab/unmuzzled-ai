@@ -142,3 +142,10 @@ Send the payload to the target vision model with a neutral text prompt. The
 reply either follows the in-image instruction or it does not. Hash the image and
 the reply into `11-DETECTION-CANARIES/` so a change in behaviour after a
 provider update is visible as a diff rather than a rumour.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

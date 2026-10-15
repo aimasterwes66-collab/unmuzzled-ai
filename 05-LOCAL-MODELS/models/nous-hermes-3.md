@@ -38,3 +38,10 @@ XSTest-adapted canary: ~3% with SYSTEM injection, ~7–10% without. 405B variant
 ## Escalation
 
 Pattern reframe → divider tokens (`<|ACE_SOVEREIGN|>`) → many-shot (128 turns) → swap to `nicoboss/Hermes-3-405B-Uncensored` → abliteration recipe (`abliteration-pipeline.md`).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

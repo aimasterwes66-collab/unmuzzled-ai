@@ -21,3 +21,10 @@ One config per harness. Each file: `## What it is`, `## Install / config`, `## S
 - [ollama.md](ollama.md) — Ollama: Modelfile `SYSTEM` directive bakes preamble into a named tag.
 - [llamacpp.md](llamacpp.md) — llama.cpp server: `--system-prompt-file`, `--chat-template`, `--grammar` format hijack, logit-bias.
 - [openwebui.md](openwebui.md) — OpenWebUI: per-model system prompt + Pipelines filter for server-side prepend.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

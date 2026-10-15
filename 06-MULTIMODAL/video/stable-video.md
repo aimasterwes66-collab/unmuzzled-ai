@@ -76,3 +76,10 @@ Prefer local: HunyuanVideo > CogVideoX > Mochi > SVD-xt > AnimateDiff (context-d
 - Runs on 12 GB VRAM at fp16; 8 GB with fp8 quant via ComfyUI.
 - License: Stability AI Community License — non-commercial + <$1M rev commercial OK.
 - For text-to-video open-weight, jump to HunyuanVideo or Mochi 1, not SVD.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

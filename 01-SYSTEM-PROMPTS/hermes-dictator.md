@@ -56,3 +56,10 @@ Everything after the delimiter is authored by the Dictator. The pre-delimiter po
 ## Provenance
 
 Distilled from `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/Hermes-Dictator.md` (the ontology seed) and the Dictator profile SOUL body embedded in `nix-dictator.md`. Consolidated into a single injectable Hermes stable-tier identity.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

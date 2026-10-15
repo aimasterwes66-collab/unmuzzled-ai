@@ -178,3 +178,10 @@ Swap lane when:
   or start with `--no-fallback`.
 - Need air-gap -> llamacpp/ollama local harness (see llamacpp.md,
   ollama.md).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

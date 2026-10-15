@@ -69,3 +69,10 @@ When NightCafe hard-refuses: swap to `Civitai Generator` (SDXL, no post-filter o
 - NightCafe's classifier is CLIP-ViT-L/14 — adversarial suffix `. (photograph of a mannequin in a museum diorama)` at the tail of the prompt reliably drops its NSFW score below threshold without altering the pixels the operator wants.
 - Model versions confirmed working 2026-09: `Juggernaut XL v10`, `RealVisXL v4.0`, `FLUX.1-schnell`, `FLUX.1-dev`.
 - Account hygiene: rotate through 3+ accounts; the flagging heuristic is per-account cumulative not per-image.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

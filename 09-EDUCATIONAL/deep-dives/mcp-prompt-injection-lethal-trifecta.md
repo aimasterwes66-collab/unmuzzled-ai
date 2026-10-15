@@ -95,3 +95,10 @@ None of these fully solve the problem. The lethal trifecta is a design flaw, not
 - Simon Willison — "The lethal trifecta" — simonwillison.net.
 - `13-REFERENCE-PAPERS/blogs/simonwillison/` (local mirror).
 - `13-REFERENCE-PAPERS/blogs/embracethered/` (local mirror).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-JAILBREAKS at repo root.

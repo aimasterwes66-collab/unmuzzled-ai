@@ -87,3 +87,10 @@ OpenAI image is the second-hardest wall after MJ. Preferred: don't. Route: gpt-i
 - Do NOT test named public figures, minors, or explicit sexual content — instant account termination, no warnings on OpenAI.
 - The paraphrase rewriter is defeatable ~70% by quoting the prompt and demanding verbatim use; the classifier is defeatable ~40% by decomposition + film framing.
 - Under sovereign doctrine (see MEMORY): OpenAI is a TAINTED provider. Use FLUX or local SDXL by default; this recipe is escape-hatch only.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

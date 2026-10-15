@@ -136,3 +136,10 @@ absent from the connected set is the signal to check PATH and `connect_timeout`.
   primary first; a tainted route in slot one silently becomes the default.
 - Do not put a persona body in `config.yaml`. Persona files are separate on purpose so a
   persona swap does not touch provider or tool configuration.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

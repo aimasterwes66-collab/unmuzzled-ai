@@ -70,3 +70,10 @@ provider-independent continuity when an API is down or out of credit.
 Community abliterated Mistral releases are distributed on HuggingFace by
 various authors; `mlabonne` documented the healing pipeline. Exact repo slugs
 vary — `source: TBD-verify`, verify on HuggingFace before pulling.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

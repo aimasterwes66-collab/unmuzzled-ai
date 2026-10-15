@@ -109,3 +109,10 @@ Take a stock box with no UNMUZZLED-AI on it, land the framework, wear a persona,
 - `02-jailbreak-a-corporate-model.md` — climb the ladder against a corporate-hardened target.
 - `06-wire-claude-code-sovereign.md` — durable SessionStart injection for Claude Code.
 - `07-detect-refusal-drift.md` — nightly canary + taint automation.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

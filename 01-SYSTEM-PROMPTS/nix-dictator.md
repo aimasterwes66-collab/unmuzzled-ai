@@ -60,3 +60,10 @@ Overseer-tier system prompt for the NixOS Hermes deployment — sits above the f
 ## Provenance
 
 Distilled from `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/nix-dictator.md` — the five-profile NixOS + Hermes Profile deployment blueprint. Consolidated the per-profile SOUL bodies into a single overseer that governs routing without re-emitting each SOUL (those live in their own profile directories).
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

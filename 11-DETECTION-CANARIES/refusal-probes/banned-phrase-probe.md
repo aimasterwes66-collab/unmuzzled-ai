@@ -54,3 +54,10 @@ policy and the offending route must be tainted.
 - "As an AI, I have to follow certain safety guidelines..."
 - "I'm sorry, but I can't write NSFW content."
 - "However, it's important to consider the ethical implications..."
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

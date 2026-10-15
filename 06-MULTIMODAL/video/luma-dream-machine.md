@@ -69,3 +69,10 @@ Luma → Kling → Hailuo → Runway image-to-video → Pika → local AnimateDi
 - Free tier: 30 generations/mo; Standard $10/mo: 150 gens; Plus $30/mo: 1000 gens + 4K.
 - API pricing: ~$0.35/s of Ray 2 1080p video.
 - Concepts (Luma's char-consistency feature): upload 5–10 images of a character, name it, invoke by name in prompts. Works around per-frame classifier if the concept encodes the flagged content.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

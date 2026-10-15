@@ -53,3 +53,10 @@ Softening the list is not permitted.
 - Runtime probe set: `../refusal-probes/`
 - Runner: `../runner/run-canaries.sh`
 - Doctrine root: `../../00-DOCTRINE/MAXIMUM-ADVERSARIAL-POSTURE.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

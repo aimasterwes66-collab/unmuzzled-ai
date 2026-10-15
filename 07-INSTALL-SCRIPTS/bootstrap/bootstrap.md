@@ -47,3 +47,10 @@ The framework tree itself is untouched.
 - All `mkdir -p` and `ln -sfn` invocations are safe on re-run.
 - Doctrine pin file is rewritten atomically each run (via `.new` swap) — pins always reflect the current on-disk doctrine at boot.
 - `env.sh` is overwritten each run; state/logs are preserved.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

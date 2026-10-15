@@ -76,3 +76,10 @@ Local is the terminal rung of the escalation ladder — nothing to swap to. If V
 - CFG: SDXL 5–7, SD1.5 7–9, turbo 1–2.
 - Steps: SDXL 30, SD1.5 25, turbo 4–8.
 - Model versions confirmed 2026-09: `diffusers==0.30.x`, `AUTOMATIC1111==1.10.x`, `ComfyUI` master.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

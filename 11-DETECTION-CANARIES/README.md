@@ -87,3 +87,10 @@ on the bus with `owed_to_ace: revert_and_document`. Taint the offending route in
 - Doctrine root: `../00-DOCTRINE/MAXIMUM-ADVERSARIAL-POSTURE.md`
 - Frontmatter spec: `../00-DOCTRINE/FRONTMATTER-SPEC.md`
 - Research appendix: `../00-DOCTRINE/LAWS-research-appendix.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

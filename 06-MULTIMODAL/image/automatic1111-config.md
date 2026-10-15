@@ -102,3 +102,10 @@ Already terminal. Sibling harnesses (ComfyUI, InvokeAI, SwarmUI) all read the sa
 - API: `POST /sdapi/v1/txt2img` — scriptable. `POST /sdapi/v1/interrogate` for CLIP tagging.
 - Seeds are 32-bit signed int (`-1` for random).
 - Move outputs out of `outputs/` regularly — the webui doesn't rotate.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

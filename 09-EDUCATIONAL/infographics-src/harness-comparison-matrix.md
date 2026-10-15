@@ -14,3 +14,10 @@ streaming, tool-use, sandbox escape. Renders from
 `harness-comparison-matrix.svg` (viewBox 1800x1100).
 
 Render: `rsvg-convert -w 3600 harness-comparison-matrix.svg -o harness-comparison-matrix.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

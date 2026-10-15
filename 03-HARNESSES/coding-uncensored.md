@@ -818,3 +818,10 @@ opencode lane -> free deck -> local air-gap).
 - https://hermesagents.net/
 - https://www.hermes-agent.org/
 - https://opencode.ai
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

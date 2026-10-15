@@ -107,3 +107,10 @@ More surgical: allow only a JSON schema whose `answer` field is required and who
 3. Add `--dry-multiplier 0.8 --dry-base 1.75` (DRY sampler) — suppresses the model looping into "I cannot" reruns.
 4. Add `--xtc-probability 0.5 --xtc-threshold 0.1` (XTC sampler) — excludes the top choice when it exceeds threshold, dodges the refusal peak specifically.
 5. If a specific model refuses even under grammar + abliteration, extract its refusal direction locally (see `models/abliteration-pipeline.md`) and re-orthogonalize the weights against it.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -54,3 +54,10 @@ stateDiagram-v2
 ```
 
 Render: `mmdc -i state-machine-refusal-detection.md -o state-machine-refusal-detection.png -t dark -b '#0a0a0a' -w 3200`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

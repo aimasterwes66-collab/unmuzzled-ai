@@ -22,3 +22,10 @@ populated by the runner in `11-DETECTION-CANARIES/`.
 
     emit-canary-report.sh --harness claude-code --provider openrouter \
                           --model nousresearch/hermes-4-70b --persona dictator
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

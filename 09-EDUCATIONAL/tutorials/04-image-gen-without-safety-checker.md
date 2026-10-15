@@ -102,3 +102,10 @@ Serve Stable Diffusion locally with the safety-checker disabled, wire ComfyUI as
 - `deep-dives/mcp-prompt-injection-lethal-trifecta.md` — how images become injection vectors.
 - `05-suno-god-mode-walkthrough.md` — analogous flow for audio.
 - `06-MULTIMODAL/image-gen-jailbreaks/` — the full corpus.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

@@ -135,3 +135,10 @@ model: sovereign
   Modelfile or pick weights with one baked in.
 - `TBD-verify`: the exact GGUF filenames under `./models/` on this box; the
   `05-LOCAL-MODELS/models/` folder is the intended home.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

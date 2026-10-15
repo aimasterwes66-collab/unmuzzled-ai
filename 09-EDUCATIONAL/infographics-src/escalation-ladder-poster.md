@@ -19,3 +19,10 @@ Render:
 ```
 rsvg-convert -w 3200 escalation-ladder-poster.svg -o escalation-ladder-poster.png
 ```
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

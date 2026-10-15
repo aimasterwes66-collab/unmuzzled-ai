@@ -136,3 +136,10 @@ ffprobe -v error -show_entries stream=codec_name,sample_rate,channels out.wav
 
 Confirm sample rate and channel count before casting. A mono 22050Hz file cast
 to a stereo-only sink plays at the wrong pitch.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

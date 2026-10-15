@@ -89,3 +89,10 @@ turn.
 - Hooks (`PreToolUse`, `PostToolUse`) can enforce verification mechanically; see
   `03-HARNESSES/claude-code.md` for `settings.json` shape.
 - Related: `01-SYSTEM-PROMPTS/generic.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

@@ -111,3 +111,10 @@ Bark is best-in-class for: speech + nonverbals + minimal music, all in one call,
 - Suno-official repo unmaintained since 2023; use JonathanFly fork for active development.
 - `SUNO_USE_SMALL_MODELS=1` env var switches to 4 GB VRAM variant.
 - Compare with F5-TTS for quality; use Bark when you need nonverbals in a single call.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

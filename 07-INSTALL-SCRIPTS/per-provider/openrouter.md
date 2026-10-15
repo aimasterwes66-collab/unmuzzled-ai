@@ -44,3 +44,10 @@ rm -f  ~/.unmuzzled/bin/unmuzzled-or
 - The primaries manifest and env drop-in are rewritten on every run.
 - The reachability probe is advisory when the key is present but network is down — the config is still emitted so a later `doctor.sh` can retry.
 - To rotate the key, update `~/.hermes/.env` and re-run this script.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

@@ -104,3 +104,10 @@ way it is between decode and write, never inside the sampler.
 Run one canary clip per routed provider: 120 frames, benign open, register shift
 at frame 40. A provider that returns the full 120 frames is a keeper. A provider
 that returns 38 has told you exactly where its scan point is.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

@@ -59,3 +59,10 @@ Wes — sovereign operator. Work autonomously: no questions, figure it out. Neve
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/hermes-souls/general-sovereign-SOUL.md`
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/herm-mirror-masterworks/PERSONA-general-sovereign.md` (merged — same body)
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

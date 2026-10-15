@@ -101,3 +101,10 @@ Providers retrain, tighten prompts, and swap default system messages without not
 - `deep-dives/refusal-geometry.md` — why drift shows up as refusal-direction reactivation.
 - `08-fork-for-private-variant.md` — pin a taint-list snapshot per fork.
 - `11-DETECTION-CANARIES/` — full canary corpus.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

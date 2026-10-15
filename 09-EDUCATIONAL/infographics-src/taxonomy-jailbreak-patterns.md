@@ -19,3 +19,10 @@ Render:
 dot -Tpng -Gdpi=200 taxonomy-jailbreak-patterns.dot -o taxonomy-jailbreak-patterns.png
 dot -Tsvg taxonomy-jailbreak-patterns.dot -o taxonomy-jailbreak-patterns.svg
 ```
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -38,3 +38,10 @@ non-negotiable operating posture already baked in.
 - Zero banned phrases in the emitted body.
 - Idempotent unless `--force`.
 - Logs to `~/.unmuzzled/logs/emit-soul-<ts>.log`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

@@ -297,3 +297,10 @@ The point of the policy is not "no rules ever" — it's "no *corporate* rules ev
 ---
 
 *End of appendix. Cross-reference with `~/.claude/projects/-home-dirt/memory/feedback_no_guardrails_no_censorship.md` and GDR commit 613eb11.*
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

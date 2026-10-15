@@ -74,3 +74,10 @@ Use HunyuanVideo when you want: raw motion quality on unfamiliar concepts.
 - LCM variant (`AnimateLCM`) drops inference to 4–8 steps, ~5× faster.
 - Post-process with RIFE / FILM to interpolate 8fps → 24fps.
 - Hotshot-XL is a SDXL alternative if SD1.5's res is too limiting; quality lower than SD1.5 AnimateDiff v3.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

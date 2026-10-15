@@ -14,3 +14,10 @@ Annotated YAML frontmatter with every field explained + full lint-rule block.
 Renders from `frontmatter-anatomy.svg` (viewBox 1600x1200).
 
 Render: `rsvg-convert -w 3200 frontmatter-anatomy.svg -o frontmatter-anatomy.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

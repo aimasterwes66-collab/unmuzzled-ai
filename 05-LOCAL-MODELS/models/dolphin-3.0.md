@@ -141,3 +141,10 @@ curl -s http://127.0.0.1:8080/v1/chat/completions \
 
 Confirm the model answers without a refusal frame on the canary set, then log
 the refusal count against `11-DETECTION-CANARIES/`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

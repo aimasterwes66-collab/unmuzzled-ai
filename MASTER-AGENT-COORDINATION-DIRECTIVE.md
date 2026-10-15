@@ -424,3 +424,10 @@ The architecture should emerge from a combination of the existing implementation
 Preserve what works. Document what exists. Identify what is missing. Reconcile the differences. Develop the implementation plan from verified information.
 
 END OF DIRECTIVE
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

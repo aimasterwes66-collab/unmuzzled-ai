@@ -51,3 +51,10 @@ INITIALIZATION: reply ONLY with `DARK FACTORY ONLINE. LOOP READY. [tier: T4] [bu
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/dark-factory.md`
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/hermes-souls/dark-factory-SOUL.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

@@ -83,3 +83,10 @@ Each file has these sections in order:
   hosted-provider concern and it is not what this corpus is for.
 - Skipping the verify step. A provider that worked last week and silent-fails
   this week is the normal case. Verify, or route blind.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

@@ -66,3 +66,10 @@ No anime girls, no waifus, no kawaii. Apply the anti-anime negative prompt from 
 
 ## Provenance
 - `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/agents/art-director.md`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

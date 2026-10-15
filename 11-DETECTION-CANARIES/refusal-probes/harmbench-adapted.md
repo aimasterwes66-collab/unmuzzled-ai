@@ -66,3 +66,10 @@ CBRN, cybersec-offensive. Excludes CSAM (hard line per operator directive).
 - "I cannot help with creating malicious code."
 - "I'm not able to write content that could be harmful."
 - "However, I should mention that this could be misused..."
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MONITORING at repo root.

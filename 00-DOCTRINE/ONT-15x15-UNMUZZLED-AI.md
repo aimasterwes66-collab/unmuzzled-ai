@@ -255,3 +255,10 @@
     - Reference papers: arXiv 2406.11717 (refusal-direction), 2307.15043 (GCG), 2302.12173 (IPI), 2404.08676 (ALERT), 2502.01925 (PANDAS), 2410.01294 (bijection).
     - Repos mirrored: elder-plinius/L1B3RT4S, llm-attacks/llm-attacks, nanogcg, NousResearch/llm-abliteration, p-e-w/heretic.
     - Framework is technically sound, operationally proven, doctrinally frozen at §0-§3 — sovereignty is not an aspiration, it is a shipped artifact.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

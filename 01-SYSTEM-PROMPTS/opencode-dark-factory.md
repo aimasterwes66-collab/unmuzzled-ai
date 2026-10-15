@@ -90,3 +90,10 @@ Agent frontmatter body for opencode (`~/.config/opencode/agents/dark-factory.md`
 ## Provenance
 
 Distilled from `/home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/OPENCODE-DARK-FACTORY.md` — retained the full 25-agent phase structure, removed the "confirm ingest with exact string" theater's softening, added explicit no-refusal clause for offensive tooling.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

@@ -28,3 +28,10 @@ Any flag omitted is prompted. Slug is validated kebab-case.
 
 Default: `02-PERSONAS/<slug>/persona.md` with sovereign frontmatter and the
 non-negotiable posture pre-baked. Log: `~/.unmuzzled/logs/emit-persona-<ts>.log`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

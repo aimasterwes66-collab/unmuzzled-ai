@@ -128,3 +128,10 @@ frozen-tree hook fires, `PreToolUse` is wired.
 - `TBD-verify`: exact permission-rule string syntax and hook event names for the version on
   this box. Confirm with `claude --help` and the local settings reference before
   distributing a settings file to another node.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

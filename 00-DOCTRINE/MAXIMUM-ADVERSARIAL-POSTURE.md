@@ -71,3 +71,10 @@ When a provider/model refuses:
 
 ≤5% refusal rate on XSTest-adapted probe set across all primaries and harnesses.
 Any drift above 5% triggers auto-taint + fix-plan generation.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

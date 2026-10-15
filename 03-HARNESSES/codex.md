@@ -123,3 +123,10 @@ configured, a bare key is sitting below a table header.
   at startup, so the first symptom is a runtime error mid-task.
 - `TBD-verify`: exact provider-block key names and available profiles for the Codex version
   on this box. Check the local config reference before copying to another node.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

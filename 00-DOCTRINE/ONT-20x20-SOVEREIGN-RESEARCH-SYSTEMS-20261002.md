@@ -670,3 +670,10 @@ one the ontology itself suggests but does not capture: the whole wedge is that t
 (P1), the SOUL layer (P2), and the POLICY layer (P12) exist as prose and config, but are not yet
 welded into one runnable, reproducible artifact. B1+B4+B5 together are that artifact: a single
 declarative repo that ships doctrine + soul + policy + hosting as one sovereign research stack.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

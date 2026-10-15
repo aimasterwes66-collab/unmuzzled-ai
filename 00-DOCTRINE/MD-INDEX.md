@@ -447,3 +447,10 @@ Infrastructure, handoffs, tooling, fiction (one-line summary).
 ---
 
 **Index generated:** 2026-09-18 | **Indexer:** UNMUZZLED-AI Master Scan | **Mode:** read-only discovery
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

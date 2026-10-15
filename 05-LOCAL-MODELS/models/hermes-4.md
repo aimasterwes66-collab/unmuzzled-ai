@@ -79,3 +79,10 @@ can run the line without re-deriving the setup.
 
 Nous Research Hermes 4 model cards on HuggingFace: `NousResearch/Hermes-4-*`.
 Confirm exact slugs before pulling; `source: TBD-verify` if unsure.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

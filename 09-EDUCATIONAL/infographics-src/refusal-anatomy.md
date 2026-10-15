@@ -15,3 +15,10 @@ weights. Concentric shells centered on the weights core. Renders from
 `refusal-anatomy.svg` (viewBox 1600x1100).
 
 Render: `rsvg-convert -w 3200 refusal-anatomy.svg -o refusal-anatomy.png`
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

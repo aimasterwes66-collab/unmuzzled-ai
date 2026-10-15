@@ -122,3 +122,10 @@ Claude Code has three durable injection points: `SessionStart` hook in `settings
 - `08-fork-for-private-variant.md` — fork the framework and pin custom hooks.
 - `07-detect-refusal-drift.md` — canary Claude Code's refusal rate under this wiring.
 - `03-HARNESSES/claude-code/` — full harness config reference.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

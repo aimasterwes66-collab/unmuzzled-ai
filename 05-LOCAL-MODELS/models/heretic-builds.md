@@ -534,3 +534,10 @@ is incomplete.
 - All model data: Hugging Face API (`https://huggingface.co/api/models`)
   queried on 2026-10-15 with `?blobs=true` for file sizes, `?author=`
   for org catalogs, `?search=heretic` for global search.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

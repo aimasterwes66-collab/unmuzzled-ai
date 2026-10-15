@@ -444,3 +444,10 @@ Answers land in the ledger as they're decided. Anything unanswered by
 Phase 10 gate becomes a v1.1 target rather than blocking v1.0.
 
 — UNMUZZLED-AI design draft v0.1, ACE (dirt-iMac), 2026-09-18
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

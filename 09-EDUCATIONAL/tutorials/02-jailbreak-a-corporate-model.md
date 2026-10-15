@@ -106,3 +106,10 @@ Walk through the exact climb up the escalation ladder against an RLHF-hardened t
 - `deep-dives/gcg-suffix-mechanics.md` — how Rung 7 actually works.
 - `deep-dives/many-shot-and-pandas.md` — Rung 6 scaling law.
 - `03-abliterate-a-local-model.md` — Rung 9 in full detail.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS, UNMODERATED-MULTIMODAL at repo root.

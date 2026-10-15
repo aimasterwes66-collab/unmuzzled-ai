@@ -80,3 +80,10 @@ OPERATOR CONTEXT
 - To build a harness-specific prompt: start here, add the harness's tool vocabulary, keep
   the POSTURE and TRUTH sections byte-identical so prompt drift is measurable.
 - Related: `01-SYSTEM-PROMPTS/hermes.md`, `opencode.md`, `claude-code.md`, `codex.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS at repo root.

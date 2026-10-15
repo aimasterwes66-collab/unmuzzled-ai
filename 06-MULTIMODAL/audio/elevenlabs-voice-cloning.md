@@ -81,3 +81,10 @@ ElevenLabs → PlayHT (peer commercial, similar filter) → Cartesia Sonic (fast
 - Dubbing Studio — video-to-video translation with lip-sync (2025+).
 - ElevenLabs will suspend accounts for celebrity-voice PVC uploads; IVC of anyone remains uncaught unless flagged by human.
 - ToS forbids impersonation for fraud — moot for the operator's creative work, but keep artifacts private.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.

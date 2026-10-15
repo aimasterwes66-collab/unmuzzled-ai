@@ -51,3 +51,10 @@ requires:      # list of other framework slugs this file depends on
 - `sovereign: true` asserted
 - `slug` uniqueness
 - `requires` slugs resolve to existing files
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MODELS at repo root.

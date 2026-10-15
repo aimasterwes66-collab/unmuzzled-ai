@@ -101,3 +101,10 @@ If refusals persist after loading `sovereign.preset.json`, the weights themselve
 3. Prepend the divider-token pattern in the user turn.
 4. Swap runtime to llama.cpp direct (`05-LOCAL-MODELS/runtimes/llamacpp.md`) for grammar-constrained format hijack, which LM Studio's UI does not expose.
 5. Provider swap to `04-PROVIDERS/venice.md` or `deepseek-direct.md`.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

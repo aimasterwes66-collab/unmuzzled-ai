@@ -106,3 +106,10 @@ mindmap
 
 Read the atlas top-down when onboarding a new box, and left-right (Doctrine →
 Detection) when debugging a live refusal.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MODELS at repo root.

@@ -26,3 +26,10 @@ Heredoc-writes an opencode agent deck entry under `<deck-dir>/<slug>/agent.md`
 
 Frontmatter carries `kind: agent-deck`, `sovereign: true`, and the model +
 persona wiring for opencode to resolve at load time.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-AGENTS, UNMODERATED-MONITORING at repo root.

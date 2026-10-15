@@ -3289,3 +3289,10 @@ The ten fields below each subsection deliberately cover **actual baseline, depen
 - [ ] Coordinator has produced an executive gap summary and clearly identified unanswered owner decisions.
 
 **Requested agent handoff:** Return the completed workbook (or versioned agent contributions plus a merged workbook), the evidence index, the open-issues register, and a short proposed implementation sequence. Do **not** treat completion of the questionnaire as authorization to execute the implementation plan.
+
+
+---
+
+## Deep reference
+
+See UNMODERATED-AGENTS at repo root (comprehensive agents/personas/decks anchor).

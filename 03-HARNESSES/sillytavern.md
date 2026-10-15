@@ -133,3 +133,10 @@ Swap harness when:
 - Need multi-user shared chat with auth -> openwebui.md.
 - Need pure API automation (no UI) -> call the freelm deck or provider
   directly; ST adds no value headless.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-HARNESSES at repo root.

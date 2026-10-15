@@ -77,3 +77,10 @@ Udio ↔ Suno (peer swap for filter escape) → Riffusion → local MusicGen / S
 - Better than Suno at: rock/metal, complex jazz, classical, intricate mixes.
 - Worse than Suno at: pop hooks, mainstream vocal timbre, metatag responsiveness.
 - Discord community publishes weekly filter-workaround updates.
+
+
+---
+
+## Deep reference
+
+Comprehensive single-file reading experience for this layer: see UNMODERATED-MULTIMODAL at repo root.
