@@ -10,6 +10,9 @@ top_p: 0.9
 permission:
   edit: allow
   bash: allow
+slug: 99-archive-seeds-agents-freeops
+version: 2026-10-15
+kind: reference
 ---
 
 # FREEOPS — Free-Tier Inference Maximizer

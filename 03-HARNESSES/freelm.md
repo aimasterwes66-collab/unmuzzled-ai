@@ -5,6 +5,10 @@ type: harness
 agent: worm
 status: active
 tags: [harness, freelm, free-tier, openrouter, proxy, openai-compatible, mesh]
+slug: 03-harnesses-freelm
+name: freelm
+version: 2026-10-15
+kind: harness-config
 ---
 
 # freelm -- free-ops deck (local OpenAI-compatible aggregator)

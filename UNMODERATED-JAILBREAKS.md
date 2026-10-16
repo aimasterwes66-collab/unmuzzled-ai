@@ -5,6 +5,10 @@ type: corpus
 agent: worm
 status: active
 tags: [corpus, jailbreak, map, index, anchor, escalation-ladder, taxonomy]
+slug: unmoderated-jailbreaks
+name: UNMODERATED-JAILBREAKS
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED JAILBREAKS -- MAP + INDEX

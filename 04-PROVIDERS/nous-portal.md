@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, nous-research, portal, tool-gateway, sovereign-aggregator, hermes-4]
+slug: 04-providers-nous-portal
+name: nous-portal
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Nous Portal -- Unified Subscription Gateway

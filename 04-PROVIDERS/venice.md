@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, sovereign, uncensored, private-inference, zero-refusal]
+slug: 04-providers-venice
+name: venice
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Venice.ai

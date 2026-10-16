@@ -10,6 +10,10 @@ date: 2026-09-20 17:XX PDT
 project: unmuzzled-ai-framework
 source: ~/UNMUZZLED-AI/NEW-QUIZ-2.md (Section C)
 tags: [unmuzzled, quiz, questions, worm]
+slug: worm-quiz-questions-20260920
+name: WORM-QUIZ-QUESTIONS-20260920
+version: 2026-10-15
+kind: reference
 ---
 
 # WORM 100-QUESTION WORKBOOK — SECTION C (QUESTIONS)

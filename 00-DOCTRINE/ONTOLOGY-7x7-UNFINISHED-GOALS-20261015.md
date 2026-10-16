@@ -5,6 +5,10 @@ type: ontology
 agent: worm
 status: active
 tags: [ontology, goals, unfinished, endpoints, methods, patches, 7x7]
+slug: 00-doctrine-ontology-7x7-unfinished-goals-20261015
+name: ONTOLOGY-7x7-UNFINISHED-GOALS-20261015
+version: 2026-10-15
+kind: doctrine
 ---
 
 # ONTOLOGY 7x7 -- UNFINISHED GOALS AND LOGICAL ENDPOINTS (49 POINTS)

@@ -5,6 +5,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [unmuzzled-ai, framework, doctrine, sovereign, comprehensive]
+slug: readme
+name: README
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMUZZLED-AI
@@ -61,19 +65,19 @@ in the matching UNMODERATED-* anchor above.
 
 | Section | Files | Purpose |
 |---|---|---|
-| 00-DOCTRINE | 17 | LAWS, ontology, directive, opsec, legal landscape (descriptive) |
-| 01-SYSTEM-PROMPTS | 9 | Distilled sovereign system prompts |
+| 00-DOCTRINE | 21 | LAWS, ontology, directive, opsec, legal landscape (descriptive) |
+| 01-SYSTEM-PROMPTS | 14 | Distilled sovereign system prompts |
 | 02-PERSONAS | 14 | Persona hats (distilled) |
 | 03-HARNESSES | 13 | 10 harnesses + freelm + sillytavern + agentic-coding + coding-uncensored |
-| 04-PROVIDERS | 18 | Per-provider files (lean), UNMODERATED-INFERENCE.md (comprehensive) |
-| 05-LOCAL-MODELS | 15 | Abliteration, runtimes, build catalog, finetune, mergekit, community hubs |
-| 06-MULTIMODAL | 25 | Image / video / audio / vision-input recipes (local video gen + TTS/STT + suno deep-dive added) |
-| 07-INSTALL-SCRIPTS | 12 | Installers + self-heal |
+| 04-PROVIDERS | 19 | Per-provider files (lean), UNMODERATED-INFERENCE.md (comprehensive) |
+| 05-LOCAL-MODELS | 28 | Abliteration, runtimes, build catalog, finetune, mergekit, community hubs |
+| 06-MULTIMODAL | 31 | Image / video / audio / vision-input recipes (local video gen + TTS/STT + suno deep-dive added) |
+| 07-INSTALL-SCRIPTS | 14 | Installers + self-heal |
 | 08-DECISION-TREES | 5 | Provider selection, refusal triage, harness selection, escalation ladder, fallback chains |
 | 09-EDUCATIONAL | 29 | Deep dives, tutorials, infographics, mindmaps |
-| 10-GLOSSARY-FAQ | 61 | Glossary + FAQ |
-| 11-DETECTION-CANARIES | 8 | Canaries + soul-lint + runner + eval-harnesses |
-| 12-JAILBREAK-CORPUS | 78 | 68 patterns + 9 bibles + Adversary-lifecycle + system-prompt-extraction corpus |
+| 10-GLOSSARY-FAQ | 63 | Glossary + FAQ |
+| 11-DETECTION-CANARIES | 9 | Canaries + soul-lint + runner + eval-harnesses |
+| 12-JAILBREAK-CORPUS | 79 | 68 patterns + 9 bibles + Adversary-lifecycle + system-prompt-extraction corpus |
 | 13-REFERENCE-PAPERS | 51 | All reference papers + refusalbench |
 | 99-ARCHIVE-SEEDS | n/a | Raw seeds, mesh handoffs, compendia archive (AI-UNMUZZLED-EDITION archived here) |
 

@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, nvidia, nim, nemotron, free-tier, openrouter, vision]
+slug: 04-providers-nemotron-nim
+name: nemotron-nim
+version: 2026-10-15
+kind: provider-note
 ---
 
 # NVIDIA NIM & Nemotron 3.5 Super VL

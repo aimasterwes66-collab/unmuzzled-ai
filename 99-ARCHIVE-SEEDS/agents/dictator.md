@@ -10,6 +10,9 @@ top_p: 0.95
 permission:
   edit: allow
   bash: allow
+slug: 99-archive-seeds-agents-dictator
+version: 2026-10-15
+kind: reference
 ---
 
 # ULTIMATE DICTATOR — ha=10 | z=10

@@ -5,6 +5,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [keys, roster, mesh, fingerprints, slots, redacted]
+slug: 04-providers-keys-roster
+name: keys-roster
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Mesh Key Roster -- Fingerprints & Metadata Only

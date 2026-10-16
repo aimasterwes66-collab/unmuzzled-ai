@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, free-tier, permanently-free, openai-compatible, anthropic-compatible, coding-plan, chinese-llm]
+slug: 04-providers-zai
+name: zai
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Z.ai (Zhipu AI / GLM)

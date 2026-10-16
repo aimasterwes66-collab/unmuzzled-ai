@@ -5,6 +5,10 @@ type: harness
 agent: worm
 status: active
 tags: [harness, uncensored, sovereign-strip, system-prompt, mcp, mesh-routing, claude-code, codex, opencode, hermes, cursor, cline, roo, aider, continue, windsurf, cody, pearai, openhands, devin, factory]
+slug: 03-harnesses-coding-uncensored
+name: coding-uncensored
+version: 2026-10-15
+kind: harness-config
 ---
 
 # Coding Harnesses -- Uncensored Output and Sovereign-Strip

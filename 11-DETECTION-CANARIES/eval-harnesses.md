@@ -6,6 +6,10 @@ type: reference
 agent: worm
 status: active
 tags: [canary, eval, judge, llm-as-judge, prometheus, judgelm, mt-bench, alpacaeval, chatbot-arena, refusalbench, harmbench, promptfoo, garak, deepeval, mlcommons-ai-safety, helm-safety, runner, integration]
+slug: 11-detection-canaries-eval-harnesses
+name: eval-harnesses
+version: 2026-10-15
+kind: canary
 ---
 
 # Eval Harnesses

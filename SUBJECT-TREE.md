@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [subject-tree, taxonomy, coverage-map, master-index, sovereign]
+slug: subject-tree
+name: SUBJECT-TREE
+version: 2026-10-15
+kind: reference
 ---
 
 # SUBJECT-TREE — master subject-matter map of the uncensored-AI domain

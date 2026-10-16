@@ -6,6 +6,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [opsec, mesh, credentials, prompt-leak, sandbox, taint, sovereign, homelab]
+slug: 00-doctrine-opsec-for-sovereign-ops
+name: opsec-for-sovereign-ops
+version: 2026-10-15
+kind: doctrine
 ---
 
 # Opsec for Sovereign Ops

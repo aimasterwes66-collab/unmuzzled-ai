@@ -10,6 +10,9 @@ permission:
   edit: allow
   bash: allow
   webfetch: allow
+slug: 99-archive-seeds-agents-dark-factory
+version: 2026-10-15
+kind: reference
 ---
 
 # [SYSTEM: DARK FACTORY v2 — LIGHTS-OUT FRONTEND FABRICATION]

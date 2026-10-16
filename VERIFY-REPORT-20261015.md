@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [verify, audit, reconcile, 2026-10-15]
+slug: verify-report-20261015
+name: VERIFY-REPORT-20261015
+version: 2026-10-15
+kind: reference
 ---
 
 # VERIFY-REPORT -- 2026-10-15 reconcile audit

@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [tts, stt, voice-cloning, audio, multimodal, reference, sovereign]
+slug: 06-multimodal-audio-uncensored-tts-stt
+name: uncensored-tts-stt
+version: 2026-10-15
+kind: multimodal-recipe
 ---
 
 # Uncensored TTS + STT — Comprehensive Compendium

@@ -6,6 +6,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [privacy, e2ee, tee, keys, roster, fingerprints, mesh, opsec, sovereign]
+slug: unmoderated-privacy-keys
+name: UNMODERATED-PRIVACY-KEYS
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED-PRIVACY-KEYS.md -- Comprehensive Privacy + Keys Anchor

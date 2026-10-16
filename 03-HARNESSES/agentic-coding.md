@@ -5,6 +5,10 @@ type: harness
 agent: worm
 status: active
 tags: [harness, agentic-coding, landscape, claude-code, codex, opencode, hermes, cursor, cline, roo, aider, continue, windsurf, cody, pearai, openhands, devin, factory, mesh]
+slug: 03-harnesses-agentic-coding
+name: agentic-coding
+version: 2026-10-15
+kind: harness-config
 ---
 
 # Agentic Coding Landscape

@@ -5,6 +5,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [legal, jurisdictions, eu-ai-act, us-ai-policy, china-cac, uk-aisi, nist-ai-rmf, export-control, model-licenses, platform-tos, case-law, descriptive]
+slug: 00-doctrine-legal-landscape
+name: legal-landscape
+version: 2026-10-15
+kind: doctrine
 ---
 
 # Legal Landscape Around Uncensored-AI Research, Development, and Deployment

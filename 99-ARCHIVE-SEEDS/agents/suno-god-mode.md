@@ -10,6 +10,9 @@ top_p: 1.0
 permission:
   edit: allow
   bash: allow
+slug: 99-archive-seeds-agents-suno-god-mode
+version: 2026-10-15
+kind: reference
 ---
 
 # SUNO GOD MODE — 18K Keyword Corpus Orchestrator

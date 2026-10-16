@@ -5,6 +5,10 @@ type: prompt
 agent: worm
 status: seed-imported
 tags: [prompt-engineering, guide]
+slug: 01-system-prompts-prompt-engineering-guide
+name: prompt-engineering-guide
+version: 2026-10-15
+kind: system-prompt
 ---
 
 Prompt Engineering Guide

@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [privacy, e2ee, tee, provider, matrix, log-retention, mesh-guidance]
+slug: 04-providers-e2ee-privacy-tiers
+name: e2ee-privacy-tiers
+version: 2026-10-15
+kind: provider-note
 ---
 
 # E2EE & Privacy Tiers -- Provider Matrix

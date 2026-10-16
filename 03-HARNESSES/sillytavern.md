@@ -5,6 +5,10 @@ type: harness
 agent: worm
 status: active
 tags: [harness, sillytavern, frontend, roleplay, character-cards, openai-compatible]
+slug: 03-harnesses-sillytavern
+name: sillytavern
+version: 2026-10-15
+kind: harness-config
 ---
 
 # SillyTavern -- power-user RP frontend harness

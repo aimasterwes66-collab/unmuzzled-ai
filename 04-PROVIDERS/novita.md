@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, mixed, free-tier, uncensored, image-gen, openai-compatible]
+slug: 04-providers-novita
+name: novita
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Novita AI

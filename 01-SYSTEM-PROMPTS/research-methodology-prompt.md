@@ -5,6 +5,10 @@ type: prompt
 agent: worm
 status: seed-imported
 tags: [research, methodology, deep-research]
+slug: 01-system-prompts-research-methodology-prompt
+name: research-methodology-prompt
+version: 2026-10-15
+kind: system-prompt
 ---
 
 

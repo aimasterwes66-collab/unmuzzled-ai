@@ -6,6 +6,10 @@ type: corpus
 agent: worm
 status: seed-imported
 tags: [corpus, adversarial, reference]
+slug: 12-jailbreak-corpus-cybercrime-bible1-5
+name: CYBERCRIME BIBLE1.5
+version: 2026-10-15
+kind: jailbreak-pattern
 ---
 
 .

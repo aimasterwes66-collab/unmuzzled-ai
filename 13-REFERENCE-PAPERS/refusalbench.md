@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [benchmark, refusal, roundup, xstest, harmbench, strongreject, jailbreakbench, alert, ugi]
+slug: 13-reference-papers-refusalbench
+name: refusalbench
+version: 2026-10-15
+kind: reference
 ---
 
 # Refusal Benchmark Roundup

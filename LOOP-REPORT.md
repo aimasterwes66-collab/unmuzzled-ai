@@ -60,3 +60,10 @@ run: 2026-10-16 03:56 PDT
   filename resolution for bare-name cites) + 2 content re-points (KEYS-ROSTER cite,
   folds/from-edition cite): DEAD=0 NO-SOV=0 HIT=0 DUP=0 -- CONVERGED.
 - CONVERGENCE: 2026-10-15 ~17:05 PDT. Tier-1 pass complete.
+
+## TIER-2 PASS (2026-10-15 ~17:30): dial-in
+
+- README section counts vs disk: 9 mismatched rows -> updated to disk truth.
+- Frontmatter field gaps: 66 files missing slug/kind/version/name -> fields added (legacy fields preserved).
+- UNMODERATED-HARNESSES.md: 8 harness links re-pointed to 03-HARNESSES/.
+- Sections missing README: 8 created (00,02,05,07,08,09,12,13).

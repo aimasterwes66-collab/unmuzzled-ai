@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [suno, bark, audiocraft, musicgen, demucs, uvr, audio-gen, stem-separation, voice-cloning, metatag, deep-dive]
+slug: 06-multimodal-audio-suno-audio-deep-dive
+name: suno-audio-deep-dive
+version: 2026-10-15
+kind: multimodal-recipe
 ---
 
 # Suno Audio Deep Dive — From God Mode to the Generation Layer

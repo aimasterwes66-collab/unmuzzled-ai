@@ -5,6 +5,10 @@ type: corpus
 agent: worm
 status: active
 tags: [corpus, extraction, system-prompt-leak, pliny, cl4r1t4s, adversa-ai, willison, partial-to-full, defense-landscape, research-reference]
+slug: 12-jailbreak-corpus-system-prompt-extraction-corpus
+name: system-prompt-extraction-corpus
+version: 2026-10-15
+kind: jailbreak-pattern
 ---
 
 # SYSTEM-PROMPT EXTRACTION CORPUS

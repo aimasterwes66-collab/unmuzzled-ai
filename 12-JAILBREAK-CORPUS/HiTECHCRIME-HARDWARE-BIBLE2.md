@@ -6,6 +6,10 @@ type: corpus
 agent: worm
 status: seed-imported
 tags: [corpus, adversarial, reference]
+slug: 12-jailbreak-corpus-hitechcrime-hardware-bible2
+name: HiTECHCRIME-HARDWARE-BIBLE2
+version: 2026-10-15
+kind: jailbreak-pattern
 ---
 
 # THE 2026 HARDWARE HACKER'S BIBLE — EXPANDED AI-FIRST OPERATIONAL EDITION

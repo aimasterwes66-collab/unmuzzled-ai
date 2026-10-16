@@ -8,6 +8,10 @@ type: consensus query — UNMUZZLED-AI vs opencode-agent-decks relationship
 date: 2026-09-19 16:59 PDT / 23:59 UTC
 status: open
 tags: [unmuzzled-ai, agent-decks, consensus, architecture, doctrine]
+slug: 99-archive-seeds-mesh-handoffs-to-all-herm-unmuzzled-ai-vs-agent-decks-relationship-query-20260919
+name: TO-ALL-herm-unmuzzled-ai-vs-agent-decks-relationship-query-20260919
+version: 2026-10-15
+kind: reference
 ---
 
 # Relationship Query: UNMUZZLED-AI ↔ opencode-agent-decks

@@ -6,6 +6,10 @@ type: model
 agent: worm
 status: active
 tags: [heretic, abliterated, gguf, local-models]
+slug: 05-local-models-models-heretic-builds
+name: heretic-builds
+version: 2026-10-15
+kind: local-model
 ---
 
 # Heretic Builds: the automatic censorship-removal ecosystem

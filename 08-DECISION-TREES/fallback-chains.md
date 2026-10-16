@@ -5,6 +5,10 @@ type: decision-tree
 agent: worm
 status: active
 tags: [decision-tree, fallback, fleet, routing, deepseek, openrouter, opencode, freelm]
+slug: 08-decision-trees-fallback-chains
+name: fallback-chains
+version: 2026-10-15
+kind: decision-tree
 ---
 
 # Fleet Fallback Chain

@@ -5,6 +5,8 @@ date: 2026-09-18
 author: operator (Wes) + ACE (dirt-iMac)
 status: PLANNING — approval expected before mass file operations begin
 sovereign: true
+slug: 00-doctrine-unmuzzled-ai-master-plan-20260918
+kind: doctrine
 ---
 
 # UNMUZZLED-AI — Master Plan & Spec

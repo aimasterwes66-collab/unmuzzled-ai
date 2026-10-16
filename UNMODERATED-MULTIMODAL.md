@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [multimodal, image, video, audio, vision-input, anchor, comprehensive, sovereign, tts, t2i, t2v, prompt-injection]
+slug: unmoderated-multimodal
+name: UNMODERATED-MULTIMODAL
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED-MULTIMODAL — Comprehensive Anchor

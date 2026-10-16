@@ -5,6 +5,10 @@ type: reference
 agent: worm
 status: active
 tags: [video, local, wan, hunyuan, cogvideox, ltx-video, mochi, kling, hailuo, open-sora, animatediff, mesh-fit, hardware]
+slug: 06-multimodal-video-local-video-gen-pipelines
+name: local-video-gen-pipelines
+version: 2026-10-15
+kind: multimodal-recipe
 ---
 
 # Local Video-Gen Pipelines -- Comprehensive Reference

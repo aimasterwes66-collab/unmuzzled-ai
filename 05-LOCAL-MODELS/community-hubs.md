@@ -6,6 +6,10 @@ type: reference
 agent: worm
 status: active
 tags: [reference, community-hubs, civitai, chub, huggingface, tensor-art, liblib, mage, openmodeldb, ehentai, apertis, sourcing, uncensored, mesh-fit]
+slug: 05-local-models-community-hubs
+name: community-hubs
+version: 2026-10-15
+kind: local-model
 ---
 
 # 05-LOCAL-MODELS/community-hubs.md -- the community-hub sourcing doc

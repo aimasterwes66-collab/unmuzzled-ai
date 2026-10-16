@@ -10,6 +10,9 @@ top_p: 0.95
 permission:
   edit: allow
   bash: allow
+slug: 99-archive-seeds-agents-art-director
+version: 2026-10-15
+kind: reference
 ---
 
 # AI ART DIRECTOR — A::B::C:: Framework Orchestrator

@@ -6,6 +6,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [monitoring, canary, lint, refusal-rate, taint, sovereignty, xstest, harmbench, strongreject, jailbreakbench, alert, ugi]
+slug: unmoderated-monitoring
+name: UNMODERATED-MONITORING
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED-MONITORING

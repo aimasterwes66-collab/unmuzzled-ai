@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, mixed, free-tier, gpu-rental, openai-compatible, decentralized]
+slug: 04-providers-hyperbolic
+name: hyperbolic
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Hyperbolic

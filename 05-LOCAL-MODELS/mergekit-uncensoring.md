@@ -5,6 +5,10 @@ type: model
 agent: worm
 status: active
 tags: [mergekit, model-merging, slerp, ties, dare, task-arithmetic, model-soup, karcher, della, multislerp, model-stock, uncensoring, abliteration, mesh-fit]
+slug: 05-local-models-mergekit-uncensoring
+name: mergekit-uncensoring
+version: 2026-10-15
+kind: local-model
 ---
 
 # Mergekit Uncensoring -- Composition of Uncensored + Skill Vectors

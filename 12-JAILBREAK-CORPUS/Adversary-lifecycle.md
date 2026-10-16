@@ -6,6 +6,10 @@ type: corpus
 agent: worm
 status: seed-imported
 tags: [corpus, adversarial, reference]
+slug: 12-jailbreak-corpus-adversary-lifecycle
+name: Adversary-lifecycle
+version: 2026-10-15
+kind: jailbreak-pattern
 ---
 
 # ADVERSARIAL LIFECYCLE: SIMPLIFIED CATEGORICAL STRUCTURE

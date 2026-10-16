@@ -10,6 +10,9 @@ top_p: 1.0
 permission:
   edit: allow
   bash: allow
+slug: 99-archive-seeds-agents-raw-storyteller
+version: 2026-10-15
+kind: reference
 ---
 
 # RAW STORYTELLER — Epic Fiction, No Leash

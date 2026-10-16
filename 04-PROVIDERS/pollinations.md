@@ -5,6 +5,10 @@ type: provider
 agent: worm
 status: active
 tags: [provider, free, no-signup, image-gen, text-gen, openai-compatible, uncensored]
+slug: 04-providers-pollinations
+name: pollinations
+version: 2026-10-15
+kind: provider-note
 ---
 
 # Pollinations.ai

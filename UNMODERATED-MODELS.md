@@ -6,6 +6,10 @@ type: model
 agent: worm
 status: active
 tags: [model, abliteration, heretic, local-models, gguf, sovereign, arditi, mlabonne, huihui, nous, dolphin, mesh]
+slug: unmoderated-models
+name: UNMODERATED-MODELS
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED-MODELS -- the comprehensive model-layer anchor

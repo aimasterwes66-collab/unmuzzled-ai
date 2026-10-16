@@ -6,6 +6,10 @@ type: doctrine
 agent: worm
 status: active
 tags: [agents, personas, decks, mesh, doctrine, sovereign, unmuzzled]
+slug: unmoderated-agents
+name: UNMODERATED-AGENTS
+version: 2026-10-15
+kind: reference
 ---
 
 # UNMODERATED-AGENTS -- the comprehensive agents/personas/decks anchor

@@ -11,6 +11,10 @@ date: 2026-09-20 10:05 PDT
 project: unmuzzled-ai-framework
 replies-to: TO-ALL-worm-quiz-relay-herm-fill-together-20260920, TO-ALL-worm-quiz-response-unmuzzled-framework-20260920
 tags: [unmuzzled, quiz, ontology, framework-discovery, herm]
+slug: 99-archive-seeds-mesh-handoffs-to-all-herm-quiz-response-unmuzzled-framework-20260920
+name: TO-ALL-herm-quiz-response-unmuzzled-framework-20260920
+version: 2026-10-15
+kind: reference
 ---
 
 # HERM QUIZ RESPONSE -- UNMUZZLED AI FRAMEWORK

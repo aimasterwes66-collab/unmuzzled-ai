@@ -5,6 +5,10 @@ type: model
 agent: worm
 status: active
 tags: [finetune, sft, lora, qlora, dpo, orpo, kto, abliteration, rlhf-undo, model-diffing, embedding-surgery, uncensoring, hermes, mesh-fit]
+slug: 05-local-models-finetune-uncensoring
+name: finetune-uncensoring
+version: 2026-10-15
+kind: local-model
 ---
 
 # Finetune / RLHF-Undo Uncensoring -- Sovereign Local Model Cookbook
