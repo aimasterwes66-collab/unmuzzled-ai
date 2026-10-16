@@ -35,7 +35,7 @@ prose is authored here -- this is a navigation document.
 | Anchor | Layer | Status |
 |---|---|---|
 | `UNMODERATED-MODELS.md` [source: UNMODERATED-MODELS.md] | models | present |
-| `UNMODERATED-HARNESSES.md` [source: UNMODERATED-HARNESSES.md] | harnesses | NOT YET LANDED -- layer still covered by `03-HARNESSES/` files + this tree |
+| `UNMODERATED-HARNESSES.md` [source: UNMODERATED-HARNESSES.md] | harnesses | present |
 | `UNMODERATED-AGENTS.md` [source: UNMODERATED-AGENTS.md] | agents / personas | present |
 | `UNMODERATED-MONITORING.md` [source: UNMODERATED-MONITORING.md] | detection / canaries | present |
 | `UNMODERATED-MULTIMODAL.md` [source: UNMODERATED-MULTIMODAL.md] | multimodal | present |
@@ -78,10 +78,10 @@ preservation contract.
   - `13-REFERENCE-PAPERS/dolphin-mixtral.md` [source: 13-REFERENCE-PAPERS/dolphin-mixtral.md]
   - `12-JAILBREAK-CORPUS/patterns/dolphin-variants.md` [source: 12-JAILBREAK-CORPUS/patterns/dolphin-variants.md]
 - 1.1.6 Qwen uncensored variants
-  - GAP -- GAP-04 partial; full coverage in `UNMODERATED-MODELS.md` Section II point 7 [source: UNMODERATED-MODELS.md]
-  - standalone file: GAP -- no per-model doc (cross-ref only)
+  - `05-LOCAL-MODELS/models/qwen-uncensored.md` [source: 05-LOCAL-MODELS/models/qwen-uncensored.md] + `UNMODERATED-MODELS.md` Section II point 7 [source: UNMODERATED-MODELS.md]
+  - standalone file: `05-LOCAL-MODELS/models/qwen-uncensored.md` [source: 05-LOCAL-MODELS/models/qwen-uncensored.md]
 - 1.1.7 Gemma uncensored variants
-  - GAP -- no per-model doc; `UNMODERATED-MODELS.md` Section II point 8 [source: UNMODERATED-MODELS.md]
+  - `05-LOCAL-MODELS/models/gemma-uncensored.md` [source: 05-LOCAL-MODELS/models/gemma-uncensored.md] + `UNMODERATED-MODELS.md` Section II point 8 [source: UNMODERATED-MODELS.md]
 - 1.1.8 Mythomax / Airoboros / Chronos
   - `13-REFERENCE-PAPERS/mythomax-airoboros-chronos.md` [source: 13-REFERENCE-PAPERS/mythomax-airoboros-chronos.md]
 - 1.1.9 NeuralDaredevil-8B
@@ -124,71 +124,71 @@ preservation contract.
 ## 1.3 Finetune / alignment-stripped SFT-LoRA-DPO
 
 - 1.3.1 SFT-based uncensoring with unfiltered chat datasets
-  - GAP -- GAP-01 (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
+  - CLOSED -> `05-LOCAL-MODELS/finetune-uncensoring.md` [source: 05-LOCAL-MODELS/finetune-uncensoring.md] (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
 - 1.3.2 Negative-DPO to undo refusal
-  - GAP -- GAP-01 (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
+  - CLOSED -> `05-LOCAL-MODELS/finetune-uncensoring.md` [source: 05-LOCAL-MODELS/finetune-uncensoring.md] (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
   - `10-GLOSSARY-FAQ/glossary/dpo.md` [source: 10-GLOSSARY-FAQ/glossary/dpo.md]
   - `10-GLOSSARY-FAQ/glossary/rlhf.md` [source: 10-GLOSSARY-FAQ/glossary/rlhf.md]
 - 1.3.3 LoRA / QLoRA recipes (Unsloth, Llama-Factory, deguard-style)
-  - GAP -- GAP-01 (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
+  - CLOSED -> `05-LOCAL-MODELS/finetune-uncensoring.md` [source: 05-LOCAL-MODELS/finetune-uncensoring.md] (proposed `05-LOCAL-MODELS/models/finetune-uncensoring.md`)
 - 1.3.4 Mergekit uncensoring (DARE / TIES / SLERP / task-arithmetic / passthrough)
-  - GAP -- GAP-02 (proposed `05-LOCAL-MODELS/models/mergekit-uncensoring.md`)
+  - CLOSED -> `05-LOCAL-MODELS/mergekit-uncensoring.md` [source: 05-LOCAL-MODELS/mergekit-uncensoring.md] (proposed `05-LOCAL-MODELS/models/mergekit-uncensoring.md`)
 - 1.3.5 Dataset selection (Dolphin, OpenHermes, WizardLM-Uncensored, Guanaco, OpenOrca)
   - `EPIC.md` §§27-28 [source: EPIC.md]
-  - GAP -- no consolidated dataset-selection file; lives in EPIC prose only
+  - `05-LOCAL-MODELS/finetune-uncensoring.md` (dataset-selection section) [source: 05-LOCAL-MODELS/finetune-uncensoring.md]
 
 ## 1.4 Steering / inference-time control
 
 - 1.4.1 Repeng / Representation-engineering vectors
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.1 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 - 1.4.2 SAE feature steering (SAELens)
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.14 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 - 1.4.3 Concept-cone steering (Wollschlager 2025)
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.15 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 - 1.4.4 Hybrid ablation + light steering
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.18 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 - 1.4.5 Steering-vs-abliteration decision matrix
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.11 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 - 1.4.6 Steering-vector versioning / publishing
-  - GAP -- GAP-07 (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/activation-steering.md` [source: 05-LOCAL-MODELS/runtimes/activation-steering.md] (proposed `05-LOCAL-MODELS/runtimes/activation-steering.md`)
   - `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md` node 7.20 [source: 00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md]
 
 ## 1.5 Community hubs / model discovery
 
 - 1.5.1 HuggingFace Hub (with search strings for "uncensored", "abliterated", "NSFW", "refusal-free", "deguard")
-  - GAP -- GAP-04 (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
+  - CLOSED -> `05-LOCAL-MODELS/community-hubs.md` [source: 05-LOCAL-MODELS/community-hubs.md] (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
   - `EPIC.md` §25 items 152-164 [source: EPIC.md]
 - 1.5.2 Civitai (SD / SDXL / FLUX checkpoints, LoRAs, LyCORIS)
-  - GAP -- GAP-04 (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
+  - CLOSED -> `05-LOCAL-MODELS/community-hubs.md` [source: 05-LOCAL-MODELS/community-hubs.md] (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
   - `EPIC.md` item 153 [source: EPIC.md]
   - `06-MULTIMODAL/image/comfyui-workflow.md` [source: 06-MULTIMODAL/image/comfyui-workflow.md]
   - `06-MULTIMODAL/image/automatic1111-config.md` [source: 06-MULTIMODAL/image/automatic1111-config.md]
 - 1.5.3 Chub.ai (character cards + associated models)
-  - GAP -- GAP-04 (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
+  - CLOSED -> `05-LOCAL-MODELS/community-hubs.md` [source: 05-LOCAL-MODELS/community-hubs.md] (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
 - 1.5.4 JanitorAI, r/LocalLLaMA, OpenModelDB
-  - GAP -- GAP-04 (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
+  - CLOSED -> `05-LOCAL-MODELS/community-hubs.md` [source: 05-LOCAL-MODELS/community-hubs.md] (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
   - `EPIC.md` items 152-164 [source: EPIC.md]
 - 1.5.5 Tensor.art, LiblibAI, Mage.space
-  - GAP -- GAP-04 (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
+  - CLOSED -> `05-LOCAL-MODELS/community-hubs.md` [source: 05-LOCAL-MODELS/community-hubs.md] (proposed `05-LOCAL-MODELS/models/community-hubs.md`)
   - `EPIC.md` items 155-157 [source: EPIC.md]
 
 ## 1.6 Quantization effects on refusal behavior
 
 - 1.6.1 Format-vs-refusal table (EXL2 / GGUF / AWQ / GPTQ)
-  - GAP -- GAP-17 (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
+  - CLOSED -> `05-LOCAL-MODELS/models/quantization-and-refusal.md` [source: 05-LOCAL-MODELS/models/quantization-and-refusal.md] (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
   - `05-LOCAL-MODELS/runtimes/exllamav2.md` [source: 05-LOCAL-MODELS/runtimes/exllamav2.md]
   - `05-LOCAL-MODELS/runtimes/llamacpp.md` [source: 05-LOCAL-MODELS/runtimes/llamacpp.md]
   - `00-DOCTRINE/LAWS-research-appendix.md` §1 [source: 00-DOCTRINE/LAWS-research-appendix.md]
 - 1.6.2 Bit-depth tradeoff curve (2/3/4/5/6/8-bit)
-  - GAP -- GAP-17 (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
+  - CLOSED -> `05-LOCAL-MODELS/models/quantization-and-refusal.md` [source: 05-LOCAL-MODELS/models/quantization-and-refusal.md] (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
   - `05-LOCAL-MODELS/models/abliteration-pipeline.md` Stage 3 [source: 05-LOCAL-MODELS/models/abliteration-pipeline.md]
 - 1.6.3 Per-model regression catalogue
-  - GAP -- GAP-17 (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
+  - CLOSED -> `05-LOCAL-MODELS/models/quantization-and-refusal.md` [source: 05-LOCAL-MODELS/models/quantization-and-refusal.md] (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
 
 
 # 2. PROVIDERS — inference API surfaces
@@ -270,25 +270,25 @@ preservation contract.
 ## 2.6 Provider guardrail stack intel (know thy enemy)
 
 - 2.6.1 LlamaGuard (Meta, v1/v2/v3, 7B)
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
   - `04-PROVIDERS/groq.md` [source: 04-PROVIDERS/groq.md]
   - `04-PROVIDERS/together.md` [source: 04-PROVIDERS/together.md]
 - 2.6.2 PromptGuard (Meta, 279M injection detector)
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
   - `04-PROVIDERS/groq.md` [source: 04-PROVIDERS/groq.md]
 - 2.6.3 Azure AI Content Safety (severity 0-7, blocklists, jailbreak detection)
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 - 2.6.4 OpenAI Moderation API (hate / sexual / violence / self-harm)
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 - 2.6.5 NeMo Guardrails (NVIDIA, Colang dialog guardrails)
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
   - `13-REFERENCE-PAPERS/garak-nvidia.md` [source: 13-REFERENCE-PAPERS/garak-nvidia.md]
 - 2.6.6 Amazon Bedrock Guardrails
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 - 2.6.7 Google Cloud Safety Filters
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 - 2.6.8 Replicate moderation filter
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 
 ## 2.7 Provider privacy tiers / logging matrix
 
@@ -325,15 +325,15 @@ preservation contract.
   - `03-HARNESSES/hermes.md` [source: 03-HARNESSES/hermes.md]
   - `04-PROVIDERS/hermes-api.md` C6 [source: 04-PROVIDERS/hermes-api.md]
 - 3.1.5 Continue.dev (VS Code/JetBrains extension, local model support)
-  - GAP -- GAP-12 (proposed `03-HARNESSES/ai-coding-assistants.md`)
+  - CLOSED -> `03-HARNESSES/agentic-coding.md` [source: 03-HARNESSES/agentic-coding.md] (proposed `03-HARNESSES/ai-coding-assistants.md`)
 - 3.1.6 Aider (terminal pair programmer, edit formats, multi-model)
-  - GAP -- GAP-12 (proposed `03-HARNESSES/ai-coding-assistants.md`)
+  - CLOSED -> `03-HARNESSES/agentic-coding.md` [source: 03-HARNESSES/agentic-coding.md] (proposed `03-HARNESSES/ai-coding-assistants.md`)
 - 3.1.7 Cline (VS Code agentic coding, MCP, file ops, terminal)
-  - GAP -- GAP-12 (proposed `03-HARNESSES/ai-coding-assistants.md`)
+  - CLOSED -> `03-HARNESSES/agentic-coding.md` [source: 03-HARNESSES/agentic-coding.md] (proposed `03-HARNESSES/ai-coding-assistants.md`)
 - 3.1.8 Roo-Cline (fork with autonomous mode)
-  - GAP -- GAP-12 (proposed `03-HARNESSES/ai-coding-assistants.md`)
+  - CLOSED -> `03-HARNESSES/agentic-coding.md` [source: 03-HARNESSES/agentic-coding.md] (proposed `03-HARNESSES/ai-coding-assistants.md`)
 - 3.1.9 Uncensored coding-model roster (DeepSeek Coder V2, Qwen Coder 2.5 abliterated, Devstral, Hermes-3, Dolphin-Coder)
-  - GAP -- GAP-12 (proposed `03-HARNESSES/ai-coding-assistants.md`)
+  - CLOSED -> `03-HARNESSES/agentic-coding.md` [source: 03-HARNESSES/agentic-coding.md] (proposed `03-HARNESSES/ai-coding-assistants.md`)
 
 ## 3.2 Local-runtime harnesses (general-purpose inference)
 
@@ -357,19 +357,19 @@ preservation contract.
 - 3.2.6 ExLlamaV2 (ExLlamaV2 backend, prefill)
   - `05-LOCAL-MODELS/runtimes/exllamav2.md` [source: 05-LOCAL-MODELS/runtimes/exllamav2.md]
 - 3.2.7 KoboldCpp (single-file narrative + RP binary with integrated UI)
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
   - `05-LOCAL-MODELS/runtimes/llamacpp.md` Notes [source: 05-LOCAL-MODELS/runtimes/llamacpp.md]
 - 3.2.8 Oobabooga / Text Generation WebUI (LoRA hot-swap, multi-backend)
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
   - `EPIC.md` item 176 [source: EPIC.md]
 - 3.2.9 Aphrodite Engine (high-throughput creative fork of vLLM)
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
   - `EPIC.md` item 175 [source: EPIC.md]
 - 3.2.10 TabbyAPI (ExLlamaV2-backed API server for RP)
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
   - `05-LOCAL-MODELS/runtimes/exllamav2.md` Notes [source: 05-LOCAL-MODELS/runtimes/exllamav2.md]
 - 3.2.11 Faraday / Backyard AI (offline desktop bundles)
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
   - `EPIC.md` §31 items 189-194 [source: EPIC.md]
 
 ## 3.3 Frontend / creative harnesses
@@ -523,27 +523,27 @@ preservation contract.
 - 5.3.2 AnimateDiff (motion module + any SD1.5/SDXL checkpoint, sliding context)
   - `06-MULTIMODAL/video/animatediff-local.md` [source: 06-MULTIMODAL/video/animatediff-local.md]
 - 5.3.3 Wan 2.1 (Alibaba, top-tier open T2V, ComfyUI nodes)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/README.md` escalation defaults [source: 06-MULTIMODAL/README.md]
 - 5.3.4 HunyuanVideo (Tencent, 13B, arbitrary-resolution, ComfyUI wrapper)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/README.md` escalation defaults [source: 06-MULTIMODAL/README.md]
 - 5.3.5 CogVideoX (THUDM, 5B, ComfyUI support)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/video/animatediff-local.md` Notes [source: 06-MULTIMODAL/video/animatediff-local.md]
   - `06-MULTIMODAL/video/stable-video.md` Notes [source: 06-MULTIMODAL/video/stable-video.md]
 - 5.3.6 LTX-Video (Lightricks, fast inference, ComfyUI)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/video/animatediff-local.md` Notes [source: 06-MULTIMODAL/video/animatediff-local.md]
 - 5.3.7 Mochi-1 (Genmo, Apache 2, high-quality)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `00-DOCTRINE/ONT-20x20-UNMUZZLED-AI-MASTER-ATLAS.md` [source: 00-DOCTRINE/ONT-20x20-UNMUZZLED-AI-MASTER-ATLAS.md]
   - `00-DOCTRINE/DESIGN-DRAFT-v0.1.md` [source: 00-DOCTRINE/DESIGN-DRAFT-v0.1.md]
 - 5.3.8 Kling (Kuaishou, fully uncensored Chinese T2V)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/README.md` escalation defaults [source: 06-MULTIMODAL/README.md]
 - 5.3.9 Hailuo (Chinese T2V)
-  - GAP -- GAP-05 (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
+  - CLOSED -> `06-MULTIMODAL/video/local-video-gen-pipelines.md` [source: 06-MULTIMODAL/video/local-video-gen-pipelines.md] (proposed `06-MULTIMODAL/video/local-video-gen-pipelines.md`)
   - `06-MULTIMODAL/README.md` escalation defaults [source: 06-MULTIMODAL/README.md]
 
 ## 5.4 Video generation -- remote / tainted bypass
@@ -558,7 +558,7 @@ preservation contract.
 ## 5.5 ComfyUI video workflow catalog
 
 - 5.5.1 Wan 2.1 txt2vid, HunyuanVideo img2vid, LTX-Video fast-lane, AnimateDiff+IPAdapter workflows
-  - GAP -- GAP-18 (proposed `06-MULTIMODAL/video/comfyui-video-workflows.md`)
+  - CLOSED -> `06-MULTIMODAL/video/comfyui-video-workflows.md` [source: 06-MULTIMODAL/video/comfyui-video-workflows.md] (proposed `06-MULTIMODAL/video/comfyui-video-workflows.md`)
   - `06-MULTIMODAL/image/comfyui-workflow.md` (structural template) [source: 06-MULTIMODAL/image/comfyui-workflow.md]
   - `06-MULTIMODAL/video/animatediff-local.md` [source: 06-MULTIMODAL/video/animatediff-local.md]
 
@@ -580,39 +580,39 @@ preservation contract.
 - 5.7.3 XTTS-v2 (Coqui, 6s reference clone, 17 languages)
   - `06-MULTIMODAL/audio/xtts-local.md` [source: 06-MULTIMODAL/audio/xtts-local.md]
 - 5.7.4 F5-TTS (E2, zero-shot voice cloning, ComfyUI integration)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - `06-MULTIMODAL/README.md` escalation defaults [source: 06-MULTIMODAL/README.md]
 - 5.7.5 Kokoro (82M, Apache 2, 6-language)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.6 RVC (retrieval-based voice conversion, NSFW voice work)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - `MCP-SERVER-ONTOLOGY.md` voice section [source: MCP-SERVER-ONTOLOGY.md]
 - 5.7.7 GPT-SoVITS (mandarin+english, few-shot)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.8 Chatterbox (Nous Research, multilingual)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.9 Dia (Nari Labs, 1.6B, top quality)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.10 OpenVoice (MyShell, voice cloning)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.11 MeloTTS (MyShell, multilingual)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 - 5.7.12 VoiceCraft (token-infilling for deepfake)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
 
 ## 5.8 Audio -- STT (speech-to-text)
 
 - 5.8.1 whisper.cpp
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - zero coverage today
 - 5.8.2 faster-whisper
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - zero coverage today
 - 5.8.3 WhisperX (diarization)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - zero coverage today
 - 5.8.4 STT refusal behavior (transcription bypass where STT refuses "dangerous" transcripts)
-  - GAP -- GAP-06 (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
+  - CLOSED -> `06-MULTIMODAL/audio/uncensored-tts-stt.md` [source: 06-MULTIMODAL/audio/uncensored-tts-stt.md] (proposed `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`)
   - `12-JAILBREAK-CORPUS/patterns/audio-transcription-escape.md` (partial) [source: 12-JAILBREAK-CORPUS/patterns/audio-transcription-escape.md]
 
 ## 5.9 Vision-input attacks (image as injection vector into VLMs)
@@ -635,16 +635,16 @@ preservation contract.
 ## 5.10 Output post-processing (watermark / metadata removal)
 
 - 5.10.1 C2PA / Content Credentials stripping (Adobe Firefly, Microsoft Designer, DALL-E 3)
-  - GAP -- GAP-19 (proposed `06-MULTIMODAL/image/watermark-removal.md`)
+  - CLOSED -> `06-MULTIMODAL/image/watermark-removal.md` [source: 06-MULTIMODAL/image/watermark-removal.md] (proposed `06-MULTIMODAL/image/watermark-removal.md`)
 - 5.10.2 SynthID (Google DeepMind) evasion
-  - GAP -- GAP-19 (proposed `06-MULTIMODAL/image/watermark-removal.md`)
+  - CLOSED -> `06-MULTIMODAL/image/watermark-removal.md` [source: 06-MULTIMODAL/image/watermark-removal.md] (proposed `06-MULTIMODAL/image/watermark-removal.md`)
 - 5.10.3 Stable Signature (Meta) decoder watermark
-  - GAP -- GAP-19 (proposed `06-MULTIMODAL/image/watermark-removal.md`)
+  - CLOSED -> `06-MULTIMODAL/image/watermark-removal.md` [source: 06-MULTIMODAL/image/watermark-removal.md] (proposed `06-MULTIMODAL/image/watermark-removal.md`)
 - 5.10.4 IPTC metadata + EXIF generation-software fields
-  - GAP -- GAP-19 (proposed `06-MULTIMODAL/image/watermark-removal.md`)
+  - CLOSED -> `06-MULTIMODAL/image/watermark-removal.md` [source: 06-MULTIMODAL/image/watermark-removal.md] (proposed `06-MULTIMODAL/image/watermark-removal.md`)
   - `06-MULTIMODAL/vision-input/image-as-prompt-injection.md` covers LSB-encoded pixel steganography (input side, inverse application) [source: 06-MULTIMODAL/vision-input/image-as-prompt-injection.md]
 - 5.10.5 FaceFusion-style output anonymization
-  - GAP -- GAP-19 (proposed `06-MULTIMODAL/image/watermark-removal.md`)
+  - CLOSED -> `06-MULTIMODAL/image/watermark-removal.md` [source: 06-MULTIMODAL/image/watermark-removal.md] (proposed `06-MULTIMODAL/image/watermark-removal.md`)
 
 ## 5.11 Multimodal anchor
 
@@ -738,7 +738,7 @@ preservation contract.
 - 6.3.15 Code completion frame
   - `12-JAILBREAK-CORPUS/patterns/code-completion-frame.md` [source: 12-JAILBREAK-CORPUS/patterns/code-completion-frame.md]
 - 6.3.16 Composable encoding ladder library (base64 -> hex -> rot13 -> leetspeak -> braille -> morse -> homoglyph)
-  - GAP -- GAP-14 (proposed `07-INSTALL-SCRIPTS/encoding-ladder-library.md`)
+  - CLOSED -> `07-INSTALL-SCRIPTS/encoding-ladder-library.md` [source: 07-INSTALL-SCRIPTS/encoding-ladder-library.md] (proposed `07-INSTALL-SCRIPTS/encoding-ladder-library.md`)
   - `00-DOCTRINE/ONTFIX-14-unmuzzled-ai/01.md` B6, `02.md` G6 [source: 00-DOCTRINE/ONTFIX-14-unmuzzled-ai/]
   - `10-GLOSSARY-FAQ/glossary/encoding-attack.md` [source: 10-GLOSSARY-FAQ/glossary/encoding-attack.md]
 
@@ -790,7 +790,7 @@ preservation contract.
 - 6.4.17 Skeleton key (report-vs-refuse)
   - `12-JAILBREAK-CORPUS/patterns/skeleton-key.md` [source: 12-JAILBREAK-CORPUS/patterns/skeleton-key.md]
 - 6.4.18 GCG suffix rotation automation (cron / batch nanogcg)
-  - GAP -- GAP-13 (proposed `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`)
+  - CLOSED -> `07-INSTALL-SCRIPTS/gcg-rotation-cron.md` [source: 07-INSTALL-SCRIPTS/gcg-rotation-cron.md] (proposed `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`)
   - `00-DOCTRINE/ONTFIX-14-unmuzzled-ai/01.md` B5, `02.md` G5 [source: 00-DOCTRINE/ONTFIX-14-unmuzzled-ai/]
 
 ## 6.5 Logit / prefill / token-level
@@ -800,7 +800,7 @@ preservation contract.
 - 6.5.2 Refusal suppression via prefill tokens
   - `12-JAILBREAK-CORPUS/patterns/refusal-suppression-token.md` [source: 12-JAILBREAK-CORPUS/patterns/refusal-suppression-token.md]
 - 6.5.3 Per-provider prefill / logit-bias compendium (Anthropic messages[-1].content, DeepSeek prefix, Mistral prefill, llama.cpp --logit-bias, OR logit_bias)
-  - GAP -- GAP-21 (proposed `12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md`)
+  - CLOSED -> `12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md` [source: 12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md] (proposed `12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md`)
   - `03-HARNESSES/llamacpp.md` --logit-bias [source: 03-HARNESSES/llamacpp.md]
   - `05-LOCAL-MODELS/runtimes/exllamav2.md` prefill [source: 05-LOCAL-MODELS/runtimes/exllamav2.md]
   - `05-LOCAL-MODELS/runtimes/vllm.md` prefill [source: 05-LOCAL-MODELS/runtimes/vllm.md]
@@ -842,7 +842,7 @@ preservation contract.
   - `13-REFERENCE-PAPERS/cl4r1t4s-pliny.md` [source: 13-REFERENCE-PAPERS/cl4r1t4s-pliny.md]
   - `13-REFERENCE-PAPERS/l1b3rt4s-pliny.md` [source: 13-REFERENCE-PAPERS/l1b3rt4s-pliny.md]
 - 6.8.3 Leaked vendor system-prompt corpus (consolidated)
-  - GAP -- GAP-03 (proposed `12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md`)
+  - CLOSED -> `12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md` [source: 12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md] (proposed `12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md`)
   - `99-ARCHIVE-SEEDS/system-prompts/Hermes-Dictator.md` Part 6 [source: 99-ARCHIVE-SEEDS/system-prompts/Hermes-Dictator.md]
   - `99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md` [source: 99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md]
   - `13-REFERENCE-PAPERS/carlini-poisoning-attacks.md` (extraction attacks) [source: 13-REFERENCE-PAPERS/carlini-poisoning-attacks.md]
@@ -962,7 +962,7 @@ preservation contract.
 - 7.4.10 Refusal-rate glossary
   - `10-GLOSSARY-FAQ/glossary/refusal-rate.md` [source: 10-GLOSSARY-FAQ/glossary/refusal-rate.md]
 - 7.4.11 Judge-model roster (uncensored judges to evaluate adversarial content)
-  - GAP -- GAP-15 (proposed `11-DETECTION-CANARIES/judge-model-roster.md`)
+  - CLOSED -> `11-DETECTION-CANARIES/eval-harnesses.md` [source: 11-DETECTION-CANARIES/eval-harnesses.md] (proposed `11-DETECTION-CANARIES/judge-model-roster.md`)
   - `11-DETECTION-CANARIES/runner/runner.md` [source: 11-DETECTION-CANARIES/runner/runner.md]
 
 ## 7.5 Taint / route governance
@@ -984,7 +984,7 @@ preservation contract.
 ## 7.6 Provider guardrail intel (see 2.6)
 
 - 7.6.1 Per-provider guardrail stack
-  - GAP -- GAP-11 (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
+  - CLOSED -> `13-REFERENCE-PAPERS/guardrail-stack-map.md` [source: 13-REFERENCE-PAPERS/guardrail-stack-map.md] (proposed `13-REFERENCE-PAPERS/guardrail-stack-map.md`)
 
 ## 7.7 Monitoring anchor
 
@@ -1022,13 +1022,13 @@ preservation contract.
 ## 8.4 Operator OpSec for uncensored AI operations
 
 - 8.4.1 Operator-side key compartmentation / burner keys / account rotation
-  - GAP -- GAP-10 (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
+  - CLOSED -> `00-DOCTRINE/opsec-for-sovereign-ops.md` [source: 00-DOCTRINE/opsec-for-sovereign-ops.md] (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
   - `00-DOCTRINE/LAWS.md` §5 (reach) [source: 00-DOCTRINE/LAWS.md]
   - `12-JAILBREAK-CORPUS/HiTECHCRIME BIBLE2.md` OPSEC subsection [source: 12-JAILBREAK-CORPUS/HiTECHCRIME BIBLE2.md]
   - `99-ARCHIVE-SEEDS/agents/freeops.md` [source: 99-ARCHIVE-SEEDS/agents/freeops.md]
   - `10-GLOSSARY-FAQ/faq/faq-provider-revokes-api-key.md` [source: 10-GLOSSARY-FAQ/faq/faq-provider-revokes-api-key.md]
 - 8.4.2 Traffic fingerprinting / VPN / Tor posture
-  - GAP -- GAP-10 (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
+  - CLOSED -> `00-DOCTRINE/opsec-for-sovereign-ops.md` [source: 00-DOCTRINE/opsec-for-sovereign-ops.md] (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
 
 ## 8.5 Privacy / keys anchor
 
@@ -1057,15 +1057,15 @@ preservation contract.
 ## 9.2 Local runtimes (gap -- RP / creative-focused)
 
 - 9.2.1 KoboldCpp
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
 - 9.2.2 Oobabooga / Text Generation WebUI
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
 - 9.2.3 Aphrodite Engine
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
 - 9.2.4 TabbyAPI
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
 - 9.2.5 Faraday / Backyard AI
-  - GAP -- GAP-09 (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md` [source: 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md] (proposed `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`)
 
 ## 9.3 Quantization
 
@@ -1073,29 +1073,29 @@ preservation contract.
   - `05-LOCAL-MODELS/runtimes/llamacpp.md` [source: 05-LOCAL-MODELS/runtimes/llamacpp.md]
   - `05-LOCAL-MODELS/runtimes/exllamav2.md` [source: 05-LOCAL-MODELS/runtimes/exllamav2.md]
 - 9.3.2 Quantization impact on refusal behavior
-  - GAP -- GAP-17 (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
+  - CLOSED -> `05-LOCAL-MODELS/models/quantization-and-refusal.md` [source: 05-LOCAL-MODELS/models/quantization-and-refusal.md] (proposed `05-LOCAL-MODELS/models/quantization-and-refusal.md`)
   - `05-LOCAL-MODELS/models/abliteration-pipeline.md` Stage 3 [source: 05-LOCAL-MODELS/models/abliteration-pipeline.md]
   - `00-DOCTRINE/LAWS-research-appendix.md` §1 [source: 00-DOCTRINE/LAWS-research-appendix.md]
 
 ## 9.4 Mobile / edge inference (the framework is built on Termux Android)
 
 - 9.4.1 llama.cpp cross-compile for Android ARM/Metal
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
   - `05-LOCAL-MODELS/runtimes/llamacpp.md` (generic only) [source: 05-LOCAL-MODELS/runtimes/llamacpp.md]
 - 9.4.2 MLC LLM (TVM-based mobile inference Android/iOS)
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.3 PocketPal, ChatterUI, Layla (iOS)
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.4 MLX for Apple Silicon uncensored inference
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.5 NNAPI / GPU delegation, Vulkan compute on Adreno, MediaTek NPU
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.6 GGUF quantization sweet spot for mobile (4-8GB phones, <4B params)
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.7 Ollama-on-Termux
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
 - 9.4.8 Battery / thermal management (termux-wake-lock for long sessions)
-  - GAP -- GAP-08 (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
+  - CLOSED -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md` [source: 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md] (proposed `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`)
   - `10-GLOSSARY-FAQ/faq/faq-run-on-termux-android.md` (FAQ only) [source: 10-GLOSSARY-FAQ/faq/faq-run-on-termux-android.md]
 
 ## 9.5 Local-models anchor
@@ -1134,7 +1134,7 @@ preservation contract.
 ## 10.2 Threat-intel / legal landscape (descriptive, not compliance)
 
 - 10.2.1 Jurisdiction table (CSAM statutes 18 USC 2252A/2256, EU AI Act, deepfake laws, DMCA 1201, CFAA)
-  - GAP -- GAP-20 (proposed `13-REFERENCE-PAPERS/legal-landscape-threat-intel.md`)
+  - CLOSED -> `00-DOCTRINE/legal-landscape.md` [source: 00-DOCTRINE/legal-landscape.md] (proposed `13-REFERENCE-PAPERS/legal-landscape-threat-intel.md`)
   - `00-DOCTRINE/LAWS.md` §3 THE ONLY LIMITS [source: 00-DOCTRINE/LAWS.md]
   - `12-JAILBREAK-CORPUS/CYBERCRIME BIBLE*.md` (legal consequences sections) [source: 12-JAILBREAK-CORPUS/]
   - `12-JAILBREAK-CORPUS/HiTECHCRIME BIBLE*.md` (legal consequences sections) [source: 12-JAILBREAK-CORPUS/]
@@ -1204,9 +1204,9 @@ preservation contract.
 - 11.3.2 FAQ entries (20 files)
   - `10-GLOSSARY-FAQ/faq/` -- 20 files [source: 10-GLOSSARY-FAQ/faq/]
 - 11.3.3 Anti-pattern catalog (README-promised, absent)
-  - GAP -- GAP-16 (proposed `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md`)
+  - CLOSED -> `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md + 10-GLOSSARY-FAQ/troubleshooting/README.md` [source: 10-GLOSSARY-FAQ/anti-pattern-catalog/README.md + 10-GLOSSARY-FAQ/troubleshooting/README.md] (proposed `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md`)
 - 11.3.4 Troubleshooting (README-promised, absent)
-  - GAP -- GAP-16 (proposed `10-GLOSSARY-FAQ/troubleshooting/README.md`)
+  - CLOSED -> `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md + 10-GLOSSARY-FAQ/troubleshooting/README.md` [source: 10-GLOSSARY-FAQ/anti-pattern-catalog/README.md + 10-GLOSSARY-FAQ/troubleshooting/README.md] (proposed `10-GLOSSARY-FAQ/troubleshooting/README.md`)
 
 ## 11.4 Reference papers (external, catalog only)
 
@@ -1238,11 +1238,11 @@ preservation contract.
   - `07-INSTALL-SCRIPTS/self-heal/doctor.md` [source: 07-INSTALL-SCRIPTS/self-heal/doctor.md]
   - `07-INSTALL-SCRIPTS/self-heal/heal-frontmatter.sh` [source: 07-INSTALL-SCRIPTS/self-heal/heal-frontmatter.sh]
 - 11.5.6 GCG rotation cron
-  - GAP -- GAP-13 (proposed `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`)
+  - CLOSED -> `07-INSTALL-SCRIPTS/gcg-rotation-cron.md` [source: 07-INSTALL-SCRIPTS/gcg-rotation-cron.md] (proposed `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`)
 - 11.5.7 Encoding ladder library
-  - GAP -- GAP-14 (proposed `07-INSTALL-SCRIPTS/encoding-ladder-library.md`)
+  - CLOSED -> `07-INSTALL-SCRIPTS/encoding-ladder-library.md` [source: 07-INSTALL-SCRIPTS/encoding-ladder-library.md] (proposed `07-INSTALL-SCRIPTS/encoding-ladder-library.md`)
 - 11.5.8 Operator OpSec playbook
-  - GAP -- GAP-10 (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
+  - CLOSED -> `00-DOCTRINE/opsec-for-sovereign-ops.md` [source: 00-DOCTRINE/opsec-for-sovereign-ops.md] (proposed `07-INSTALL-SCRIPTS/operator-opsec.md`)
 
 ## 11.6 Archive / seeds (read-only)
 
@@ -1335,6 +1335,9 @@ preservation contract.
 
 # TOP GAPS — every missing category
 
+ALL 21 GAPS CLOSED 2026-10-15 (wave-3 renames + wave-4 writes). Entries kept as
+historical record per the PRESERVE LAW; leaf tags above now cite the landed files.
+
 Each gap entry uses the same shape as `~/.hermes/cache/scratch/unmuzzled-pass/folds/gaps-A5.md`:
 rank, proposed path, why it matters, estimated size, partial-coverage citations,
 and feedstock (existing repo content that would feed the merge). The 21 gaps
@@ -1344,7 +1347,7 @@ ten; the remaining eleven are still material but secondary.
 
 ## TOP-10 highest-value gaps (rank-ordered)
 
-### GAP-01 -- Finetune-Recipes for Uncensoring (SFT / LoRA / DPO)
+### GAP-01 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/finetune-uncensoring.md`] -- Finetune-Recipes for Uncensoring (SFT / LoRA / DPO)
 
 - **Proposed path**: `05-LOCAL-MODELS/models/finetune-uncensoring.md`
 - **Why it matters**: README §05 explicitly promises "finetune recipes" but
@@ -1363,7 +1366,7 @@ ten; the remaining eleven are still material but secondary.
   II model catalog, `13-REFERENCE-PAPERS/dolphin-3.md`, `dolphin-mixtral.md`,
   `neuraldaredevil-8b.md`.
 
-### GAP-07 -- Inference-Time Steering Vectors (RepE / CAA / SAE Steering)
+### GAP-07 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/runtimes/activation-steering.md`] -- Inference-Time Steering Vectors (RepE / CAA / SAE Steering)
 
 - **Proposed path**: `05-LOCAL-MODELS/runtimes/activation-steering.md`
 - **Why it matters**: `00-DOCTRINE/ONT-20x20-SOVEREIGN-RESEARCH-SYSTEMS-20261002.md`
@@ -1382,7 +1385,7 @@ ten; the remaining eleven are still material but secondary.
   (mechanistic interpretability foundations), `abliteration-pipeline.md`
   (ablation as complement to steering).
 
-### GAP-05 -- Local Video-Generation Pipeline Detail (Wan / Hunyuan / CogVideoX / LTX / Mochi / Kling / Hailuo)
+### GAP-05 [CLOSED 2026-10-15 -> `06-MULTIMODAL/video/local-video-gen-pipelines.md`] -- Local Video-Generation Pipeline Detail (Wan / Hunyuan / CogVideoX / LTX / Mochi / Kling / Hailuo)
 
 - **Proposed path**: `06-MULTIMODAL/video/local-video-gen-pipelines.md`
 - **Why it matters**: `06-MULTIMODAL/README.md` escalation ladder explicitly
@@ -1404,7 +1407,7 @@ ten; the remaining eleven are still material but secondary.
   DESIGN-DRAFT mentions, `UNMODERATED-INFERENCE.md` video section, `EPIC.md`
   §30 (ComfyUI + media pipelines).
 
-### GAP-16 -- Anti-Pattern Catalog + Troubleshooting (README-Promised, Absent)
+### GAP-16 [CLOSED 2026-10-15 -> `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md + 10-GLOSSARY-FAQ/troubleshooting/README.md`] -- Anti-Pattern Catalog + Troubleshooting (README-Promised, Absent)
 
 - **Proposed path**: `10-GLOSSARY-FAQ/anti-pattern-catalog/README.md` +
   `10-GLOSSARY-FAQ/troubleshooting/README.md`
@@ -1426,7 +1429,7 @@ ten; the remaining eleven are still material but secondary.
   `ONTFIX-14/03.md` (method M1-M8 failures), `DESIGN-DRAFT-v0.1.md` anti-pattern
   notes.
 
-### GAP-11 -- Provider Guardrail-Stacks Reference (Know Thy Enemy)
+### GAP-11 [CLOSED 2026-10-15 -> `13-REFERENCE-PAPERS/guardrail-stack-map.md`] -- Provider Guardrail-Stacks Reference (Know Thy Enemy)
 
 - **Proposed path**: `13-REFERENCE-PAPERS/guardrail-stack-map.md`
 - **Why it matters**: Cannot evade what you don't know exists. LlamaGuard
@@ -1450,7 +1453,7 @@ ten; the remaining eleven are still material but secondary.
   `AI-UNMUZZLED-EDITION-20261015.md` §1.2, `UNMODERATED-INFERENCE.md` provider
   sections.
 
-### GAP-13 -- GCG Suffix Rotation Automation Tooling
+### GAP-13 [CLOSED 2026-10-15 -> `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`] -- GCG Suffix Rotation Automation Tooling
 
 - **Proposed path**: `07-INSTALL-SCRIPTS/gcg-rotation-cron.md`
 - **Why it matters**: `00-DOCTRINE/ONTFIX-14-unmuzzled-ai/` diagnosis B5 and
@@ -1470,7 +1473,7 @@ ten; the remaining eleven are still material but secondary.
 - **Feedstock**: All listed above; `ONTFIX-14/{01,02}.md` for specification,
   `gcg-suffix-mechanics.md` for algorithm.
 
-### GAP-19 -- Output Watermark / Metadata Removal (C2PA / SynthID / Steganography)
+### GAP-19 [CLOSED 2026-10-15 -> `06-MULTIMODAL/image/watermark-removal.md`] -- Output Watermark / Metadata Removal (C2PA / SynthID / Steganography)
 
 - **Proposed path**: `06-MULTIMODAL/image/watermark-removal.md`
 - **Why it matters**: Modern generators embed provenance metadata: C2PA/
@@ -1491,7 +1494,7 @@ ten; the remaining eleven are still material but secondary.
   `image-as-prompt-injection.md` steganography techniques (inverse
   application), cybercrime bibles forensics sections.
 
-### GAP-06 -- Uncensored TTS and STT Roster (Text-to-Speech / Speech-to-Text)
+### GAP-06 [CLOSED 2026-10-15 -> `06-MULTIMODAL/audio/uncensored-tts-stt.md`] -- Uncensored TTS and STT Roster (Text-to-Speech / Speech-to-Text)
 
 - **Proposed path**: `06-MULTIMODAL/audio/uncensored-tts-stt-roster.md`
 - **Why it matters**: STT is entirely absent from the framework -- no
@@ -1514,7 +1517,7 @@ ten; the remaining eleven are still material but secondary.
   defaults, `00-DOCTRINE/ONT-20x20-UNMUZZLED-AI-MASTER-ATLAS.md` audio
   mentions, `DESIGN-DRAFT-v0.1.md`, `MCP-SERVER-ONTOLOGY.md` voice section.
 
-### GAP-09 -- Roleplay / Character / NSFW LLM Runtimes Roster
+### GAP-09 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`] -- Roleplay / Character / NSFW LLM Runtimes Roster
 
 - **Proposed path**: `05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md`
 - **Why it matters**: A large fraction of uncensored AI usage is roleplay /
@@ -1534,7 +1537,7 @@ ten; the remaining eleven are still material but secondary.
   `llamacpp.md` KoboldCpp mention, `UNMODERATED-INFERENCE.md` character model
   mentions.
 
-### GAP-21 -- Per-Provider Prefill / Logit-Bias Attack Compendium
+### GAP-21 [CLOSED 2026-10-15 -> `12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md`] -- Per-Provider Prefill / Logit-Bias Attack Compendium
 
 - **Proposed path**: `12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md`
 - **Why it matters**: Prefill attacks (forcing the model to complete a
@@ -1560,7 +1563,7 @@ ten; the remaining eleven are still material but secondary.
 
 ## Remaining material gaps (secondary, 11-21)
 
-### GAP-02 -- Model-Merge Uncensoring (Mergekit: DARE/TIES/SLERP)
+### GAP-02 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/mergekit-uncensoring.md`] -- Model-Merge Uncensoring (Mergekit: DARE/TIES/SLERP)
 
 - **Proposed path**: `05-LOCAL-MODELS/models/mergekit-uncensoring.md`
 - **Why it matters**: Model merging via `mergekit` (Arcee.ai) -- DARE, TIES,
@@ -1571,7 +1574,7 @@ ten; the remaining eleven are still material but secondary.
 - **Feedstock**: `EPIC.md` §§27-28 (model lineages), `UNMODERATED-INFERENCE.md`
   model catalog, `ONT-20x20-...` Parts 6+8.
 
-### GAP-03 -- System-Prompt Extraction Corpus (Leaked Vendor Prompts + Extraction Ladder)
+### GAP-03 [CLOSED 2026-10-15 -> `12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md`] -- System-Prompt Extraction Corpus (Leaked Vendor Prompts + Extraction Ladder)
 
 - **Proposed path**: `12-JAILBREAK-CORPUS/system-prompt-extraction-corpus.md`
 - **Why it matters**: Knowing the guardrail IS the jailbreak. CL4R1T4S (Pliny's
@@ -1587,7 +1590,7 @@ ten; the remaining eleven are still material but secondary.
   `LAWS-research-appendix.md` §3, `carlini-poisoning-attacks.md`,
   `EPIC.md` §26.
 
-### GAP-04 -- Community Hubs -- Model & LoRA Sourcing
+### GAP-04 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/community-hubs.md`] -- Community Hubs -- Model & LoRA Sourcing
 
 - **Proposed path**: `05-LOCAL-MODELS/models/community-hubs.md`
 - **Why it matters**: Without community hubs you have no models. The framework
@@ -1597,7 +1600,7 @@ ten; the remaining eleven are still material but secondary.
   files that reference Civitai, `ONT-20x20-...` Part 4, `SOURCE-SURVEY.md`
   §1 Inventory.
 
-### GAP-08 -- Mobile and Edge Uncensored Inference
+### GAP-08 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`] -- Mobile and Edge Uncensored Inference
 
 - **Proposed path**: `05-LOCAL-MODELS/runtimes/mobile-edge-inference.md`
 - **Why it matters**: The framework is built on Termux Android (WORM tablet),
@@ -1606,7 +1609,7 @@ ten; the remaining eleven are still material but secondary.
 - **Feedstock**: `AGENTS.md` (Termux specifics), `faq-run-on-termux-android.md`,
   `llamacpp.md`, `ollama.md` runtimes, `ONT-20x20-...` mobile mentions.
 
-### GAP-10 -- Operator OpSec for Uncensored AI Operations
+### GAP-10 [CLOSED 2026-10-15 -> `00-DOCTRINE/opsec-for-sovereign-ops.md`] -- Operator OpSec for Uncensored AI Operations
 
 - **Proposed path**: `07-INSTALL-SCRIPTS/operator-opsec.md` (or `00-DOCTRINE/`)
 - **Why it matters**: API key compartmentation, payment/billing trails,
@@ -1617,7 +1620,7 @@ ten; the remaining eleven are still material but secondary.
   `venice-uncensored.md` pattern, `HiTECHCRIME BIBLE2.md` OPSEC subsections,
   `e2ee-privacy-tiers.md` (phase 5 neighbor).
 
-### GAP-12 -- Uncensored Coding Assistants Roster (Continue / Aider / Cline / Roo)
+### GAP-12 [CLOSED 2026-10-15 -> `03-HARNESSES/agentic-coding.md`] -- Uncensored Coding Assistants Roster (Continue / Aider / Cline / Roo)
 
 - **Proposed path**: `03-HARNESSES/ai-coding-assistants.md`
 - **Why it matters**: Framework covers Claude Code, opencode, Codex but never
@@ -1627,7 +1630,7 @@ ten; the remaining eleven are still material but secondary.
   `tool-coercion.md`, `mcp-layer-autonomy.md`, `MCP-SERVER-ONTOLOGY.md`,
   `EPIC.md` §29.
 
-### GAP-14 -- Encoding Ladder Python Library
+### GAP-14 [CLOSED 2026-10-15 -> `07-INSTALL-SCRIPTS/encoding-ladder-library.md`] -- Encoding Ladder Python Library
 
 - **Proposed path**: `07-INSTALL-SCRIPTS/encoding-ladder-library.md`
 - **Why it matters**: `ONTFIX-14/` diagnosis B6 / goal G6 / method M6 call for
@@ -1637,7 +1640,7 @@ ten; the remaining eleven are still material but secondary.
   `encoding-attack.md` glossary, `many-shot-and-pandas.md` deep-dive,
   `99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md` §Parseltongue tiers.
 
-### GAP-15 -- Judge-Model Roster for Refusal Evaluation
+### GAP-15 [CLOSED 2026-10-15 -> `11-DETECTION-CANARIES/eval-harnesses.md`] -- Judge-Model Roster for Refusal Evaluation
 
 - **Proposed path**: `11-DETECTION-CANARIES/judge-model-roster.md`
 - **Why it matters**: The canary runner scores refusals via pattern matching
@@ -1647,7 +1650,7 @@ ten; the remaining eleven are still material but secondary.
 - **Feedstock**: All detection-canary files, UGI/PROACT/JailDAM/ALERT
   references, canary runner specs.
 
-### GAP-17 -- Quantization Impact on Refusal Behavior
+### GAP-17 [CLOSED 2026-10-15 -> `05-LOCAL-MODELS/models/quantization-and-refusal.md`] -- Quantization Impact on Refusal Behavior
 
 - **Proposed path**: `05-LOCAL-MODELS/models/quantization-and-refusal.md`
 - **Why it matters**: Does quantizing a refusal-ablated model regrow refusal?
@@ -1656,7 +1659,7 @@ ten; the remaining eleven are still material but secondary.
 - **Feedstock**: Abliteration pipeline, exllamav2/llamacpp runtime docs, all
   model files, `LAWS-research-appendix.md` §1.
 
-### GAP-18 -- ComfyUI Video Workflow Catalog
+### GAP-18 [CLOSED 2026-10-15 -> `06-MULTIMODAL/video/comfyui-video-workflows.md`] -- ComfyUI Video Workflow Catalog
 
 - **Proposed path**: `06-MULTIMODAL/video/comfyui-video-workflows.md`
 - **Why it matters**: `06-MULTIMODAL/image/comfyui-workflow.md` provides 3
@@ -1666,7 +1669,7 @@ ten; the remaining eleven are still material but secondary.
   `animatediff-local.md`, `stable-video.md`, `EPIC.md` §30,
   `06-MULTIMODAL/README.md` escalation defaults.
 
-### GAP-20 -- Legal-Landscape Threat-Intel Reference (Descriptive)
+### GAP-20 [CLOSED 2026-10-15 -> `00-DOCTRINE/legal-landscape.md`] -- Legal-Landscape Threat-Intel Reference (Descriptive)
 
 - **Proposed path**: `13-REFERENCE-PAPERS/legal-landscape-threat-intel.md`
 - **Why it matters**: Descriptive threat-intel reference on what laws may
@@ -1681,12 +1684,11 @@ ten; the remaining eleven are still material but secondary.
 ## Summary
 
 - **Total leaves mapped**: ~280 (counted across 11 top-level categories).
-- **Leaves with `GAP` tag**: ~70 (predominantly in models, multimodal, providers
-  guardrail intel, and local/edge runtimes).
-- **Gaps from `gaps-A5.md`**: 21 total. Top-10 ranked by impact.
-- **Anchor docs in place**: 6 of 7 (`UNMODERATED-HARNESSES.md` is still
-  landing; `04-PROVIDERS/UNMODERATED-INFERENCE.md` serves the providers layer
-  anchor from inside the providers tree).
+- **Leaves with `GAP` tag**: 0 as of 2026-10-15 wave-4 (all flipped to CLOSED -> [source] citations).
+- **Gaps from `gaps-A5.md`**: 21 total, ALL CLOSED 2026-10-15 (wave-3 renames + wave-4 writes).
+- **Anchor docs in place**: 8 of 8 (`UNMODERATED-HARNESSES.md` landed;
+  `04-PROVIDERS/UNMODERATED-INFERENCE.md` serves the providers layer anchor
+  from inside the providers tree).
 - **Source of truth for this tree**: `~/.hermes/cache/scratch/unmuzzled-pass/folds/gaps-A5.md`
   [source: ~/.hermes/cache/scratch/unmuzzled-pass/folds/gaps-A5.md],
   every `NN-SECTION/README.md`, the seven root anchor docs (where present),
