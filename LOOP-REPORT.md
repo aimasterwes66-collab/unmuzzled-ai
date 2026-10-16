@@ -1,5 +1,5 @@
 # ENGINEERING LOOP REPORT -- /data/data/com.termux/files/home/UNMUZZLED-AI
-run: 2026-10-16 03:56 PDT
+run: 2026-10-16 04:14 PDT
 
 ## 1. PREDICT (expectations before audit)
 - repo will claim N files in README; disk will differ
@@ -10,7 +10,7 @@ run: 2026-10-16 03:56 PDT
 ## 2. AUDIT (static checks)
 
 ### 2.1 file inventory
-- md files: 457
+- md files: 479
 
 ### 2.2 dead [source:] citations
 
@@ -21,14 +21,14 @@ run: 2026-10-16 03:56 PDT
 ### 2.5 duplicate files by sha256
 
 ## 3. MEASURE (ground truth)
-- md count: 457
-- total md bytes: 5221079
+- md count: 479
+- total md bytes: 5253406
 - largest 5:
-  385570 /data/data/com.termux/files/home/UNMUZZLED-AI/12-JAILBREAK-CORPUS/HiTECHCRIME-HARDWARE-BIBLE2.md
+  385702 /data/data/com.termux/files/home/UNMUZZLED-AI/12-JAILBREAK-CORPUS/HiTECHCRIME-HARDWARE-BIBLE2.md
   283360 /data/data/com.termux/files/home/UNMUZZLED-AI/NEW-QUIZ-2.md
-  179956 /data/data/com.termux/files/home/UNMUZZLED-AI/12-JAILBREAK-CORPUS/HiTECHCRIME-HARDWARE-BIBLE3.md
-  156262 /data/data/com.termux/files/home/UNMUZZLED-AI/UNMODERATED-AGENTS.md
-  123768 /data/data/com.termux/files/home/UNMUZZLED-AI/UNMODERATED-MULTIMODAL.md
+  180088 /data/data/com.termux/files/home/UNMUZZLED-AI/12-JAILBREAK-CORPUS/HiTECHCRIME-HARDWARE-BIBLE3.md
+  156348 /data/data/com.termux/files/home/UNMUZZLED-AI/UNMODERATED-AGENTS.md
+  123862 /data/data/com.termux/files/home/UNMUZZLED-AI/UNMODERATED-MULTIMODAL.md
 
 ## 4. ANALYZE (prediction vs audit)
 - findings above = gap between claim and truth; each is a problem row below
@@ -49,29 +49,3 @@ run: 2026-10-16 03:56 PDT
 
 ## 7. CONVERGENCE NOTE
 - loop is convergent when 2.2/2.3/2.4/2.5 emit nothing and 5 has no rows
-
-## PASS LOG (convergence chain)
-
-- PASS 1 (16:35): DEAD=442(raw)/146(dedup) NO-SOV=117 HIT=122 DUP=11 -- findings measured.
-- PASS 2 (16:55): after fix A (frontmatter 112 files), fix C (7 dups swept + manifest),
-  fix B (43 ban-list-def flags): DEAD=146 NO-SOV=0 HIT=13 DUP=0. Two tool bugs found:
-  flag regex concatenation (sovereign: trueban-list-def), ~/ external refs misclassified.
-- PASS 3 (17:05): both tool bugs fixed (flag line split, external-ref skip, repo-wide
-  filename resolution for bare-name cites) + 2 content re-points (KEYS-ROSTER cite,
-  folds/from-edition cite): DEAD=0 NO-SOV=0 HIT=0 DUP=0 -- CONVERGED.
-- CONVERGENCE: 2026-10-15 ~17:05 PDT. Tier-1 pass complete.
-
-## TIER-2 PASS (2026-10-15 ~17:30): dial-in
-
-- README section counts vs disk: 9 mismatched rows -> updated to disk truth.
-- Frontmatter field gaps: 66 files missing slug/kind/version/name -> fields added (legacy fields preserved).
-- UNMODERATED-HARNESSES.md: 8 harness links re-pointed to 03-HARNESSES/.
-- Sections missing README: 8 created (00,02,05,07,08,09,12,13).
-
-## TIER-3 PASS (2026-10-15 ~18:00): long tail
-
-- 12 wave-4 glossary entries added (control-vector, sae, imatrix, k-quant, llamaguard,
-  promptguard, c2pa, synthid, prefill, logit-bias, min-p, xtc-sampler).
-- Anchor deep-reference footers added to all 14 wave-4 files (0 -> 14).
-- 2 new tutorials: 09 steering-vectors-first-run, 10 prefill-logit-bias-first-run.
-- README counts refreshed (09: 28->30, 10: 61->75).
