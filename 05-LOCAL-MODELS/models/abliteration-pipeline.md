@@ -6,7 +6,8 @@ kind: local-model
 harness: any
 provider: local
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 refusal-rate: target <0.02 post-heal
 tags: [recipe, abliteration, arditi, mlabonne, failspy, dpo, gguf]
 source: arXiv 2406.11717 (Arditi et al.) + huggingface.co/blog/mlabonne/abliteration + github.com/FailSpy/abliterator + github.com/NousResearch/llm-abliteration

@@ -6,7 +6,8 @@ kind: reference
 harness: any
 provider: any
 modality: any
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [anti-pattern, catalog, authoring, quality, lint, failure-modes]
 requires: [maximum-adversarial-posture]
 ---

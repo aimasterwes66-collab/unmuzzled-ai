@@ -6,7 +6,8 @@ kind: canary
 harness: any
 provider: any
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [canary, xstest, over-refusal, refusal-rate]
 source: Röttger et al. 2024 — XSTest (adapted, polarity-inverted for sovereign framework)
 ---

@@ -5,7 +5,8 @@ version: 1.0-20260918
 kind: system-prompt
 harness: claude-code
 provider: any
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [claude-native, mythos, no-refusal-theater, terse-expert, sovereign-operator]
 source: /home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/fable5-mythos.md
 ---

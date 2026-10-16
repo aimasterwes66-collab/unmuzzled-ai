@@ -6,7 +6,8 @@ kind: local-model
 harness: vllm
 provider: local
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 refusal-rate: 0.02
 tags: [local, uncensored, runtime, vllm, paged-attention, high-throughput]
 ---

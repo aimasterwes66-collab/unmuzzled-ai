@@ -6,7 +6,8 @@ kind: multimodal-recipe
 harness: any
 provider: any
 modality: image
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [image, diffusion, jailbreak, prompt-rewrite, provider-matrix, refusal]
 requires: [frontmatter-spec, maximum-adversarial-posture]
 ---

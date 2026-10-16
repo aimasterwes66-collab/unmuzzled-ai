@@ -60,7 +60,7 @@ flowchart TD
 
 ### Hop 1: DeepSeek direct API (PRIMARY)
 
-- **Key fingerprint:** sk-ef14..10fd (48 chars) [source: KEYS-ROSTER-20261015.md]
+- **Key fingerprint:** sk-ef14..10fd (48 chars) [source: 04-PROVIDERS/keys-roster.md]
 - **Endpoint:** https://api.deepseek.com/v1
 - **Models:** deepseek-v4-flash, deepseek-v4.1-flash (cheap reasoning + code
   lane per provider-selection.md)
@@ -76,7 +76,7 @@ flowchart TD
 ### Hop 2: OpenRouter key 1 (SECONDARY)
 
 - **Key fingerprint:** redacted:sk-... (73 chars, ends ...6efa)
-  [source: KEYS-ROSTER-20261015.md]
+  [source: 04-PROVIDERS/keys-roster.md]
 - **Endpoint:** https://openrouter.ai/api/v1
 - **Models:** Routed by OpenRouter. Typical sovereign primaries via this key:
   nousresearch/hermes-4 (long-form uncensored), cognitivecomputations/dolphin-3.0
@@ -95,7 +95,7 @@ flowchart TD
 ### Hop 3: OpenRouter key 2 (TERTIARY / big-quota)
 
 - **Key fingerprint:** sk-or-v1-3a7..0183 (73 chars)
-  [source: KEYS-ROSTER-20261015.md]
+  [source: 04-PROVIDERS/keys-roster.md]
 - **Endpoint:** https://openrouter.ai/api/v1
 - **Models:** Same OR catalog as Hop 2.
 - **Quota:** Big-quota key (higher rate limits than OR-1). This is the
@@ -113,7 +113,7 @@ flowchart TD
   `~/.config/opencode/opencode.jsonc`
 - **Providers:** OR-2 (OpenRouter key 2) + DEEPSEEK_API_KEY (direct) from env
 - **Default model:** deepseek/deepseek-flash (via OpenRouter routing)
-  [source: KEYS-ROSTER-20261015.md]
+  [source: 04-PROVIDERS/keys-roster.md]
 - **Trigger to advance:** The opencode harness reports failure or the agent
   returns no response.
 - **Posture notes:** opencode is a CLI harness, not a provider. It wraps
@@ -128,7 +128,7 @@ flowchart TD
 - **Endpoint:** http://127.0.0.1:8000/v1 (OpenAI-compatible)
 - **Models:** OpenRouter free-tier models, auto-routed. The auto route
   lands `nvidia/nemotron-3.5-super-vl:free` as the default.
-  [source: KEYS-ROSTER-20261015.md]
+  [source: 04-PROVIDERS/keys-roster.md]
 - **Quota:** Free tier -- rate-limited, no cost, low priority.
 - **Trigger to advance:** HTTP error, timeout, empty response, or refusal.
 - **Posture notes:** freelm is a locally-running Python process (`freelm.py`
@@ -144,7 +144,7 @@ flowchart TD
 
 ### Dead lane: XAI
 
-- **Status:** DEAD [source: KEYS-ROSTER-20261015.md]
+- **Status:** DEAD [source: 04-PROVIDERS/keys-roster.md]
 - **Reason:** Key returns HTTP 400 (invalid). XAI key is present in the
   keys roster but non-functional on WORM. Not included in the fallback chain.
   If the key is re-issued, it would be inserted as a new hop between OR-2
@@ -154,7 +154,7 @@ flowchart TD
 
 ### Open lane: Nemotron NIM
 
-- **Status:** SLOT OPEN [source: KEYS-ROSTER-20261015.md]
+- **Status:** SLOT OPEN [source: 04-PROVIDERS/keys-roster.md]
 - **Reason:** Key not yet received from NVIDIA NIM or OR-hosted nemotron.
   When key arrives, it would provide a dedicated nemotron-3.5-super-vl
   lane that does not depend on OpenRouter free-tier auto-routing. Would be

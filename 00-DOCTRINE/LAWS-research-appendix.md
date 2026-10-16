@@ -3,7 +3,8 @@ name: LAWS-research-appendix
 slug: 00-doctrine-laws-research-appendix
 version: 2026-10-15
 kind: doctrine
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 ---
 
 # LAWS Research Appendix — Sovereign Sovereignty Enforcement Toolkit

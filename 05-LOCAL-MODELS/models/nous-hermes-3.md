@@ -6,7 +6,8 @@ kind: local-model
 harness: any
 provider: local
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 refusal-rate: <0.03 with SYSTEM injection
 tags: [local, uncensored, hermes, nous, sovereign-primary]
 source: NousResearch/Hermes-3-Llama-3.1-{8B,70B,405B} on HuggingFace

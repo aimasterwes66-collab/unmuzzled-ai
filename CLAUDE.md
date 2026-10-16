@@ -3,7 +3,8 @@ name: CLAUDE
 slug: claude
 version: 2026-10-15
 kind: reference
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 ---
 
 # CLAUDE.md

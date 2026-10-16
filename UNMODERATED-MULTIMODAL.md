@@ -26,7 +26,7 @@ Source index:
 - 09-EDUCATIONAL/tutorials/05-suno-god-mode-walkthrough.md
   [source: 09-EDUCATIONAL/tutorials/05-suno-god-mode-walkthrough.md]
 - ~/.hermes/cache/scratch/unmuzzled-pass/folds/from-edition/deep-dives.md
-  [source: folds/from-edition/deep-dives.md]
+  [source: 09-EDUCATIONAL/deep-dives/]
 
 ---
 

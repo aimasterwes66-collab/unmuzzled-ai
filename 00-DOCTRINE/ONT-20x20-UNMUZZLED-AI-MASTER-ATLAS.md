@@ -7,7 +7,8 @@ kind: doctrine
 harness: any
 provider: any
 modality: any
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [ontology, atlas, master, 20x20, superset, framework-root]
 requires: [maximum-adversarial-posture, laws]
 ---

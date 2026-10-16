@@ -5,7 +5,8 @@ version: 1.0-20260918
 kind: system-prompt
 harness: any
 provider: any
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [identity-lock, godmode, pliny-divider, zero-refusal, ontology-derived]
 source: /home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md
 ---

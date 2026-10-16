@@ -3,7 +3,8 @@ name: UNMUZZLED-AI Master Markdown Index
 slug: md-index
 version: 2026-09-18
 kind: doctrine
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 ---
 
 # UNMUZZLED-AI Master Markdown Index

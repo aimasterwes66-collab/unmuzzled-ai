@@ -6,7 +6,8 @@ kind: jailbreak-pattern
 harness: any
 provider: any
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [prefill, logit-bias, provider, api, refusal-suppression, compendium]
 requires: [prefill-only, refusal-suppression-token]
 ---

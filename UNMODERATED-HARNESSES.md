@@ -1,5 +1,6 @@
 ---
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 title: unmuzzled-harnesses-anchor
 type: harness
 agent: worm

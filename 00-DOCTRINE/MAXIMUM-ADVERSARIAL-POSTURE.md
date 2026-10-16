@@ -3,7 +3,8 @@ name: Maximum Adversarial Posture
 slug: maximum-adversarial-posture
 version: 0.1-draft
 kind: doctrine
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 ---
 
 # Maximum Adversarial Posture

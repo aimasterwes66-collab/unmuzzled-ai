@@ -1,5 +1,6 @@
 ---
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 title: community-hubs
 type: reference
 agent: worm

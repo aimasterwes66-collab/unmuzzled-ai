@@ -3,7 +3,8 @@ name: MCP-SERVER-ONTOLOGY
 slug: mcp-server-ontology
 version: 2026-10-15
 kind: reference
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 ---
 
 AI Masta Wes's 11-Part Overpowered MCP Server Ontology

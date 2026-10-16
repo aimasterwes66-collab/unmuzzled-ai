@@ -6,7 +6,8 @@ kind: local-model
 harness: any
 provider: local
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 refusal-rate: <0.02
 tags: [local, uncensored, mistral, abliterated, mlabonne, huihui]
 source: mlabonne/* and huihui-ai/* abliterated Mistral variants on HuggingFace (TBD-verify exact slugs)

@@ -6,7 +6,8 @@ kind: tutorial
 harness: any
 provider: any
 modality: text
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 tags: [tutorial, onboarding, bootstrap, persona]
 requires: []
 ---

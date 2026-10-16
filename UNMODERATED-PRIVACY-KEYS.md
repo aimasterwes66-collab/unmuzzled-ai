@@ -1,5 +1,6 @@
 ---
-sovereign: trueban-list-def: true
+sovereign: true
+ban-list-def: true
 title: unmoderated-privacy-keys
 type: doctrine
 agent: worm
