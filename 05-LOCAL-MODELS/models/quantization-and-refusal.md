@@ -74,3 +74,7 @@ the ablation is damaged.
 - Importance matrix (imatrix) docs in llama.cpp repo.
 - Arditi et al. refusal direction: arxiv 2406.11717 (see
   `13-REFERENCE-PAPERS/llm-abliteration-nousresearch.md`).
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MODELS.md.

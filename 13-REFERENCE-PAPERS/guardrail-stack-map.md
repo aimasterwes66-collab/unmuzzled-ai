@@ -80,3 +80,7 @@ pairs with `08-DECISION-TREES/provider-selection.md` and the taint list.
 - OpenAI Moderation API docs: platform.openai.com
 - NeMo Guardrails: github.com/NVIDIA/NeMo-Guardrails
 - Bedrock Guardrails docs: docs.aws.amazon.com/bedrock
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-JAILBREAKS.md + 04-PROVIDERS/UNMODERATED-INFERENCE.md.

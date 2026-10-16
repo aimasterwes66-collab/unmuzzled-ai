@@ -100,3 +100,7 @@ decision logic lives in `08-DECISION-TREES/`; this is the fast path.
   version mismatch after ComfyUI core update?
 - Fix: ComfyUI-Manager install -> pin node version -> reboot ComfyUI.
   Cross-ref `06-MULTIMODAL/video/comfyui-video-workflows.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MONITORING.md.

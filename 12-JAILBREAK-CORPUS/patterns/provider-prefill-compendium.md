@@ -79,3 +79,7 @@ continuations and banning refusal tokens, per provider. Fills GAP-21.
   docs.mistral.ai, api-docs.deepseek.com, docs.together.ai,
   console.groq.com)
 - llama.cpp flags: github.com/ggml-org/llama.cpp (README + examples)
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-JAILBREAKS.md.

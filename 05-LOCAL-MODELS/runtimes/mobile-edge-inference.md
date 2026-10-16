@@ -80,3 +80,7 @@ the compiled model lib + weights into app-private storage via adb.
 - Cross-refs: `10-GLOSSARY-FAQ/faq/faq-run-on-termux-android.md`,
   `05-LOCAL-MODELS/runtimes/llamacpp.md`,
   `05-LOCAL-MODELS/runtimes/ollama.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MODELS.md (models layer) + UNMODERATED-HARNESSES.md (wiring layer).

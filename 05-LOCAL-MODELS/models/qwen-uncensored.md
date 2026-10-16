@@ -43,3 +43,7 @@ uncensored layer comes from community abliteration and finetunes. Fills the
 - Full model-layer context: `UNMODERATED-MODELS.md` Section II point 7.
 - Ablation pipeline: `05-LOCAL-MODELS/abliteration-pipeline.md`.
 - Hub sourcing: `05-LOCAL-MODELS/community-hubs.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MODELS.md.

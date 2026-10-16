@@ -79,3 +79,7 @@ frames with Q4 GGUF.
 - ComfyUI-GGUF: github.com/city96/ComfyUI-GGUF
 - Model repos: CogVideoX (THUDM), LTX-Video (Lightricks), Wan
   (Alibaba), HunyuanVideo (Tencent), Mochi (Genmo)
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MULTIMODAL.md.

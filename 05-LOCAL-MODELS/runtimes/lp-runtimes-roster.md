@@ -65,3 +65,7 @@ SillyTavern sit on top of these; this roster is the engine layer.
 - Faraday: https://faraday.dev
 - Cross-refs: `EPIC.md` SS28 (items 171-176), SS31 (items 189-194),
   `03-HARNESSES/sillytavern.md`, `05-LOCAL-MODELS/runtimes/exllamav2.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-HARNESSES.md.

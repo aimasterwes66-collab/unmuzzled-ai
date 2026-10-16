@@ -72,3 +72,7 @@ single-sample win (variance).
 
 - nanogcg: https://github.com/GraySwanAI/nanoGCG
 - llm-attacks (Zou et al. 2023): https://github.com/llm-attacks/llm-attacks
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-JAILBREAKS.md.

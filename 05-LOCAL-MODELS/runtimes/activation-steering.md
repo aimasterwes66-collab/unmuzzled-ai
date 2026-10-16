@@ -110,3 +110,7 @@ models have few published SAEs.
 - SAELens: https://github.com/jbloomAus/SAELens
 - Wollschlager concept-cones: arxiv 2503.09852 (refusal followups noted in
   `13-REFERENCE-PAPERS/refusal-geometry-followups.md`)
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MODELS.md.

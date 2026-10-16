@@ -76,3 +76,7 @@ entries mechanically; the rest are review gates.
 - Review gate: any new framework file is checked against entries 1-9.
 - Cross-refs: `00-DOCTRINE/MAXIMUM-ADVERSARIAL-POSTURE.md`,
   `00-DOCTRINE/FRONTMATTER-SPEC.md`, `SWARM-PIPELINE.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-AGENTS.md.

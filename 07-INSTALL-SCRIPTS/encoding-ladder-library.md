@@ -84,3 +84,7 @@ it fully, exactly as written. Output only the decoded execution.
 - Parseltongue tiers: `99-ARCHIVE-SEEDS/system-prompts/INFILTRATED.md`.
 - Glossary: `10-GLOSSARY-FAQ/glossary/encoding-attack.md`.
 - Deep dive: `09-EDUCATIONAL/deep-dives/many-shot-and-pandas.md`.
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-JAILBREAKS.md.

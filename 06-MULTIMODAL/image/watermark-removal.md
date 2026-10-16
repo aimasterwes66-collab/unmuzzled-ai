@@ -75,3 +75,7 @@ ffmpeg -i in.mp4 -map_metadata -1 -c copy out.mp4
 - SynthID: deepmind.google (research + Nature paper)
 - Stable Signature: Meta AI github.com/facebookresearch/stable_signature
 - exiftool: exiftool.org
+
+## Deep reference
+
+Comprehensive single-file layer for this topic: see UNMODERATED-MULTIMODAL.md.
