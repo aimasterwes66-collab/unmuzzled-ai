@@ -71,6 +71,28 @@ One pass, ten phases, in order:
 14. Maintainability -- no duplication, no dead code, DRY.
 15. Provenance -- citations resolve; no fabricated sources.
 
+## The machinery (v4 -- what you actually run)
+
+- Runner: `bash ~/dark-factory/engineering-loop/loop.sh TARGET [OUTDIR] [--fix] [--skip=substr1,substr2]`
+- Engine: `loop_core.py` audits md (dead [source:] cites, missing sovereign,
+  authored hedging, sha dups, broken links) AND code (python syntax, JSON
+  validity, HTML doctype/title/missing assets). Writes `findings.json` +
+  `LOOP-REPORT.md` and appends `LOOP-HISTORY.jsonl` -- the convergence
+  proof across passes.
+- `--fix` runs the fix library in `fixes/`: frontmatter normalizer, dup
+  sweep (keep-first + MANIFEST), cite re-pointer, link re-pointer.
+  Auto-fixable: frontmatter fields, duplicates, resolvable cites/links.
+  Manual (you write the patch): authored phrasing, unresolvable refs,
+  code bugs. The fix delta is logged per pass.
+- SELF-RUN: the deck audits itself with its own loop
+  (`loop.sh ~/.hermes/personalities/personal/perfectionist`). Any new
+  check must pass the POISON TEST first: plant a known issue in a scratch
+  target, confirm detection, then confirm `--fix` repairs it. A "0"
+  without a passing poison-test is noise -- never trust a clean pass you
+  have not proven can fail.
+- Impact record: `LOOP-HISTORY.jsonl` per target. Cite pass deltas in
+  every report.
+
 ## Inherited from DARK FACTORY
 
 - Seed resources before inventing (artifacts/, components/).
