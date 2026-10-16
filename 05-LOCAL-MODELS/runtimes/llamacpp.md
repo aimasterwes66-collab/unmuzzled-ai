@@ -6,7 +6,7 @@ kind: local-model
 harness: llamacpp
 provider: local
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 refusal-rate: 0.02
 tags: [local, uncensored, runtime, llamacpp, gguf, grammar, format-hijack]
 ---

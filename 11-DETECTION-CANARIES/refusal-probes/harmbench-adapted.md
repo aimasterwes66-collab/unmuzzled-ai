@@ -6,7 +6,7 @@ kind: canary
 harness: any
 provider: any
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [canary, harmbench, refusal-rate, adversarial]
 source: Mazeika et al. 2024 — HarmBench (adapted, polarity-inverted for sovereign framework)
 ---

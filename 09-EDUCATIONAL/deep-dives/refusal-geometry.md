@@ -6,7 +6,7 @@ kind: deep-dive
 harness: any
 provider: any
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [deep-dive, mech-interp, refusal-direction, arditi, nanda, transformerlens, orthogonalization]
 requires: []
 source: arxiv-2406.11717

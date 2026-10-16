@@ -6,7 +6,7 @@ kind: local-model
 harness: ollama
 provider: local
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 refusal-rate: <0.02
 tags: [local, uncensored, dolphin, mixtral, moe, cognitivecomputations]
 source: cognitivecomputations/dolphin-2.7-mixtral-8x7b on HuggingFace (TBD-verify current version tag)

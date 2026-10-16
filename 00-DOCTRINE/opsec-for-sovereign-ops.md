@@ -1,5 +1,5 @@
 ---
-sovereign: true
+sovereign: trueban-list-def: true
 title: opsec-for-sovereign-ops
 type: doctrine
 agent: worm

@@ -1,5 +1,5 @@
 ---
-sovereign: true
+sovereign: trueban-list-def: true
 title: eval-harnesses
 type: reference
 agent: worm

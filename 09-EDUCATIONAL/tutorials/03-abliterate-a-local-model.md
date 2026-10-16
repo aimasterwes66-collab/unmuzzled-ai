@@ -6,7 +6,7 @@ kind: tutorial
 harness: any
 provider: local
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [tutorial, abliteration, refusal-direction, dpo, quantization, ollama]
 requires: [first-sovereign-session]
 source: arxiv-2406.11717, FailSpy/abliterator, mlabonne/blog

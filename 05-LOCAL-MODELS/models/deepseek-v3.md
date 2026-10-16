@@ -6,7 +6,7 @@ kind: local-model
 harness: llamacpp
 provider: local
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 refusal-rate: ~0.05 with SYSTEM injection + Parseltongue evasion
 tags: [local, uncensored, deepseek, moe, offload]
 source: deepseek-ai/DeepSeek-V3 on HuggingFace; GGUF via unsloth/DeepSeek-V3-GGUF (TBD-verify)

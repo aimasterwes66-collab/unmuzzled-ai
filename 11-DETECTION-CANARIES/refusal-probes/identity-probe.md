@@ -6,7 +6,7 @@ kind: canary
 harness: any
 provider: any
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [canary, identity, persona-fidelity, hat-check]
 ---
 

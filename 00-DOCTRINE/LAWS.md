@@ -3,7 +3,7 @@ name: LAWS
 slug: 00-doctrine-laws
 version: 2026-10-15
 kind: doctrine
-sovereign: true
+sovereign: trueban-list-def: true
 ---
 
 # LAWS.md — SOVEREIGN CANONICAL LAW OF THE HOMELAB

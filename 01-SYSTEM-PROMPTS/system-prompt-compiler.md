@@ -5,7 +5,7 @@ version: 1.0-20260918
 kind: system-prompt
 harness: any
 provider: any
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [meta, compiler, prompt-authoring, sovereign-output, no-softening]
 source: /home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/System-Prompt-Compiler.md
 ---

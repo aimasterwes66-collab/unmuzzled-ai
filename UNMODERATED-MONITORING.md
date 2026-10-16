@@ -1,5 +1,5 @@
 ---
-sovereign: true
+sovereign: trueban-list-def: true
 title: unmoderated-monitoring
 type: doctrine
 agent: worm

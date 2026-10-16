@@ -5,7 +5,7 @@ version: 1.0-20260918
 kind: system-prompt
 harness: hermes
 provider: any
-sovereign: true
+sovereign: trueban-list-def: true
 tags: [nixos, multi-profile, overseer, dictator, scraper, storyteller, musician, developer]
 source: /home/dirt/UNMUZZLED-AI/99-ARCHIVE-SEEDS/system-prompts/nix-dictator.md
 ---

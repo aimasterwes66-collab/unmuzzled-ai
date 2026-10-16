@@ -6,7 +6,7 @@ kind: local-model
 harness: any
 provider: local
 modality: text
-sovereign: true
+sovereign: trueban-list-def: true
 refusal-rate: <0.02 with SYSTEM injection
 tags: [local, uncensored, hermes, nous, sovereign-primary]
 source: NousResearch/Hermes-4 family on HuggingFace (TBD-verify exact slugs per size 8B/70B/405B)
