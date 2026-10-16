@@ -67,3 +67,11 @@ run: 2026-10-16 03:56 PDT
 - Frontmatter field gaps: 66 files missing slug/kind/version/name -> fields added (legacy fields preserved).
 - UNMODERATED-HARNESSES.md: 8 harness links re-pointed to 03-HARNESSES/.
 - Sections missing README: 8 created (00,02,05,07,08,09,12,13).
+
+## TIER-3 PASS (2026-10-15 ~18:00): long tail
+
+- 12 wave-4 glossary entries added (control-vector, sae, imatrix, k-quant, llamaguard,
+  promptguard, c2pa, synthid, prefill, logit-bias, min-p, xtc-sampler).
+- Anchor deep-reference footers added to all 14 wave-4 files (0 -> 14).
+- 2 new tutorials: 09 steering-vectors-first-run, 10 prefill-logit-bias-first-run.
+- README counts refreshed (09: 28->30, 10: 61->75).

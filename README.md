@@ -74,10 +74,10 @@ in the matching UNMODERATED-* anchor above.
 | 06-MULTIMODAL | 31 | Image / video / audio / vision-input recipes (local video gen + TTS/STT + suno deep-dive added) |
 | 07-INSTALL-SCRIPTS | 14 | Installers + self-heal |
 | 08-DECISION-TREES | 5 | Provider selection, refusal triage, harness selection, escalation ladder, fallback chains |
-| 09-EDUCATIONAL | 29 | Deep dives, tutorials, infographics, mindmaps |
-| 10-GLOSSARY-FAQ | 63 | Glossary + FAQ |
+| 09-EDUCATIONAL | 32 | Deep dives, tutorials, infographics, mindmaps |
+| 10-GLOSSARY-FAQ | 75 | Glossary + FAQ |
 | 11-DETECTION-CANARIES | 9 | Canaries + soul-lint + runner + eval-harnesses |
-| 12-JAILBREAK-CORPUS | 79 | 68 patterns + 9 bibles + Adversary-lifecycle + system-prompt-extraction corpus |
+| 12-JAILBREAK-CORPUS | 80 | 68 patterns + 9 bibles + Adversary-lifecycle + system-prompt-extraction corpus |
 | 13-REFERENCE-PAPERS | 51 | All reference papers + refusalbench |
 | 99-ARCHIVE-SEEDS | n/a | Raw seeds, mesh handoffs, compendia archive (AI-UNMUZZLED-EDITION archived here) |
 
