@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: System-Prompt Extraction Corpus
 type: corpus
 agent: worm

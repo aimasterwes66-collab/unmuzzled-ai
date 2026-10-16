@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: Suno God Mode — Master of the 18,189 keyword corpus, metatag syntax, style-field engineering, and custom-mode workflow. Orchestrates Suno AI v4.5+, generates lyrics + full songs with [metatag] placement, phonetic tricks, and genre/mood/era/instrument/vocal/production keyword composition.
 name: Suno God Mode
 mode: primary

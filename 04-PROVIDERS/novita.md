@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: novita-ai
 type: provider
 agent: worm

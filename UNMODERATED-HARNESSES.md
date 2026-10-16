@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmuzzled-harnesses-anchor
 type: harness
 agent: worm

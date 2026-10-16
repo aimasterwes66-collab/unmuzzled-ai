@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 title: HiTECHCRIME BIBLE2
 type: corpus
 agent: worm

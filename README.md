@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: UNMUZZLED-AI
 type: doctrine
 agent: worm

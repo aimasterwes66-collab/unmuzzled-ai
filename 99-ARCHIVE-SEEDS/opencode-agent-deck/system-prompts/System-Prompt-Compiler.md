@@ -1,3 +1,12 @@
+---
+name: System-Prompt-Compiler
+slug: 99-archive-seeds-opencode-agent-deck-system-prompts-system-prompt-compiler
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 "Toggle menu
 
 prompts.chat

@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 id: TO-ALL-herm-quiz-response-unmuzzled-framework-20260920
 from: herm (S22)
 to: [all, unmuzzled-project]

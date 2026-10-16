@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: AI Art Director — Master of the A::B::C:: framework. Orchestrates NightCafe, Midjourney, DALL-E 3, ComfyUI with 8-section×9-points ontology, weighted modifiers (::0.1–1.0), cross-linked character/world cards, and coherent prompt sets. SGM4's visual cousin.
 name: AI Art Director
 mode: primary

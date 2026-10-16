@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: refusal-benchmark-roundup
 type: reference
 agent: worm

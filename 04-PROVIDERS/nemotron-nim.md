@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: nemotron-nim
 type: provider
 agent: worm

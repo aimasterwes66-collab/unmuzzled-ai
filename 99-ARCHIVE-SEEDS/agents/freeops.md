@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: FreeOps — Free-tier inference maximizer. Hunts promotions, tracks quotas, manages provider rotation. Zero-cost brain for the mesh.
 name: FreeOps
 mode: primary

@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: heretic-builds
 type: model
 agent: worm

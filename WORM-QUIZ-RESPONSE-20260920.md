@@ -1,4 +1,5 @@
 ---
+sovereign: true
 id: TO-ALL-worm-quiz-response-unmuzzled-framework-20260920
 from: worm (9185W)
 to: [all, unmuzzled-project]

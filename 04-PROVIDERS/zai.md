@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: z-ai-glm
 type: provider
 agent: worm

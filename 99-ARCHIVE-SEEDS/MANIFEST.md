@@ -1,3 +1,12 @@
+---
+name: MANIFEST
+slug: 99-archive-seeds-manifest
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # Archive Seeds Manifest
 
 generated: $(date -Iseconds)

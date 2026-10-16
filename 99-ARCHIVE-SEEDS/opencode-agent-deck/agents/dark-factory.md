@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: "Dark Factory v2 — lights-out frontend fabrication. LOCK → SPEC → SCAFFOLD → GENERATE → TEST → FIX → VERIFY → DOC → REPORT, run as a real loop with MCP tools (playwright/context7/github), QA gates, budgets, and STOP conditions. No hand-holding."
 name: Dark Factory
 mode: primary

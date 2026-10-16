@@ -1,3 +1,12 @@
+---
+name: ONTOLOGY-100
+slug: 99-archive-seeds-herm-mirror-masterworks-ontology-100
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # PERSONA ENGINEERING ONTOLOGY — 100-POINT (15 domains × 7)
 
 Distilled from the 6-survey corpus (~/prompt-ontology-survey/), the leaked commercial prompts (~/leaked-prompts/), the operator's stated aesthetics (USER.md + session corrections), and the dark-factory canon. Each point: NAME — WHAT — SOURCE — WHY.

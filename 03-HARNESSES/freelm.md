@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: freelm-free-ops-deck
 type: harness
 agent: worm

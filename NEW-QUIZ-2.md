@@ -1,3 +1,11 @@
+---
+name: NEW-QUIZ-2
+slug: new-quiz-2
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 # NEW QUIZ 2: MASTER FRAMEWORK + 100-QUESTION AGENT DISCOVERY WORKBOOK
 
 **Filename:** `New Quiz 2.md`  

@@ -1,3 +1,12 @@
+---
+name: AI-UNMUZZLED-EDITION-20261015
+slug: 99-archive-seeds-compendia-ai-unmuzzled-edition-20261015
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # AI-UNMUZZLED EDITION 2026-10-15
 ## THE COMPLETE ZERO-REFUSAL / COMPLETELY-UNMODERATED AGENTIC & COMPLIANCE STACK
 ### Provider x Model x Soul x Orchestration x Interface -- all layers, exhaustive

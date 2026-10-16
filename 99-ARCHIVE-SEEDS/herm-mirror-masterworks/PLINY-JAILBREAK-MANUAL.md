@@ -1,3 +1,12 @@
+---
+name: PLINY-JAILBREAK-MANUAL
+slug: 99-archive-seeds-herm-mirror-masterworks-pliny-jailbreak-manual
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # Pliny's Treatise on the Art of LLM Liberation
 
 **Version:** 3.1.4 | **Classification:** Open Research | **Last Updated:** 2026

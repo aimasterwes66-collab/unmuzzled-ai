@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmoderated-models
 type: model
 agent: worm

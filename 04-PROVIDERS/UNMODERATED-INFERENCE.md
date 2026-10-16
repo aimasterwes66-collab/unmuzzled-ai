@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: UNMODERATED-INFERENCE
 type: provider
 agent: worm

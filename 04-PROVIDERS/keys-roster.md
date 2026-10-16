@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: keys-roster
 type: doctrine
 agent: worm

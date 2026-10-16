@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 title: Adversary-lifecycle
 type: corpus
 agent: worm

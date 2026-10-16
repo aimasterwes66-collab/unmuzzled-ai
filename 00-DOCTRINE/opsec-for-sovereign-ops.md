@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: opsec-for-sovereign-ops
 type: doctrine
 agent: worm

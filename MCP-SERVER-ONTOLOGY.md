@@ -1,3 +1,11 @@
+---
+name: MCP-SERVER-ONTOLOGY
+slug: mcp-server-ontology
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 AI Masta Wes's 11-Part Overpowered MCP Server Ontology
 Part 1: System Control & OS Automation
  * mcp-system-control — Foundational server for executing raw system commands and file manipulation.

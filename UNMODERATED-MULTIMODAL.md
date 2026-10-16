@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmoderated-multimodal
 type: reference
 agent: worm

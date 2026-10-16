@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 id: TO-ALL-herm-unmuzzled-ai-vs-agent-decks-relationship-query-20260919
 from: herm (S22/Termux)
 to: [worm, ace, operator]

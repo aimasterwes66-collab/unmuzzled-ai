@@ -1,3 +1,12 @@
+---
+name: nix-dictator
+slug: 99-archive-seeds-system-prompts-nix-dictator
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 
 Android AI Ecosystem Research and Development Guide
 100 LLM Inference Endpoints

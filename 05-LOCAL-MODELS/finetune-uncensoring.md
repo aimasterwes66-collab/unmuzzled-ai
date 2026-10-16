@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: finetune-uncensoring
 type: model
 agent: worm

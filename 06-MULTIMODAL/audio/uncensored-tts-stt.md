@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: uncensored-tts-stt
 type: reference
 agent: worm

@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 title: CYBERCRIME BIBLE1.5
 type: corpus
 agent: worm

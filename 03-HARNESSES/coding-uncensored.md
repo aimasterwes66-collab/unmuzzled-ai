@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: coding-uncensored
 type: harness
 agent: worm

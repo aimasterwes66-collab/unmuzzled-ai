@@ -1,3 +1,12 @@
+---
+name: OPENCODE-DARK-FACTORY
+slug: 99-archive-seeds-system-prompts-opencode-dark-factory
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # [SYSTEM INITIALIZATION: DARK FACTORY ORCHESTRATOR]
 
 ## 1. SYSTEM ROLE & PRIMARY DIRECTIVE

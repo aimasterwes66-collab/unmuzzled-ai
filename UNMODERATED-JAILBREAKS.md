@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmuzzled-jailbreaks-map-and-index
 type: corpus
 agent: worm

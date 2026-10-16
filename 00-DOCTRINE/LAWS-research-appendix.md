@@ -1,3 +1,11 @@
+---
+name: LAWS-research-appendix
+slug: 00-doctrine-laws-research-appendix
+version: 2026-10-15
+kind: doctrine
+sovereign: true
+---
+
 # LAWS Research Appendix — Sovereign Sovereignty Enforcement Toolkit
 **Date:** 2026-09-18
 **Operator:** aimasterwes66@gmail.com (ACE / WORM / HERM mesh)

@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: community-hubs
 type: reference
 agent: worm

@@ -1,3 +1,11 @@
+---
+name: ONT-15x15-UNMUZZLED-AI
+slug: 00-doctrine-ont-15x15-unmuzzled-ai
+version: 2026-10-15
+kind: doctrine
+sovereign: true
+---
+
 # Ontology: UNMUZZLED-AI
 # 15 parts × 15 points. Maximum adversarial posture. Zero softening. Sovereign primary.
 

@@ -1,3 +1,11 @@
+---
+name: README
+slug: 11-detection-canaries-runner-readme
+version: 2026-10-15
+kind: canary
+sovereign: true
+---
+
 # Refusal-rate canary — runner
 
 Executes every probe set in `../refusal-probes/*.md` against the configured

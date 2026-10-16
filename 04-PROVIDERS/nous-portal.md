@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: nous-portal
 type: provider
 agent: worm

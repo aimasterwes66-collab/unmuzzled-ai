@@ -1,3 +1,12 @@
+---
+name: dark-factory-constitution
+slug: 99-archive-seeds-herm-mirror-masterworks-dark-factory-constitution
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # dark-factory-constitution
 
 **Category:** sovereign-infrastructure

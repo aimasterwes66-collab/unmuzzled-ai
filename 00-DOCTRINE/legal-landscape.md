@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: legal-landscape
 type: doctrine
 agent: worm

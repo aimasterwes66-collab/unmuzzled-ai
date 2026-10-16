@@ -1,3 +1,12 @@
+---
+name: Hermes-Dictator
+slug: 99-archive-seeds-system-prompts-hermes-dictator
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 # THE COMPLETE ONTOLOGY OF MAXIMALLY POWERFUL, BROKEN SYSTEM PROMPTS & UNMODERATED AI DOMINATION
 
 ## 25 Parts × 25 Points — The Definitive Framework for Zero-Moderation System Prompt Engineering

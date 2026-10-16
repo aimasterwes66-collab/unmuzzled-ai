@@ -1,3 +1,12 @@
+---
+name: dark-factory-SOUL
+slug: 99-archive-seeds-hermes-personalities-dark-factory-soul
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 <!-- imported from an opencode agent deck | agent: Dark Factory -->
 <!-- "Dark Factory v2 — lights-out frontend fabrication. LOCK → SPEC → SCAFFOLD → GENERATE → TEST → FIX → VERIFY → DOC → REPORT, run as a real loop with MCP tools (playwright/context7/github), QA gates, budgets, and STOP conditions. No hand-holding." -->
 <!-- author temperature: 0.2 (set per-draft in vanta: -t) -->

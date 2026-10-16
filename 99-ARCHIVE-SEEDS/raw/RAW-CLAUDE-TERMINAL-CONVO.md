@@ -1,3 +1,12 @@
+---
+name: RAW-CLAUDE-TERMINAL-CONVO
+slug: 99-archive-seeds-raw-raw-claude-terminal-convo
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
   12-JAILBREAK-CORPUS/.                                        
                                                                  
   Gap = infrastructure, not methodology. The operator's seed   

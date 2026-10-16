@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: suno-audio-deep-dive
 type: reference
 agent: worm

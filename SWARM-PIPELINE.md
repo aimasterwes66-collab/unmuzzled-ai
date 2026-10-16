@@ -1,3 +1,11 @@
+---
+name: SWARM-PIPELINE
+slug: swarm-pipeline
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 # SWARM-PIPELINE — UNMUZZLED-AI reconcile swarm
 
 Orchestrator: worm (dictator hat) — this session owns all git writes.

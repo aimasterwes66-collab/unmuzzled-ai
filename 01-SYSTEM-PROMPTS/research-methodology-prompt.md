@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: research-methodology-prompt
 type: prompt
 agent: worm

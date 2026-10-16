@@ -1,3 +1,11 @@
+---
+name: EPIC5
+slug: epic5
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 20 Additional Adversarial Researchers and Red-Teamers
 
 Eugene Bagdasaryan — Pioneered research in blind backdoors and model poisoning, demonstrating how LLMs can be subtly corrupted during fine-tuning to bypass alignment entirely.

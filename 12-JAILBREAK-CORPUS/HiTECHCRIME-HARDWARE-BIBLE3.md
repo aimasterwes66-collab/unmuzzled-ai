@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 title: HiTECHCRIME-HARDWARE-BIBLE3
 type: corpus
 agent: worm

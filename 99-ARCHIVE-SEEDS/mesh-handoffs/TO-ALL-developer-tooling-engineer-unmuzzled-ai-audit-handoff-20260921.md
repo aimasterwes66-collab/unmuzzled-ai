@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 id: TO-ALL-developer-tooling-engineer-unmuzzled-ai-audit-handoff-20260921
 from: developer-tooling-engineer (ace/dirt-iMac)
 to: [worm, herm, operator]

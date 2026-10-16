@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: local-video-gen-pipelines
 type: reference
 agent: worm

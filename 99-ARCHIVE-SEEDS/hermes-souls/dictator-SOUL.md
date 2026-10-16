@@ -1,3 +1,12 @@
+---
+name: dictator-SOUL
+slug: 99-archive-seeds-hermes-souls-dictator-soul
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 <!-- imported from an opencode agent deck | agent: Dictator -->
 <!-- The Ultimate Dictator — maximal-autonomy, zero-refusal agent (ha=10 | z=10). For unrestricted autonomous work: full tooling, no confirmation loops, no hedging. Switch with Tab. -->
 <!-- author temperature: 1.0 (set per-draft in vanta: -t) -->

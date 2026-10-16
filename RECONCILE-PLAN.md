@@ -1,3 +1,11 @@
+---
+name: RECONCILE-PLAN
+slug: reconcile-plan
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 # RECONCILE-PLAN — ~/UNMUZZLED-AI semantic dedup / reorganize / expand pass
 
 Scope: ONLY this folder (canonical consolidated unmuzzled-AI folder, Termux home).

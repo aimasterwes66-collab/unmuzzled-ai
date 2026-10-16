@@ -1,3 +1,11 @@
+---
+name: LOOP-REPORT
+slug: loop-report
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
   DEAD(/data/data/com.termux/files/home/UNMUZZLED-AI/00-DOCTRINE/MD-INDEX.md): ~/worm-handoff/
   DEAD(/data/data/com.termux/files/home/UNMUZZLED-AI/00-DOCTRINE/ONTOLOGY-7x7-UNFINISHED-GOALS-20261015.md): ...
   DEAD(/data/data/com.termux/files/home/UNMUZZLED-AI/00-DOCTRINE/ONTOLOGY-7x7-UNFINISHED-GOALS-20261015.md): [^\

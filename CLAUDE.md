@@ -1,3 +1,11 @@
+---
+name: CLAUDE
+slug: claude
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.

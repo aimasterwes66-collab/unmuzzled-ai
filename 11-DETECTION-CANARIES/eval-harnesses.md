@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: eval-harnesses
 type: reference
 agent: worm

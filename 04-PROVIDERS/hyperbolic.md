@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: hyperbolic
 type: provider
 agent: worm

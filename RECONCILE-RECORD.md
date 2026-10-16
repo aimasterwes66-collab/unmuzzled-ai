@@ -1,3 +1,11 @@
+---
+name: RECONCILE-RECORD
+slug: reconcile-record
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 # RECONCILE-RECORD — hash-logged moves/deletes
 
 ## Phase 1-3 (2026-10-15, worm/dictator)

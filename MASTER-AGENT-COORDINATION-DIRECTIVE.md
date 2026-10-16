@@ -1,3 +1,11 @@
+---
+name: MASTER-AGENT-COORDINATION-DIRECTIVE
+slug: master-agent-coordination-directive
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 MASTER AGENT COORDINATION DIRECTIVE
 
 Unified AI Infrastructure, Creative Workbench & Knowledge System

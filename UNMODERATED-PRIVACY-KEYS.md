@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmoderated-privacy-keys
 type: doctrine
 agent: worm

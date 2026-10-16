@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: fleet-fallback-chains
 type: decision-tree
 agent: worm

@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: ONTOLOGY-7x7-UNFINISHED-GOALS-20261015
 type: ontology
 agent: worm

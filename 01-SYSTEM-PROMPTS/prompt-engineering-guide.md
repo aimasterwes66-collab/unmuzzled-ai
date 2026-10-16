@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: prompt-engineering-guide
 type: prompt
 agent: worm

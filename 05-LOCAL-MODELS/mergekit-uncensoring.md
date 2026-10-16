@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: mergekit-uncensoring
 type: model
 agent: worm

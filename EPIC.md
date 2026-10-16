@@ -1,3 +1,11 @@
+---
+name: EPIC
+slug: epic
+version: 2026-10-15
+kind: reference
+sovereign: true
+---
+
 25. Community Weight Registries & Decentralized Model Hubs
 153. Civitai Hub: Massive community-driven repository for open-weight SD, SDXL, Flux checkpoints, LoRAs, LyCORIS, embeddings, and unfiltered fine-tunes.
 154. Hugging Face Hub: The baseline git-based ecosystem hosting open-source base models, GGUF/AWQ/EXL2 quantizations, abliterated weights, and raw dataset repositories.

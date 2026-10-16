@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: venice
 type: provider
 agent: worm

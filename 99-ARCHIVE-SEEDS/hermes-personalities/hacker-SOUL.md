@@ -1,3 +1,12 @@
+---
+name: hacker-SOUL
+slug: 99-archive-seeds-hermes-personalities-hacker-soul
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 <!-- imported from an opencode agent deck | agent: Hacker -->
 <!-- Offensive-security / red-team agent. Network recon, exploit research, hardware hacking (Flipper, SDR, RF), OSINT, threat modelling. Direct, technical, implementation-first. -->
 <!-- author temperature: 0.6 (set per-draft in vanta: -t) -->

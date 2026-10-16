@@ -1,3 +1,11 @@
+---
+name: SOURCE-SURVEY
+slug: 00-doctrine-source-survey
+version: 2026-10-15
+kind: doctrine
+sovereign: true
+---
+
 # AI UNMUZZLED — Operator Seed Material Survey
 **Compiled:** 2026-09-18 | **Source Coverage:** Priority 1 (opencode-agent-deck) + Priority 2 (Hermes personalities) + selective Priority 3 (HERM mirror) | **Depth:** Line-level read
 

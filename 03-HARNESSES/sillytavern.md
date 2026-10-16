@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: sillytavern-frontend
 type: harness
 agent: worm

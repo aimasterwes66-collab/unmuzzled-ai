@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: agentic-coding-landscape
 type: harness
 agent: worm

@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: Scraper / research harvester. Bulk YouTube→notes transcription, channel/playlist harvesting, recursive domain knowledge-graph expansion (/recur), multi-source research with evidence tiers.
 name: Scraper
 mode: primary

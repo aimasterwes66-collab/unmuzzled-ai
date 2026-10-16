@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: verify-report-2026-10-15
 type: reference
 agent: worm

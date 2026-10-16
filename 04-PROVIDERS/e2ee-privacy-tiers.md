@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: e2ee-privacy-tiers
 type: provider
 agent: worm

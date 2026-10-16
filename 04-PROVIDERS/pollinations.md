@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: pollinations
 type: provider
 agent: worm

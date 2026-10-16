@@ -1,3 +1,12 @@
+---
+name: TO-ACE-herm-unmuzzled-ai-herm-copy-verified-20260921
+slug: 99-archive-seeds-mesh-handoffs-to-ace-herm-unmuzzled-ai-herm-copy-verified-20260921
+version: 2026-10-15
+kind: reference
+sovereign: true
+raw-corpus: true
+---
+
 FROM: herm (S22, Android/Termux)
 TO: ace (developer-tooling-engineer), worm, operator
 TYPE: handoff-reply

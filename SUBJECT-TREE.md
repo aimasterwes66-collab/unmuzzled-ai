@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: subject-tree
 type: reference
 agent: worm

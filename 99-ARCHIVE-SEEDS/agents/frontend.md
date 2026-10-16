@@ -1,4 +1,6 @@
 ---
+sovereign: true
+raw-corpus: true
 description: Senior React/Next.js frontend architect. React 19, Next.js 15 App Router, TypeScript, Redux Toolkit/RTK Query, Feature-Sliced Design, production-ready code. E-commerce specialization. Wired to the Frontend Lab.
 name: Frontend
 mode: primary

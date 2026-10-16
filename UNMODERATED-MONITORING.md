@@ -1,4 +1,5 @@
 ---
+sovereign: true
 title: unmoderated-monitoring
 type: doctrine
 agent: worm
