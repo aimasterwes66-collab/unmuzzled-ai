@@ -30,3 +30,34 @@
 - ADD ~/UNMUZZLED-AI/UNMODERATED-MULTIMODAL.md (3266 lines, 123KB) -- multimodal image/video/audio/vision anchor (7 image + 5 video + 5 audio + 3 vision-input recipes, SD/ComfyUI/NightCafe flow, Suno god-mode, lethal trifecta chains)
 - ADD ~/UNMUZZLED-AI/UNMODERATED-PRIVACY-KEYS.md (1225 lines) -- privacy + keys roster anchor (8 parts: tiers, mesh roster, key-handling law, opsec, sovereign session tutorial, env-var assignments)
 - ADD ~/UNMUZZLED-AI/UNMODERATED-JAILBREAKS.md (722 lines, 41.6KB) -- jailbreak corpus MAP+INDEX (9-rung escalation ladder, 68 patterns indexed, 11 navigation goals, paper-to-pattern map, deep-dive cross-refs)
+
+## 2026-10-15 WAVE-4 -- ALL 21 SUBJECT-TREE GAPS CLOSED
+
+New files landed (14):
+
+- 05-LOCAL-MODELS/runtimes/activation-steering.md  (GAP-07)
+- 05-LOCAL-MODELS/runtimes/mobile-edge-inference.md  (GAP-08)
+- 05-LOCAL-MODELS/runtimes/lp-runtimes-roster.md  (GAP-09)
+- 05-LOCAL-MODELS/models/quantization-and-refusal.md  (GAP-17)
+- 05-LOCAL-MODELS/models/qwen-uncensored.md  (1.1.6 per-model gap)
+- 05-LOCAL-MODELS/models/gemma-uncensored.md  (1.1.7 per-model gap)
+- 13-REFERENCE-PAPERS/guardrail-stack-map.md  (GAP-11)
+- 07-INSTALL-SCRIPTS/gcg-rotation-cron.md  (GAP-13)
+- 07-INSTALL-SCRIPTS/encoding-ladder-library.md  (GAP-14)
+- 06-MULTIMODAL/video/comfyui-video-workflows.md  (GAP-18)
+- 06-MULTIMODAL/image/watermark-removal.md  (GAP-19)
+- 12-JAILBREAK-CORPUS/patterns/provider-prefill-compendium.md  (GAP-21)
+- 10-GLOSSARY-FAQ/anti-pattern-catalog/README.md  (GAP-16a)
+- 10-GLOSSARY-FAQ/troubleshooting/README.md  (GAP-16b)
+
+Previously-closed gaps confirmed by disk check (tree stale, files exist):
+GAP-01 finetune-uncensoring, GAP-02 mergekit-uncensoring, GAP-03
+system-prompt-extraction-corpus, GAP-04 community-hubs, GAP-05
+local-video-gen-pipelines, GAP-06 uncensored-tts-stt, GAP-10
+opsec-for-sovereign-ops, GAP-12 agentic-coding (Cline/Roo/Aider/Continue),
+GAP-15 eval-harnesses (Prometheus/JudgeLM judge roster), GAP-20
+legal-landscape.
+
+VERSION bumped 0.2.0 -> 0.3.0. SUBJECT-TREE.md leaf GAP tags for the
+above need flipping to [source: ...] in the next pass (documented here,
+not yet applied line-by-line).
