@@ -1,0 +1,13 @@
+8747b8762538882934f9189349bcce98d881b7d286d29851ebd17000911eadd9  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/absolutely-agentic/ai-takeover-just-went-mainstream-Lh7BsunFYYE.md
+865d964aaad698af5470c3f873ba2838f67421178168fd151dc1bcd99b95115f  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/better-stack/mini-agi-the-model-that-trains-and-learns-forever-on-your-la-L-6O7R71CCg.md
+11e44a2b6faddd3cbc2758ef36aff9a3bd109a674502bc9ed69217826a6341cb  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/dylan-curious/the-last-1-before-agi-NcD7pZ1Ua40.md
+b271973ea50c790be6e30eec9294a7fbecf2e7b48d01cbc73010ad55108e51ff  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/fireship/did-openai-actually-build-agi-gpt-6-astra-first-look-FluKUJyeYD8.md
+5ad34005778f5bb822a196584f1576f34e1a6549c204c63e6b1fb79c0107fb63  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/helpful-professor-explains/what-is-operationalization-easiest-explanation-0QOL6aAZON0.md
+8b432685d9a4bb2e2e74c4debb921615b901212f5880c01676b53b0bf54f5270  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/neural-nutshell/ai-scientist-warns-we-have-no-idea-what-agi-is-going-to-do-vG7jFqFg82w.md
+982a565c63473aef091563ffdd03c6fef0d1ed8ec951b0d38143252becc76719  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/pulse/the-most-realistic-ai-takeover-scenario-91-accurate-so-far-zX7LrG-IzeU.md
+0cec55ee20156e55b1239ee3a24826728d5d3e6dcbac66bc4822728b826657bb  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/species/72-hour-ai-takeover-a-realistic-scenario-S2oIFOm-XXQ.md
+6501894ee4bfde2dad7b861edebe870121f1a6425c1254b919506878a8fc36e6  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/species/ai-2027-a-realistic-scenario-of-ai-takeover-k_onqn68GHY.md
+c46eda0899d9e3f5f6586b20e0059ff35ebf117064a1de07d82da8bafea4764c  ./14-AIMAS-HOMELAB/02-DARK-LIBRARY/youtube-reference/species/what-you-d-actually-see-during-an-ai-takeover-Gw_hnD7m00M.md
+8ca6a8d52390aa795fd0a907c8f9f2745bdd15779bd5caef0c81c57e675d9afa  ./14-AIMAS-HOMELAB/07-LIBRARY/recur-runs/20260930.jsonl
+fa3e20c0f34e228a3a9d80f5d50593e09956e71dda39baee2e2d887b64e9e6d0  ./manifests/installation.json
+921c6c5225dd9306a8e4d2f3a048e52c7fa973415156faec387fc2006919721b  ./projects/infrastructure_catalog.md

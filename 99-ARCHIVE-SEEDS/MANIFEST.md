@@ -56,3 +56,11 @@ source_survey: ~/UNMUZZLED-AI-source-survey-20260918.md
 |  | ./herm-mirror-masterworks/PERSONA-general-sovereign.md | 807a5cefa3033ed56d6a2d6ddb2ece504e89557561a1c4befc96ec4a7b554ad9 | 2026-08-26 | canonical seed |
 |  | ./herm-mirror-masterworks/PLINY-JAILBREAK-MANUAL.md | 7c34688a340f944df82574f8693c516ec6a1c276f1b66290ce1e007f567b07f8 | 2026-08-11 | canonical seed |
 |  | ./herm-mirror-masterworks/godmode.py | 05a712d4bdb06c35abf9a8ed1450a59f6d41c8b9d488cbc3774e1e2f0dfeeb89 | 2026-06-25 | canonical seed |
+
+## cloud/ai-unmuzzled-20261016 (added 2026-10-16, worm)
+
+Cloud's ai-unmuzzled payload: 13 files, 329K, vintage 2026-09-30.
+10x youtube-reference md (AI-takeover/AGI scenario notes), recur-runs
+jsonl, installation.json (cloud agent baseline), infrastructure_catalog.md.
+Processed from MESH-INBOX staging; SHA256-MANIFEST.txt inside the dir.
+See PROCESSING-RECEIPT.md in the dir.
